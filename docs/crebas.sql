@@ -1,4 +1,4 @@
-/*==============================================================*/
+﻿/*==============================================================*/
 /* DBMS name:      ORACLE Version 10g                           */
 /* Created on:     2011-03-18 17:20:01                          */
 /*==============================================================*/
@@ -192,4 +192,6 @@ create table CUT_USER_ROLE  (
    ROLE_ID              NUMBER(12)                      not null,
    constraint PK_CUT_USER_ROLE primary key (USER_ID, ROLE_ID)
 );
+
+insert into cut_user(user_id,user_Real_Name,user_Login_Name,user_Password) values(1,'admin','admin','91f9c8dfd08626d6dc23b137109b9da4');
 
