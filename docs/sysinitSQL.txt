@@ -1,0 +1,2 @@
+update cut_task t set t.task_status=0;
+update cut_step t set t.step_status=0, t.step_cur_percent=0;

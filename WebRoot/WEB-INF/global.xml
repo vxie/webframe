@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<global>
+	<area name="Step_Status">
+		<entry key="0" value="未开始"/>
+		<entry key="1" value="正在执行"/>
+		<entry key="2" value="执行已完成"/>
+		<entry key="3" value="正在检查"/>
+		<entry key="4" value="检查已完成"/>
+		<entry key="5" value="执行异常"/>
+	</area>
+	<area name="Sys_DB_Clear_Zero">
+		<entry key="sql" value="
+		update cut_task set task_status=0, start_time=null, finish_time=null;
+		update cut_step set step_status=0, step_cur_percent=0, start_time=null, finish_time=null;
+		"/>
+	</area>
+	<area name="Sys_DB_Init">
+		<entry key="sql" value="
+		
+		delete from cut_user;
+		delete from cut_user_role;
+		
+		delete from cut_role;
+		
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (1, '系统管理员', null);
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (2, '割接总负责人', null);
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (3, '总体进度观察', null);
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (11, '步骤负责人', null);
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (12, '步骤检查人', null);
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (21, '子任务负责人', null);
+		insert into CUT_ROLE (ROLE_ID, ROLE_NAME, ROLE_MEMO) values (22, '子任务检查人', null);
+		
+		delete from cut_menu;
+		
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (1, '总体进度', '/progress/list', null, 1);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (2, '步骤进度', '/progress/steps/exec', null, 2);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (3, '任务信息', '/progress/tasks/exec', null, 3);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (100, '割接配置', null, null, 2);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (110, '基本信息', '/baseinfo/set', 100, 1);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (120, '步骤配置', '/step/set', 100, 2);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (130, '任务配置', '/task/set', 100, 3);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (200, '系统管理', null, null, 3);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (210, '用户管理', '/user/list', 200, 1);
+		insert into CUT_MENU (MENU_ID, MENU_NAME, MENU_URL, MENU_PARENT_ID, MENU_INDEX) values (220, '角色管理', '/role/list', 200, 2);
+		
+		delete from cut_role_menu;
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 1);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 1);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (3, 1);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 2);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 2);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (11, 2);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (12, 2);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 3);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 3);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (21, 3);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (22, 3);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 100);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 100);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (11, 100);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (21, 100);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 110);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 110);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 120);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 120);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (11, 120);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 130);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 130);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (11, 130);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (21, 130);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 200);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 200);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 210);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (2, 210);
+		insert into CUT_ROLE_MENU (ROLE_ID, MENU_ID) values (1, 220);
+		
+		insert into cut_user(user_id,user_login_name,user_real_name,user_password) values(1,'admin','admin','91f9c8dfd08626d6dc23b137109b9da4');
+		insert into cut_user_role(user_id,role_id) values(1, 1);
+		
+		delete from cut_task;
+		delete from cut_step;
+		delete from cut_step_user;
+		"/>
+	</area>
+</global>

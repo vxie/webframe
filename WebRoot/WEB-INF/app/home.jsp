@@ -1,0 +1,146 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>割接进度管理系统</title>
+		<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
+		<script src="/resources/js/dlg/jquery.xdialog.js" type="text/javascript"></script>
+		<script>
+		var images = [];
+		function preLoadImages(){
+			for(i=0;i<4;i++){
+				images[i] = new Image();
+				images[i].src = "/resources/images/nav"+i+".png";
+			}
+		}
+		preLoadImages();
+
+		
+		function switchBar(type){
+			
+			var o = document.getElementById("switch_"+type+"_point");
+			var f = document.getElementById(type+"Info");
+			var v = o.src.substr(o.src.lastIndexOf(".png")-1, 1);
+			if(type=="top"){
+				o.src = v=="0"?images[1].src:images[0].src;
+				f.style.display= v=="0"?"none":"";
+
+				if(v == "0"){
+                   //收缩
+                    barflg ="0";
+			    }else{
+                   //展开
+			    	barflg = "1";   
+				}
+			}else{
+				o.src = v=="2"?images[3].src:images[2].src;
+				f.style.display= v=="2"?"none":"";
+				
+			}
+		}
+		
+		//function showModalDlg(title, url, w, h, callback){
+		//	JQueryXDialog.Open(title, url, w, h, callback);
+		//}
+		
+		function showModalDlg(title, url, w, h, callback, txtSubmit, txtCancel){
+			JQueryXDialog.Open(title, url, w, h, callback, txtSubmit, txtCancel);
+		}
+		
+		function closeModalDlg(){
+			JQueryXDialog.Close();
+		}
+		<c:if test="${isAdmin==1}">
+		//割接管理系统数据库初始化
+		function init_sys(){
+			if(!window.confirm("你确定要初始化本系统吗(初始化后不可恢复)?")){
+			    return;
+			}
+			$.post('/init', function(s){
+				if(s=="0"){
+					alert("操作成功!");
+					window.top.location.href = "/login";
+				}else{
+					alert("错误：你无权执行该项操作!");
+				}
+			});
+		}
+		
+		function clear_zero(){
+			if(!window.confirm("你确定要对进度数据清零吗(清零后不可恢复)?")){
+			    return;
+			}
+			$.post('/zero', function(s){
+				if(s=="0"){
+					alert("操作成功!");
+					window.top.location.href = "/login";
+				}else{
+					alert("错误：你无权执行该项操作!");
+				}
+			});
+		}
+		</c:if>
+		
+		function logout(){
+			$.post('/logout', function(s){
+				window.top.location.href = "/login";
+			});
+		}
+		
+		function changePwdDlg(){
+			showModalDlg("修改密码", '/user/changepwd', 600, 180);
+		}
+
+		var barflg = "";
+		var height = 0;
+		$(document).ready(function(){
+			switchBar('left');
+			switchBar('top');
+			height = document.body.offsetHeight;
+			//alert("home:"+document.body.offsetHeight);
+		});
+		</script>
+	</head>
+<body scroll="no" style="margin: 0px">
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
+ 		<tr id="topInfo">
+  			<td width="100%" height="28px" bgcolor="#2596ee">
+  				<table style="width:100%; font-family: Arial;font-size: 12px;">
+  					<tr valign="bottom">
+  						<td><img src="/resources/images/top_bg.jpg" border="0"/></td>
+  					    <c:if test="${isAdmin==1}"><td align="right"><a href="#" style="color:#fff;display:none;" onclick="init_sys()" >系统初始化</a></td></c:if>
+  					    <c:if test="${isAdmin==1}"><td align="right"><a href="#" style="color:#fff;" onclick="clear_zero()">进度清零</a></td></c:if>
+  						<td align="right"><a href="#" style="color:#fff;" onclick="changePwdDlg()">修改密码</a></td>
+  						<td align="right"><a href="#" onclick="logout()" style="color:#fff;">退出</a>&nbsp;</td>
+  					</tr>
+  				</table>
+ 		</tr>
+ 		<tr>
+  			<td bgColor="#dbe3f7" style="height: 2pt" width="100%" align="middle"><img id="switch_top_point" onclick="switchBar('top')" style="cursor: hand;" src="/resources/images/nav0.png"/ border="0"></td>
+ 		</tr>
+ 		<tr>
+	  		<td width="100%" height="100%">
+	  		<table border="0" cellPadding="0" cellSpacing="0" height="100%" width="100%">
+				<tr>
+			  		<td align="left" id="frmTitle" noWrap >
+						<iframe name="menuInfo" id="leftInfo" frameborder="0" framespacing="0" marginwidth="0" marginheight="0" src="/left" style="height: 100%; visibility: inherit; width: 140px; z-index: 2"></iframe>
+			  		</td>
+			  		<td bgColor="#dbe3f7" style="width: 10pt">
+              			<img id="switch_left_point" onclick="switchBar('left')" style="cursor: hand;" src="/resources/images/nav2.png"/ border="0">
+			   		</td>
+					<td style="width: 100%">
+               
+						<iframe name="contentInfo" id="contentInfo" frameBorder="0" scrolling="no" src="/progress/list" style="height: 100%; visibility: inherit; width: 100%; z-index: 1"></iframe>
+					 
+					</td>
+				</tr>
+			</table>
+	  		</td>
+ 		</tr>
+
+ 	</table>
+</body>
+
+</html>

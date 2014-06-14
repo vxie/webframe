@@ -1,0 +1,21 @@
+需要局方提供的东东：
+1. 割接总体操作步骤， 一般为Excel格式
+2. 割接总体操作步骤的流程图，即底图。 一般为jpg格式，由visio生成
+
+操作步骤：
+1. jpg格式的图片改名为cutshow-bk.jpg, 并另存到WebRoot/WEB-INF/app/resources/images/下
+2. excel文件改名为cutshow.xlsx, 并另存到src/main/resources/下
+3. 执行src/test/initDB.java
+4. 用Macromedia Dreamweaver 8打开src/main/resources/imgsetup.xhtml, 添加并调整图片上的热点
+5. 执行src/test/GenerateAreas.java
+
+6. 将cutshow.xlsx, imgsetup.xhtml上传到远程主机/WEB-INF/classes/路径下
+7. 执行WebRoot/WEB-INF/classes/initdb.sh
+8. 启动jetty6
+
+
+
+浏览器要求：
+1. IE8
+2. 打开兼容性设置
+3. internate临时文件设置->每次访问时做检查

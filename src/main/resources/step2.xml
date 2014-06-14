@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-diagram  name="secondcut" width="2105" height="1371">
+
+	<step name="step1.1" stepid="101" taskid="101"  x="198" y="129" width="105" height="28"/>
+	<step name="step1.2" stepid="101" taskid="102"  x="463" y="129" width="105" height="28"/>
+	<step name="step1.3" stepid="101" taskid="103"  x="733" y="129" width="105" height="28"/>
+	<step name="step1.4" stepid="101" taskid="104"  x="932" y="129" width="200" height="28"/>
+	<step name="step1.5" stepid="101" taskid="105"  x="1231" y="129" width="105" height="28"/>
+	<step name="step1.6" stepid="101" taskid="106"  x="1525" y="129" width="105" height="28"/>
+	<step name="step1.7" stepid="101" taskid="107"  x="1769" y="129" width="105" height="28"/>
+	<step name="step1.8" stepid="101" taskid="108"  x="2010" y="106" width="105" height="58"/>
+	
+	<step name="step2.1" stepid="102" taskid="201"  x="736" y="478" width="105" height="30"/>
+	<step name="step2.2" stepid="102" taskid="202"  x="1000" y="475" width="65" height="40"/>
+	<step name="step2.3" stepid="102" taskid="203"  x="693" y="601" width="105" height="30"/>
+	<step name="step2.4" stepid="102" taskid="204"  x="826" y="601" width="120" height="32"/>
+	<step name="step2.5" stepid="102" taskid="205"  x="979" y="600" width="105" height="32"/>
+	<step name="step2.6" stepid="102" taskid="206"  x="1116" y="592" width="128" height="40"/>
+	<step name="step2.7" stepid="102" taskid="207"  x="1273" y="595" width="125" height="44"/>
+	<step name="step2.8" stepid="102" taskid="208"  x="1441" y="600" width="125" height="30"/>
+	<step name="step2.9" stepid="102" taskid="209"  x="1595" y="600" width="125" height="30"/>
+	<step name="step2.10" stepid="102" taskid="210"  x="1754" y="600" width="125" height="30"/>
+	<step name="step2.11" stepid="102" taskid="211"  x="946" y="750" width="170" height="30"/>
+	<step name="step2.12" stepid="102" taskid="212"  x="1433" y="760" width="125" height="30"/>
+	<step name="step2.13" stepid="102" taskid="213"  x="685" y="750" width="170" height="22"/>
+	<step name="step2.14" stepid="102" taskid="214"  x="945" y="826" width="170" height="32"/>
+	<step name="step2.15" stepid="102" taskid="215"  x="685" y="834" width="170" height="35"/>
+	<step name="step2.16" stepid="102" taskid="216"  x="1923" y="604" width="125" height="32"/>
+	<step name="step3.1" stepid="103" taskid="301"  x="2918" y="479" width="105" height="30"/>
+	<step name="step3.2" stepid="103" taskid="302"  x="3130" y="472" width="66" height="40"/>
+	<step name="step3.3" stepid="103" taskid="303"  x="2829" y="601" width="100" height="32"/>
+	<step name="step3.4" stepid="103" taskid="304"  x="2958" y="602" width="118" height="32"/>
+	<step name="step3.5" stepid="103" taskid="305"  x="3110" y="600" width="105" height="32"/>
+	<step name="step3.6" stepid="103" taskid="306"  x="3248" y="592" width="125" height="40"/>
+	<step name="step3.7" stepid="103" taskid="307"  x="3404" y="596" width="125" height="42"/>
+	<step name="step3.8" stepid="103" taskid="308"  x="3572" y="600" width="125" height="32"/>
+	<step name="step3.9" stepid="103" taskid="309"  x="3728" y="600" width="125" height="32"/>
+	<step name="step3.10" stepid="103" taskid="310"  x="3885" y="600" width="125" height="32"/>
+	<step name="step3.11" stepid="103" taskid="311"  x="3078" y="734" width="170" height="55"/>
+	<step name="step3.12" stepid="103" taskid="312"  x="3564" y="759" width="125" height="32"/>
+	<step name="step3.14" stepid="103" taskid="314"  x="3078" y="826" width="170" height="32"/>
+	 
+	<step name="step4.1" stepid="104" taskid="401"  x="970" y="940" width="126" height="30"/>
+	<step name="step4.2" stepid="104" taskid="402"  x="970" y="1008" width="126" height="30"/>
+	<step name="step4.3" stepid="104" taskid="403"  x="970" y="1075" width="126" height="30"/>
+	<step name="step4.4" stepid="104" taskid="404"  x="970" y="1145" width="126" height="30"/>
+	<step name="step4.5" stepid="104" taskid="405"  x="722" y="1096" width="125" height="32"/>
+	<step name="step4.6" stepid="104" taskid="406"  x="830" y="1288" width="110" height="32"/>
+	<step name="step4.7" stepid="104" taskid="407"  x="1130" y="1288" width="110" height="32"/>
+	<step name="step4.8" stepid="104" taskid="408"  x="1012" y="1382" width="143" height="25"/>
+	<step name="step4.9" stepid="104" taskid="409"  x="1215" y="1106" width="138" height="28"/>
+	<step name="step4.10" stepid="104" taskid="410"  x="560" y="1616" width="152" height="25"/>
+	<step name="step4.11" stepid="104" taskid="411"  x="1015" y="1550" width="138" height="24"/>
+	<step name="step4.12" stepid="104" taskid="412"  x="1012" y="1622" width="144" height="25"/>
+	<step name="step4.13" stepid="104" taskid="413"  x="1225" y="1180" width="128" height="32"/>
+	<step name="step4.14" stepid="104" taskid="414"  x="1240" y="1652" width="145" height="25"/>
+	<step name="step4.15" stepid="104" taskid="415"  x="825" y="1616" width="145" height="25"/>
+	<step name="step4.16" stepid="104" taskid="416"  x="1346" y="1004" width="70" height="50"/>
+	<step name="step8.6" stepid="104" taskid="417"  x="1235" y="1410" width="125" height="32"/>
+	
+	<step name="step5.1" stepid="105" taskid="501"  x="3048" y="978" width="128" height="35"/>
+	<step name="step5.2" stepid="105" taskid="502"  x="3048" y="1043" width="128" height="27"/>
+	<step name="step5.3" stepid="105" taskid="503"  x="3048" y="1100" width="128" height="28"/>
+	<step name="step5.4" stepid="105" taskid="504"  x="3048" y="1158" width="128" height="32"/>
+	<step name="step5.5" stepid="105" taskid="505"  x="3270" y="1103" width="125" height="28"/>
+	<step name="step5.6" stepid="105" taskid="506"  x="2878" y="1057" width="128" height="32"/>
+	<step name="step5.7" stepid="105" taskid="507"  x="2885" y="1234" width="120" height="32"/>
+	<step name="step5.8" stepid="105" taskid="508"  x="3230" y="1238" width="120" height="32"/>
+	<step name="step5.9" stepid="105" taskid="509"  x="3048" y="1312" width="140" height="28"/>
+	<step name="step5.10" stepid="105" taskid="510"  x="3270" y="1168" width="128" height="32"/>
+	<step name="step5.11" stepid="105" taskid="511"  x="3050" y="1448" width="140" height="28"/>
+	<step name="step5.12" stepid="105" taskid="512"  x="3310" y="1540" width="182" height="30"/>
+	<step name="step5.13" stepid="105" taskid="513"  x="3048" y="1512" width="140" height="28"/>
+	<step name="step5.14" stepid="105" taskid="514"  x="3046" y="1599" width="144" height="28"/>
+	<step name="step5.15" stepid="105" taskid="515"  x="3363" y="1605" width="125" height="15"/>
+	<step name="step5.16" stepid="105" taskid="516"  x="2795" y="1628" width="115" height="12"/>
+	<step name="step5.17" stepid="105" taskid="517"  x="3418" y="1275" width="128" height="50"/>
+	<step name="step5.18" stepid="105" taskid="518"  x="3402" y="977" width="135" height="25"/>
+	<step name="step5.19" stepid="105" taskid="519"  x="2842" y="1375" width="135" height="28"/>
+	 
+	<step name="step6.1" stepid="106" taskid="601"  x="232" y="1024" width="125" height="32"/>
+	<step name="step6.2" stepid="106" taskid="602"  x="232" y="1100" width="125" height="32"/>
+	<step name="step6.3" stepid="106" taskid="603"  x="232" y="1195" width="125" height="32"/>
+	<step name="step6.4" stepid="106" taskid="604"  x="233" y="1282" width="125" height="32"/>
+	<step name="step6.5" stepid="106" taskid="605"  x="233" y="1372" width="125" height="32"/>
+	<step name="step6.6" stepid="106" taskid="606"  x="231" y="1450" width="125" height="32"/>
+	<step name="step6.7" stepid="106" taskid="607"  x="230" y="1538" width="127" height="40"/>
+   
+	<step name="step7.1" stepid="107" taskid="701"  x="2363" y="1032" width="125" height="32"/>
+	<step name="step7.2" stepid="107" taskid="702"  x="2363" y="1110" width="125" height="32"/>
+	<step name="step7.3" stepid="107" taskid="703"  x="2363" y="1202" width="125" height="32"/>
+	<step name="step7.4" stepid="107" taskid="704"  x="2364" y="1292" width="125" height="32"/>
+	<step name="step7.5" stepid="107" taskid="705"  x="2364" y="1382" width="125" height="32"/>
+	<step name="step7.6" stepid="107" taskid="706"  x="2362" y="1460" width="125" height="32"/>
+	<step name="step7.7" stepid="107" taskid="707"  x="2362" y="1548" width="127" height="40"/>
+
+	<step name="step8.2" stepid="108" taskid="802"  x="952" y="1786" width="82" height="48"/>
+	<step name="step8.3" stepid="108" taskid="803"  x="1125" y="1788" width="92" height="42"/>
+	<step name="step8.5" stepid="108" taskid="805"  x="1026" y="1914" width="125" height="32"/>
+	<step name="step8.6" stepid="108" taskid="806"  x="822" y="2010" width="125" height="32"/>
+
+	<step name="step9.2" stepid="109" taskid="902"  x="3024" y="1756" width="87" height="48"/>
+	<step name="step9.3" stepid="109" taskid="903"  x="3180" y="1756" width="87" height="48"/>
+	<step name="step9.4" stepid="109" taskid="904"  x="3332" y="1758" width="92" height="42"/>
+	<step name="step9.5" stepid="109" taskid="905"  x="3474" y="1760" width="92" height="54"/>
+	<step name="step9.6" stepid="109" taskid="906"  x="3315" y="1915" width="128" height="32"/>
+	<step name="step9.7" stepid="109" taskid="907"  x="3176" y="2010" width="125" height="32"/>
+	<step name="step9.8" stepid="109" taskid="908"  x="3474" y="1918" width="95" height="32"/>
+
+	<step name="step10.1" stepid="110" taskid="1001"  x="1618" y="1002" width="125" height="32"/>
+	<step name="step10.2" stepid="110" taskid="1002"  x="1611" y="1326" width="125" height="32"/> 
+	<step name="step10.3" stepid="110" taskid="1003"  x="1789" y="1326" width="125" height="32"/>
+	<step name="step10.4" stepid="110" taskid="1004"  x="1611" y="1392" width="125" height="32"/>
+	<step name="step10.5" stepid="110" taskid="1005"  x="1616" y="1470" width="124" height="32"/>
+
+	<step name="step11.1" stepid="111" taskid="1101"  x="3749" y="1004" width="125" height="32"/> 
+	<step name="step11.2" stepid="111" taskid="1102"  x="3694" y="1383" width="125" height="32"/>
+	<step name="step11.3" stepid="111" taskid="1103"  x="3873" y="1383" width="125" height="32"/>
+	<step name="step11.4" stepid="111" taskid="1104"  x="3695" y="1474" width="125" height="32"/>
+	<step name="step11.5" stepid="111" taskid="1105"  x="3699" y="1570" width="125" height="32"/>
+	<step name="step11.6" stepid="111" taskid="1106"  x="3727" y="1083" width="125" height="32"/>
+	<step name="step11.7" stepid="111" taskid="1107"  x="3695" y="1294" width="125" height="32"/>
+	<step name="step11.8" stepid="111" taskid="1108"  x="3936" y="1295" width="126" height="32"/>
+	<step name="step11.9" stepid="111" taskid="1109"  x="3714" y="1160" width="125" height="32"/>
+	   
+	<step name="step12.1" stepid="112" taskid="1201"  x="606" y="2190" width="135" height="30"/>  
+	<step name="step12.2" stepid="112" taskid="1202"  x="810" y="2192" width="102" height="30"/> 
+	<step name="step12.3" stepid="112" taskid="1203"  x="970" y="2172" width="125" height="30"/> 
+	<step name="step12.4" stepid="112" taskid="1204"  x="1535" y="2192" width="102" height="30"/> 
+	<step name="step12.5" stepid="112" taskid="1205"  x="1714" y="2192" width="102" height="30"/> 
+	<step name="step12.7" stepid="112" taskid="1207"  x="1156" y="2265" width="132" height="48"/> 
+	<step name="step12.8" stepid="112" taskid="1208"  x="950" y="2274" width="162" height="32"/> 
+	<step name="step12.9" stepid="112" taskid="1209"  x="968" y="2418" width="125" height="32"/> 
+	<step name="step12.10" stepid="112" taskid="1210"  x="1206" y="2422" width="125" height="32"/>
+	<step name="step12.11" stepid="112" taskid="1211"  x="1444" y="2425" width="125" height="32"/>
+	<step name="step12.13" stepid="112" taskid="1213"  x="980" y="2692" width="105" height="22"/>
+	<step name="step12.15" stepid="112" taskid="1215"  x="830" y="2617" width="105" height="22"/>
+	<step name="step12.16" stepid="112" taskid="1216"  x="668" y="2528" width="125" height="32"/>
+	<step name="step12.17" stepid="112" taskid="1217"  x="686" y="2418" width="95" height="32"/>
+	<step name="step12.18" stepid="112" taskid="1218"  x="823" y="2418" width="105" height="32"/>
+	 
+	<step name="step13.1" stepid="113" taskid="1301"  x="2738" y="2190" width="135" height="28"/>  
+	<step name="step13.2" stepid="113" taskid="1302"  x="2942" y="2192" width="100" height="32"/> 
+	<step name="step13.3" stepid="113" taskid="1303"  x="3102" y="2171" width="125" height="32"/> 
+	<step name="step13.4" stepid="113" taskid="1304"  x="3400" y="2160" width="134" height="30"/> 
+	<step name="step13.5" stepid="113" taskid="1305"  x="3665" y="2193" width="105" height="30"/> 
+	<step name="step13.6" stepid="113" taskid="1306"  x="3845" y="2192" width="105" height="32"/> 
+	<step name="step13.8" stepid="113" taskid="1308"  x="3082" y="2274" width="162" height="32"/> 
+	<step name="step13.9" stepid="113" taskid="1309"  x="3288" y="2276" width="135" height="40"/> 
+	<step name="step13.10" stepid="113" taskid="1310"  x="3099" y="2418" width="128" height="32"/>
+	<step name="step13.11" stepid="113" taskid="1311"  x="3338" y="2422" width="128" height="32"/>
+	<step name="step13.12" stepid="113" taskid="1312"  x="3572" y="2425" width="110" height="32"/>
+	<step name="step13.14" stepid="113" taskid="1314"  x="3112" y="2618" width="102" height="25"/>
+	<step name="step13.16" stepid="113" taskid="1316"  x="2964" y="2618" width="100" height="22"/>
+	<step name="step13.17" stepid="113" taskid="1317"  x="2800" y="2530" width="125" height="30"/>
+	<step name="step13.18" stepid="113" taskid="1318"  x="2818" y="2418" width="105" height="30"/>
+	<step name="step13.19" stepid="113" taskid="1319"  x="2955" y="2418" width="110" height="30"/>
+	<step name="step13.20" stepid="113" taskid="1320"  x="4030" y="2187" width="105" height="38"/>
+	<step name="step13.21" stepid="113" taskid="1321"  x="4010" y="2428" width="110" height="32"/>
+	
+	<step name="step14.1" stepid="114" taskid="1401"  x="322" y="2358" width="110" height="25"/>  
+	<step name="step14.2" stepid="114" taskid="1402"  x="322" y="2488" width="110" height="25"/>
+	 
+	<step name="step15.1" stepid="115" taskid="1501"  x="2454" y="2358" width="110" height="25"/>  
+	<step name="step15.2" stepid="115" taskid="1502"  x="2454" y="2489" width="110" height="25"/>
+	<step name="step15.3" stepid="115" taskid="1503"  x="2454" y="2609" width="110" height="25"/>  
+   
+	<step name="step16.1" stepid="116" taskid="1601"  x="982" y="2925" width="100" height="28"/>
+	<step name="step16.2" stepid="116" taskid="1602"  x="996" y="3000" width="70" height="24"/>
+	<step name="step16.3" stepid="116" taskid="1603"  x="998" y="3155" width="72" height="38"/>
+	<step name="step16.4" stepid="116" taskid="1604"  x="1418" y="2865" width="170" height="20"/>
+	<step name="step16.5" stepid="116" taskid="1605"  x="1416" y="2938" width="170" height="32"/>
+	<step name="step16.6" stepid="116" taskid="1606"  x="1415" y="3009" width="172" height="50"/>
+	<step name="step16.7" stepid="116" taskid="1607"  x="1112" y="3083" width="100" height="25"/>
+	<step name="step16.8" stepid="116" taskid="1608"  x="996" y="3262" width="70" height="25"/>
+	<step name="step16.9" stepid="116" taskid="1609"  x="1396" y="3260" width="130" height="30"/>
+   
+	<step name="step17.1" stepid="117" taskid="1701"  x="3115" y="2920" width="100" height="25"/>
+	<step name="step17.2" stepid="117" taskid="1702"  x="3128" y="2994" width="70" height="25"/>  
+	<step name="step17.3" stepid="117" taskid="1703"  x="3243" y="3078" width="100" height="25"/>  
+	<step name="step17.4" stepid="117" taskid="1704"  x="3130" y="3148" width="66" height="40"/>
+	<step name="step17.5" stepid="117" taskid="1705"  x="3549" y="2855" width="172" height="25"/>
+	<step name="step17.6" stepid="117" taskid="1706"  x="3549" y="2930" width="172" height="32"/>
+	<step name="step17.7" stepid="117" taskid="1707"  x="3547" y="3003" width="172" height="50"/>
+	<step name="step17.8" stepid="117" taskid="1708"  x="3080" y="3255" width="170" height="25"/>  
+	<step name="step17.9" stepid="117" taskid="1709"  x="3549" y="2805" width="125" height="32"/>
+	<step name="step17.10" stepid="117" taskid="1710"  x="3570" y="3241" width="125" height="32"/>
+</process-diagram>
