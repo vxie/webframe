@@ -3,6 +3,90 @@
   <component name="AntConfiguration">
     <defaultAnt bundledAnt="true" />
   </component>
+  <component name="ArtifactManager">
+    <artifact type="exploded-war" build-on-make="true" name="webframe">
+      <output-path>$PROJECT_DIR$/out/artifacts/webframe.war</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="cutshow4zh" />
+          </element>
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/app-servlet.xml" />
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" />
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/global.xml" />
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/jboss-web.xml" />
+          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/oracle-ds.xml" />
+          <element id="directory" name="app">
+            <element id="dir-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/app" />
+          </element>
+          <element id="directory" name="lib">
+            <element id="library" level="module" name="junit4" module-name="cutshow4zh" />
+            <element id="library" level="module" name="antlr-2.7.6.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="aopalliance-1.0.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="asm.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="backport-util-concurrent.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="cglib-2.1.3.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-beanutils-1.8.3.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-collections-3.2.1.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-dbcp-1.2.2.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-fileupload-1.2.2.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-io-2.0.1.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-lang-2.3.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-logging-1.0.4.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-pool.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="dom4j-1.6.1.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="ehcache-1.4.1.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="ejb3-persistence.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="ezmorph-1.0.5.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="hibernate-annotations.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="hibernate-commons-annotations.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="hibernate3.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="jakarta-oro-2.0.8.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="json-lib-2.3-jdk13.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="jta.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="jxl.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="log4j-1.2.15.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="ognl-2.6.11.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="ojdbc14.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.aop-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.asm-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.aspects-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.beans-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.context-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.context.support-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.core-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.expression-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.instrument-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.instrument.tomcat-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.jdbc-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.orm-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.oxm-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.transaction-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.web-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.web.portlet-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.web.servlet-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="slf4j-api-1.5.2.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="slf4j-log4j12-1.5.2.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="sqlpage-1.2.4.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="standard.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="sunrise-spring-ext-1.0.0.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="xml-apis.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="jaxen-1.1.1.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="org.springframework.test-3.0.5.RELEASE.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="commons-codec-1.5.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="poi-3.9-20121203.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="poi-ooxml-3.9-20121203.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="poi-ooxml-schemas-3.9-20121203.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="stax-api-1.0.1.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="xmlbeans-2.3.0.jar" module-name="cutshow4zh" />
+            <element id="library" level="module" name="pinyin4j-2.5.0.jar" module-name="cutshow4zh" />
+            <element id="library" level="project" name="jstl-1.2" />
+          </element>
+        </element>
+        <element id="javaee-facet-resources" facet="cutshow4zh/web/Web" />
+      </root>
+    </artifact>
+  </component>
   <component name="CodeStyleSettingsManager">
     <option name="PER_PROJECT_SETTINGS">
       <value>
@@ -117,33 +201,7 @@
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/docs/crebas-all.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/docs/crebas-test.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/历史版本/汕头割接v80(正式割接)/initdata.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/历史版本/粤北V60(正式割接)/更新方法.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳V34/CUT_BASE_INFO.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳V34/CUT_ROLE.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳V34/CUT_STEP.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳V34/CUT_TASK.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳V34/CUT_USER.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳V34/initdata.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/CUT_BASE_INFO.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/CUT_ROLE.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/CUT_STEP.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/CUT_TASK.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/CUT_USER.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/initdata.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳二仿v42/更新方法.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/CUT_BASE_INFO.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/CUT_ROLE.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/CUT_STEP.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/CUT_TASK.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/CUT_USER.sql" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/initdata.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/深圳正式割接/更新方法.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/releases/部署说明_st.txt" charset="GBK" />
-  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
@@ -320,7 +378,7 @@
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="JDK1.6" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/WebRoot/WEB-INF/classes" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SvnBranchConfigurationManager">
     <option name="myConfigurationMap">
@@ -332,31 +390,18 @@
             </SvnBranchConfiguration>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/releases/历史版本/汕头二仿v5.1">
-          <value>
-            <SvnBranchConfiguration>
-              <option name="trunkUrl" value="https://10.200.3.186/NGCRMDOC/%E5%B0%8F%E7%BB%84%E5%B7%A5%E4%BD%9C%E5%8C%BA/%E5%AE%A2%E6%88%B7&amp;%E8%90%A5%E9%94%80%E7%AE%A1%E7%90%86/8.%E5%89%B2%E6%8E%A5%E8%BF%9B%E5%BA%A6%E5%B1%95%E7%A4%BA%E7%BD%91%E7%AB%99/cutshow/releases/%E6%B1%95%E5%A4%B4%E4%BA%8C%E4%BB%BFv5.1" />
-            </SvnBranchConfiguration>
-          </value>
-        </entry>
       </map>
     </option>
     <option name="mySupportsUserInfoFilter" value="true" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
-    <library name="jetty-util-6.1.5">
+    <library name="jstl-1.2">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/jetty-6.1.9.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/jetty-util-6.1.9.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/servlet-api-2.5-6.1.9.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/jsp-2.1/ant-1.6.5.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/jsp-2.1/core-3.1.1.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/jsp-2.1/jsp-2.1.jar!/" />
-        <root url="jar://$PROJECT_DIR$/../jetty6/lib/jsp-2.1/jsp-api-2.1.jar!/" />
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/jstl-1.2.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
