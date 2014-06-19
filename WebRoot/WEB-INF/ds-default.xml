@@ -13,39 +13,11 @@
             http://www.springframework.org/schema/jdbc  
             http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd"
        default-autowire="byName" default-lazy-init="false">
-  
-  <!-- 在JBOSS中配置oracle数据源 
-	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
-    	<property name="jndiName">
-        	<value>java:OracleDS2</value>
-        </property>
-	</bean>-->
+
 	
   <!-- -->
   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
     <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
-  <!--
-    <property name="url" value="jdbc:oracle:thin:@172.17.0.33:1521:orcl"/>
-    <property name="username" value="szxoam"/>
-    <property name="password" value="oam4pw"/>
-    -->
-    <!--
-    <property name="url" value="jdbc:oracle:thin:@192.168.109.131:1521:rac1"/>
-    <property name="url" value="jdbc:oracle:thin:@10.249.204.45:1521:orcl"/>
-     -->
-   
-    <!-- 第一次割接 
-    <property name="username" value="epdscp"/>
-    <property name="password" value="epdscp"/> -->
-
-    <!-- 第二次割接 
-    <property name="username" value="TTRF"/>
-    <property name="password" value="TTRF"/>
-     -->
-    <!--
-    <property name="username" value="CUTSHOW2"/>
-    <property name="password" value="CUTSHOW2"/>
-     -->
 
     <!--开发库-->
     <property name="url" value="jdbc:oracle:thin:@10.200.27.127:1521:cxcrm_kf"/>
@@ -54,7 +26,7 @@
 
 
     <property name="initialSize" value="5"/>
-    <property name="maxActive" value="20"/><!-- 佛山、中山现场500人左右 -->
+    <property name="maxActive" value="20"/>
     <property name="maxIdle" value="30"/>
     <property name="maxWait" value="5000"/>
     <property name="removeAbandoned" value="true"/>
