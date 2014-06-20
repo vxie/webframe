@@ -81,6 +81,7 @@
             <element id="library" level="module" name="xmlbeans-2.3.0.jar" module-name="cutshow4zh" />
             <element id="library" level="module" name="pinyin4j-2.5.0.jar" module-name="cutshow4zh" />
             <element id="library" level="project" name="jstl-1.2" />
+            <element id="library" level="project" name="mysql-jdbc" />
           </element>
         </element>
         <element id="javaee-facet-resources" facet="cutshow4zh/web/Web" />
@@ -402,6 +403,13 @@
     <library name="jstl-1.2">
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/jstl-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="mysql-jdbc">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/mysql-jdbc.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

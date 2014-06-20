@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b495909d-c17f-43cd-849e-a0e99246efba" name="Default" comment="汕头">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/initdb_mysql.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.iml" afterPath="$PROJECT_DIR$/cutshow4zh.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.ipr" afterPath="$PROJECT_DIR$/cutshow4zh.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.iws" afterPath="$PROJECT_DIR$/cutshow4zh.iws" />
@@ -41,6 +43,10 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
   </component>
   <component name="DebuggerManager">
     <breakpoint_any>
@@ -83,55 +89,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/BaseService.java">
+      <file leaf-file-name="CutLoginController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutLoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CutRole.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutRole.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="5" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginInterceptor.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/beans/LoginInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="0.08007117">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="set.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/app/baseinfo/set.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="5" selection-start="2577" selection-end="2577" vertical-scroll-proportion="-7.857143">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CutTaskController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutTaskController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="4" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CutTaskService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/CutTaskService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+            <state line="39" column="76" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,16 +101,61 @@
       <file leaf-file-name="CutUser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="27" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+            <state line="31" column="36" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CutUserController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutUserController.java">
+      <file leaf-file-name="CutBaseInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutBaseInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="5" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
+            <state line="11" column="30" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CutMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="56" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initdb_mysql.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/initdb_mysql.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="27" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AjaxPageService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/AjaxPageService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="73" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.4395018">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="55" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ds-default.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="49" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,19 +164,7 @@
       <file leaf-file-name="app-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/app-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="39" selection-start="1863" selection-end="1863" vertical-scroll-proportion="6.3809524">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+            <state line="48" column="54" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,8 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/releases/深圳二仿v42/更新方法.txt" />
-        <option value="$PROJECT_DIR$/releases/历史版本/粤北V60(正式割接)/更新方法.txt" />
         <option value="$PROJECT_DIR$/WebRoot/WEB-INF/app/login.jsp" />
         <option value="$PROJECT_DIR$/releases/深圳正式割接/更新方法.txt" />
         <option value="$PROJECT_DIR$/releases/深圳正式割接/CUT_BASE_INFO.sql" />
@@ -204,10 +196,12 @@
         <option value="$PROJECT_DIR$/releases/深圳正式割接/initdata.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/AbstractController.java" />
         <option value="$PROJECT_DIR$/src/test/java/GenerateAreas.java" />
-        <option value="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" />
         <option value="$PROJECT_DIR$/WebRoot/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/beans/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutLoginController.java" />
+        <option value="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" />
+        <option value="$PROJECT_DIR$/README.txt" />
+        <option value="$PROJECT_DIR$/docs/initdb_mysql.sql" />
       </list>
     </option>
   </component>
@@ -321,24 +315,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebRoot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow4zh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -358,10 +334,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -417,65 +389,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="beans" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow4zh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow4zh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow4zh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webframe" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".settings" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,13 +420,13 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
-    <property name="project.structure.side.proportion" value="0.13368984" />
+    <property name="project.structure.side.proportion" value="0.14492753" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="143" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="79" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="75" />
-    <property name="project.structure.proportion" value="0.116959065" />
+    <property name="project.structure.proportion" value="0.12547052" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="85" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
@@ -656,7 +570,7 @@
     </configuration>
     <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 6">
       <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:9900/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="webframe">
@@ -667,6 +581,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_cutshow4zh" />
+        <option name="HTTP_PORT" value="9900" />
       </server-settings>
       <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -911,16 +826,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="778" extended-state="7" />
+    <frame x="-4" y="-4" width="1288" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26136363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5176849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46463022" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6800643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4324759" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -932,11 +846,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28977272" sideWeight="0.31993568" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19724026" sideWeight="0.56752414" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53898305" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48713827" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1041,106 +956,111 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/app/left.jsp">
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar!/org/springframework/web/servlet/handler/HandlerInterceptorAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="560" selection-end="560" vertical-scroll-proportion="-0.90836656" />
+        <state line="9" column="19" selection-start="368" selection-end="368" vertical-scroll-proportion="0.22346368" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/jboss-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" />
+    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="1053" selection-end="1053" vertical-scroll-proportion="-15.380953" />
+        <state line="41" column="43" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0" />
       </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutStepController.java">
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/ojdbc14.jar!/oracle/jdbc/OracleDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="40" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" />
+        <state line="5" column="13" selection-start="149" selection-end="149" vertical-scroll-proportion="0.10909091" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/CutRoleService.java">
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/hibernate3.jar!/org/hibernate/dialect/MySQLInnoDBDialect.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="44" selection-start="667" selection-end="667" vertical-scroll-proportion="0.0" />
+        <state line="5" column="13" selection-start="159" selection-end="159" vertical-scroll-proportion="0.12605043" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/CutStepService.java">
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/org.springframework.web-3.0.5.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="20" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.0" />
+        <state line="15" column="19" selection-start="587" selection-end="587" vertical-scroll-proportion="0.41899443" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/BaseService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/beans/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" />
+        <state line="21" column="0" selection-start="802" selection-end="802" vertical-scroll-proportion="0.09252669" />
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="28" selection-start="5543" selection-end="5543" vertical-scroll-proportion="0.56989247" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/app-servlet.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="54" selection-start="2320" selection-end="2320" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="49" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
+        <state line="5" column="55" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/app-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="39" selection-start="1863" selection-end="1863" vertical-scroll-proportion="6.3809524">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
+        <state line="22" column="56" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutUserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutLoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="5" selection-start="2695" selection-end="2695" vertical-scroll-proportion="0.0">
+        <state line="39" column="76" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="27" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
+        <state line="31" column="36" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutRole.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/model/CutBaseInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
+        <state line="11" column="30" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/CutTaskService.java">
+    <entry file="file://$PROJECT_DIR$/docs/initdb_mysql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+        <state line="28" column="27" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutTaskController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/AjaxPageService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="4" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebRoot/WEB-INF/app/baseinfo/set.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="5" selection-start="2577" selection-end="2577" vertical-scroll-proportion="-7.857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/beans/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="0.08007117">
+        <state line="63" column="73" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.4395018">
           <folding />
         </state>
       </provider>
@@ -1198,7 +1118,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.13368984" />
+                <option value="0.14492753" />
                 <option value="0.5" />
               </list>
             </option>
@@ -1212,7 +1132,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.13368984" />
+                <option value="0.14492753" />
               </list>
             </option>
           </splitter-proportions>
@@ -1248,7 +1168,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.13368984" />
+                <option value="0.14327063" />
               </list>
             </option>
           </splitter-proportions>
