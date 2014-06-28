@@ -28,10 +28,10 @@ public class CutLoginService extends BaseService {
 			if(user.getUserPassword().equals(MD5Encoder.encode(pwd))){
 				return user;
 			}else{
-				return "密码错!";
+				return "密码错误";
 			}
 		}
-		return "用户不存在!";
+		return "帐号不存在";
 	}
 	
 	public List<CutMenu> getUserMenus(Long cutUserId) {

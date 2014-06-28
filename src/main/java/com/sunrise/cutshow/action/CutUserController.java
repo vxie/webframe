@@ -54,6 +54,9 @@ public class CutUserController extends AbstractController {
 	@RequestMapping(value = "/edit/save")
 	@ResponseBody
 	public String save(CutUser cutUser) {
+        if(cutUser.getUserId() == null) {
+            cutUser.setUserId(cutUserService.genUserId());
+        }
 		cutUser.setUserPassword(cutUserService.DEFAULT_PWD);
 		cutUserService.save(cutUser);
 		return "0";

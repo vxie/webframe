@@ -34,7 +34,7 @@ public class CutUserService extends BaseService {
 	private static final String addUserSql = "insert into cut_user(user_id, user_login_name, user_real_name, user_password) values(?,?,?,?)";
 	private static final String addUserRoleSql = "insert into cut_user_role(user_id, role_id) values(?, ?)";
 	
-	public static final String DEFAULT_PWD = MD5Encoder.encode("12345");
+	public static final String DEFAULT_PWD = MD5Encoder.encode("123456");
 	private static final String XLS_END_FLAG = "<EOF>";
 
 	public Map<Long, String[]> getRoles(Long id) {
@@ -94,7 +94,11 @@ public class CutUserService extends BaseService {
 		return dao.getSimpleJdbcTemplate().queryForInt("select count(user_id) from cut_user where user_login_name=?", userLoginName) > 0;
 	}
 
-	public String handleXlsFile(File file) throws JSONException {
+    public Long genUserId() {
+        return dao.getSimpleJdbcTemplate().queryForInt("select max(user_id) from cut_user") + 1L;
+    }
+
+    public String handleXlsFile(File file) throws JSONException {
 		Workbook book = null;
 		Map<String, Integer> m = new HashMap<String, Integer>();
 		int i = 2;

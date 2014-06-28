@@ -1,5 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,7 +26,7 @@ td{ font:Arial, Helvetica, sans-serif; font-size:12px}
       </tr>
 		<tr >
 		  <td width="439" align="left"  class="query01_td_text">&nbsp;</td>
-	      <td width="50" align="left"  class="query01_td_text"><div align="right">用户ID</div></td>
+	      <td width="50" align="left"  class="query01_td_text"><div align="right">帐号</div></td>
 	      <td align="left"  class="query01_td_text"><input name="userLoginName" id="userLoginName" type="text" value="" size="20" class="input"/></td>
 		</tr>
 		<tr>
@@ -38,7 +40,7 @@ td{ font:Arial, Helvetica, sans-serif; font-size:12px}
 	  </tr>
 		<tr >
 		  <td colspan="2" align="left">&nbsp;</td>
-		  <td align="left">&nbsp;</td>
+		  <td align="left" style="color:red;">${errorInfo}</td>
 	  </tr>
 		<tr >
 		  <td colspan="2" align="left">&nbsp;</td>

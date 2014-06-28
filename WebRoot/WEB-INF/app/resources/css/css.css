@@ -123,3 +123,6 @@ BORDER-RIGHT: #002D96 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #002D96 1px sol
 }
 
 
+.highlight {
+    color: red;
+}

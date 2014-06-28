@@ -9,10 +9,11 @@ import com.sunrise.springext.utils.Encode;
 
 public class Constants {
 	
-	public static final String DB_NAME = "oracle";
-	
+//	public static final String DB_NAME = "oracle";
+	public static final String DB_NAME = "mysql";
+
 	//默认密码
-	public static final String DEFAULT_USER_PWD = MD5Encoder.encode("12345");
+	public static final String DEFAULT_USER_PWD = MD5Encoder.encode("123456");
 	
 	public static final String SESSION_VALIDATE_MSG = Encode.escape("Session已过期或服务器已重启, 请重新登录!");
 	
