@@ -4,20 +4,12 @@
     <defaultAnt bundledAnt="true" />
   </component>
   <component name="ArtifactManager">
-    <artifact type="exploded-war" build-on-make="true" name="webframe">
-      <output-path>$PROJECT_DIR$/out/artifacts/webframe.war</output-path>
+    <artifact type="exploded-war" build-on-make="true" name="Healthy">
+      <output-path>$PROJECT_DIR$/out/artifacts/Healthy.war</output-path>
       <root id="root">
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="cutshow4zh" />
-          </element>
-          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/app-servlet.xml" />
-          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" />
-          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/global.xml" />
-          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/jboss-web.xml" />
-          <element id="file-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/oracle-ds.xml" />
-          <element id="directory" name="app">
-            <element id="dir-copy" path="$PROJECT_DIR$/WebRoot/WEB-INF/app" />
           </element>
           <element id="directory" name="lib">
             <element id="library" level="module" name="junit4" module-name="cutshow4zh" />
@@ -402,14 +394,14 @@
   <component name="libraryTable">
     <library name="jstl-1.2">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/jstl-1.2.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/jstl-1.2.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
     <library name="mysql-jdbc">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/mysql-jdbc.jar!/" />
+        <root url="jar://$PROJECT_DIR$/lib/mysql-jdbc.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

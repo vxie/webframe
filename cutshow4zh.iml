@@ -73,19 +73,12 @@
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/WebRoot/WEB-INF/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-          <root url="file://$MODULE_DIR$/src/test/java" />
-          <root url="file://$MODULE_DIR$/src/test/resources" />
-          <root url="file://$MODULE_DIR$/src/main" />
-        </sourceRoots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -113,7 +106,7 @@
     <orderEntry type="module-library">
       <library name="antlr-2.7.6.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/antlr-2.7.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/antlr-2.7.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -122,7 +115,7 @@
     <orderEntry type="module-library">
       <library name="aopalliance-1.0.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/aopalliance-1.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/aopalliance-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -131,7 +124,7 @@
     <orderEntry type="module-library">
       <library name="asm.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/asm.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/asm.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -140,7 +133,7 @@
     <orderEntry type="module-library">
       <library name="backport-util-concurrent.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/backport-util-concurrent.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/backport-util-concurrent.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -149,7 +142,7 @@
     <orderEntry type="module-library">
       <library name="cglib-2.1.3.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/cglib-2.1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/cglib-2.1.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -158,7 +151,7 @@
     <orderEntry type="module-library">
       <library name="commons-beanutils-1.8.3.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-beanutils-1.8.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-beanutils-1.8.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -167,7 +160,7 @@
     <orderEntry type="module-library">
       <library name="commons-collections-3.2.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-collections-3.2.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-collections-3.2.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -176,7 +169,7 @@
     <orderEntry type="module-library">
       <library name="commons-dbcp-1.2.2.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-dbcp-1.2.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-dbcp-1.2.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -185,7 +178,7 @@
     <orderEntry type="module-library">
       <library name="commons-fileupload-1.2.2.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-fileupload-1.2.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-fileupload-1.2.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -194,7 +187,7 @@
     <orderEntry type="module-library">
       <library name="commons-io-2.0.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-io-2.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-io-2.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -203,7 +196,7 @@
     <orderEntry type="module-library">
       <library name="commons-lang-2.3.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-lang-2.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-lang-2.3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -212,7 +205,7 @@
     <orderEntry type="module-library">
       <library name="commons-logging-1.0.4.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-logging-1.0.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -221,7 +214,7 @@
     <orderEntry type="module-library">
       <library name="commons-pool.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-pool.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-pool.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -230,7 +223,7 @@
     <orderEntry type="module-library">
       <library name="dom4j-1.6.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/dom4j-1.6.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -239,7 +232,7 @@
     <orderEntry type="module-library">
       <library name="ehcache-1.4.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/ehcache-1.4.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/ehcache-1.4.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -248,7 +241,7 @@
     <orderEntry type="module-library">
       <library name="ejb3-persistence.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/ejb3-persistence.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/ejb3-persistence.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -257,7 +250,7 @@
     <orderEntry type="module-library">
       <library name="ezmorph-1.0.5.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/ezmorph-1.0.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/ezmorph-1.0.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -266,7 +259,7 @@
     <orderEntry type="module-library">
       <library name="hibernate-annotations.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-annotations.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/hibernate-annotations.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -275,7 +268,7 @@
     <orderEntry type="module-library">
       <library name="hibernate-commons-annotations.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate-commons-annotations.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/hibernate-commons-annotations.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -284,7 +277,7 @@
     <orderEntry type="module-library">
       <library name="hibernate3.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/hibernate3.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/hibernate3.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -293,7 +286,7 @@
     <orderEntry type="module-library">
       <library name="jakarta-oro-2.0.8.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jakarta-oro-2.0.8.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jakarta-oro-2.0.8.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -302,7 +295,7 @@
     <orderEntry type="module-library">
       <library name="json-lib-2.3-jdk13.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/json-lib-2.3-jdk13.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/json-lib-2.3-jdk13.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -311,7 +304,7 @@
     <orderEntry type="module-library">
       <library name="jta.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jta.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jta.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -320,7 +313,7 @@
     <orderEntry type="module-library">
       <library name="jxl.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jxl.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jxl.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -329,7 +322,7 @@
     <orderEntry type="module-library">
       <library name="log4j-1.2.15.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/log4j-1.2.15.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/log4j-1.2.15.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -338,7 +331,7 @@
     <orderEntry type="module-library">
       <library name="ognl-2.6.11.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/ognl-2.6.11.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/ognl-2.6.11.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -347,7 +340,7 @@
     <orderEntry type="module-library">
       <library name="ojdbc14.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/ojdbc14.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/ojdbc14.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -356,7 +349,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.aop-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.aop-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.aop-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -365,7 +358,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.asm-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.asm-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.asm-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -374,7 +367,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.aspects-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.aspects-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.aspects-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -383,7 +376,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.beans-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.beans-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.beans-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -392,7 +385,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.context-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.context-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.context-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -401,7 +394,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.context.support-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.context.support-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.context.support-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -410,7 +403,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.core-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.core-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.core-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -419,7 +412,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.expression-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.expression-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.expression-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -428,7 +421,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.instrument-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.instrument-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.instrument-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -437,7 +430,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.instrument.tomcat-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.instrument.tomcat-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.instrument.tomcat-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -446,7 +439,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.jdbc-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.jdbc-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.jdbc-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -455,7 +448,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.orm-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.orm-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.orm-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -464,7 +457,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.oxm-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.oxm-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.oxm-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -473,7 +466,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.transaction-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.transaction-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.transaction-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -482,7 +475,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.web-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.web-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.web-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -491,7 +484,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.web.portlet-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.web.portlet-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.web.portlet-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -500,7 +493,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.web.servlet-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -509,7 +502,7 @@
     <orderEntry type="module-library">
       <library name="slf4j-api-1.5.2.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/slf4j-api-1.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slf4j-api-1.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -518,7 +511,7 @@
     <orderEntry type="module-library">
       <library name="slf4j-log4j12-1.5.2.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/slf4j-log4j12-1.5.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/slf4j-log4j12-1.5.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -527,7 +520,7 @@
     <orderEntry type="module-library">
       <library name="sqlpage-1.2.4.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/sqlpage-1.2.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/sqlpage-1.2.4.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -536,7 +529,7 @@
     <orderEntry type="module-library">
       <library name="standard.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/standard.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/standard.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -545,7 +538,7 @@
     <orderEntry type="module-library">
       <library name="sunrise-spring-ext-1.0.0.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/sunrise-spring-ext-1.0.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/sunrise-spring-ext-1.0.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -554,7 +547,7 @@
     <orderEntry type="module-library">
       <library name="xml-apis.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/xml-apis.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/xml-apis.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -563,7 +556,7 @@
     <orderEntry type="module-library">
       <library name="jaxen-1.1.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jaxen-1.1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/jaxen-1.1.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -572,7 +565,7 @@
     <orderEntry type="module-library">
       <library name="org.springframework.test-3.0.5.RELEASE.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/org.springframework.test-3.0.5.RELEASE.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/org.springframework.test-3.0.5.RELEASE.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -581,7 +574,7 @@
     <orderEntry type="module-library">
       <library name="commons-codec-1.5.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/commons-codec-1.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/commons-codec-1.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -590,7 +583,7 @@
     <orderEntry type="module-library">
       <library name="poi-3.9-20121203.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/poi-3.9-20121203.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/poi-3.9-20121203.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -599,7 +592,7 @@
     <orderEntry type="module-library">
       <library name="poi-ooxml-3.9-20121203.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/poi-ooxml-3.9-20121203.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/poi-ooxml-3.9-20121203.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -608,7 +601,7 @@
     <orderEntry type="module-library">
       <library name="poi-ooxml-schemas-3.9-20121203.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/poi-ooxml-schemas-3.9-20121203.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/poi-ooxml-schemas-3.9-20121203.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -617,7 +610,7 @@
     <orderEntry type="module-library">
       <library name="stax-api-1.0.1.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/stax-api-1.0.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/stax-api-1.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -626,7 +619,7 @@
     <orderEntry type="module-library">
       <library name="xmlbeans-2.3.0.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/xmlbeans-2.3.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/xmlbeans-2.3.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -635,7 +628,7 @@
     <orderEntry type="module-library">
       <library name="pinyin4j-2.5.0.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/pinyin4j-2.5.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/pinyin4j-2.5.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
