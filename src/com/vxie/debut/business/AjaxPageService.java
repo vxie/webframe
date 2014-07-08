@@ -6,13 +6,12 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.vxie.debut.model.AdminUser;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
-import com.vxie.debut.model.CutUser;
 import com.vxie.debut.utils.Constants;
 import com.sunrise.springext.utils.DataSourceUtils;
-import com.sunrise.springext.utils.SystemUtils;
 import com.sunrise.sqlpage.Pageable;
 import com.sunrise.sqlpage.SQLPage;
 import com.sunrise.sqlpage.intf.EntitiesHandler;
@@ -22,32 +21,29 @@ import com.sunrise.sqlpage.intf.EntitiesHandler;
 public class AjaxPageService extends BaseService {
 	
 	public String userPage(HttpServletRequest request) throws Exception {
-		String sql = "select user_login_name, user_real_name, '' userRoles, '' userAction, user_memo, user_id  from cut_user where 1=1 ";
+		String sql = "select number, name, '' areaName, '' action, id  from t_admin where 1=1 ";
 		
-		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by user_login_name");
+		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
 		
-		page.registerQueryParams("userLoginName", "user_login_name like ?", String.class);
-		page.registerQueryParams("userRealName", "user_real_name like ?", String.class);
-		
-		return page.generatePageContent(request, CutUser.class, new EntitiesHandler<CutUser>(){
-        	public List<CutUser> handle(List<CutUser> rows) throws Exception {
-        		for (CutUser cutUser : rows) {
-        			cutUser.setUserRoles(
-	        			SystemUtils.join(
-		        			dao.getSimpleJdbcTemplate().query(
-		        				"select r.role_name from cut_user_role t, cut_role r where t.role_id=r.role_id and t.user_id=?", 
-		        			 	new RowMapper<String>() {
-		        					public String mapRow(ResultSet rs, int arg1)
-		        							throws SQLException {
-		        						return "["+rs.getString(1)+"]";
-		        					}
-		        				},
-		        				cutUser.getUserId()
-		        			),
-	        				", "
-		        		)
-        			);
-				}
+		page.registerQueryParams("param_number", "number = ?", String.class);
+		page.registerQueryParams("param_name", "name like ?", String.class);
+		page.registerQueryParams("param_areaId", "areaId = ?", String.class);
+
+		return page.generatePageContent(request, AdminUser.class, new EntitiesHandler<AdminUser>(){
+        	public List<AdminUser> handle(List<AdminUser> rows) throws Exception {
+        		for (AdminUser adminUser : rows) {
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_area a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1)
+                                        throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            adminUser.getAreaId()
+                    );
+                    adminUser.setAreaName(list.size() > 0 ? list.get(0) : "");
+                }
         		return rows;
         	}
         });

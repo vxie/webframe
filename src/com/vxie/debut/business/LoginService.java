@@ -5,34 +5,34 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.vxie.debut.model.AdminUser;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.vxie.debut.model.CutMenu;
-import com.vxie.debut.model.CutUser;
 import com.vxie.debut.utils.MD5Encoder;
 
 @Service
-public class CutLoginService extends BaseService {
+public class LoginService extends BaseService {
 	
-	private CutUser findUser(String loginName){
-		List<CutUser> res = dao.find(CutUser.class, "from CutUser c where c.userLoginName=?", loginName);		
-		return (res.size()==0 || res.size()>1)?null:res.get(0);
-	}
+	private AdminUser findUser(String loginName){
+		List<AdminUser> res = dao.find(AdminUser.class, "from AdminUser c where c.number=?", loginName);
+        return (res.size() == 0 || res.size() > 1) ? null : res.get(0);
+    }
 	
 	
-	public Object checkUser(String loginName, String pwd){
-		CutUser user = findUser(loginName);
-		if(user!=null){
-			if(user.getUserPassword().equals(MD5Encoder.encode(pwd))){
-				return user;
-			}else{
-				return "密码错误";
-			}
-		}
-		return "帐号不存在";
-	}
+	public Object checkUser(String loginName, String pwd) {
+        AdminUser user = findUser(loginName);
+        if (user != null) {
+            if (user.getPassword().equals(MD5Encoder.encode(pwd))) {
+                return user;
+            } else {
+                return "密码错误";
+            }
+        }
+        return "帐号不存在";
+    }
 	
 	public List<CutMenu> getUserMenus(Long cutUserId) {
 		String sql = "select distinct m.menu_id, m.menu_name, m.menu_url, m.menu_parent_id from cut_user_role u "+

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.vxie.debut.model.AdminUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.FileCopyUtils;
@@ -20,16 +21,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import com.vxie.debut.business.CutUserService;
-import com.vxie.debut.model.CutUser;
+import com.vxie.debut.business.AdminUserService;
 import com.sunrise.springext.utils.SystemUtils;
 
 @Controller
 @RequestMapping(value = "/user")
-public class CutUserController extends AbstractController {
+public class AdminUserController extends AbstractController {
 
 	@Resource
-	private CutUserService cutUserService;
+	private AdminUserService adminUserService;
 
 	@RequestMapping(value = "/list")
 	public String list() {
@@ -38,34 +38,34 @@ public class CutUserController extends AbstractController {
 
 	@RequestMapping(value = "/edit/{id}")
 	public String edit(ModelMap map, @PathVariable long id) {
-		map.put("oneCutUser", id == 0 ? new CutUser() : cutUserService.getDao()
-				.get(CutUser.class, id));
-		map.put("roles", cutUserService.getRoles(id));
+		map.put("oneCutUser", id == 0 ? new AdminUser() : adminUserService.getDao()
+				.get(AdminUser.class, id));
+		map.put("roles", adminUserService.getRoles(id));
 		return "users/input";
 	}
 
 	@RequestMapping(value = "/edit/check")
 	@ResponseBody
 	public String check(Long userId, String userLoginName) {
-		return cutUserService.hasLoginName(userId, userLoginName) ? "1" : "0";
+		return adminUserService.hasLoginName(userId, userLoginName) ? "1" : "0";
 	}
 
 	@SuppressWarnings("static-access")
 	@RequestMapping(value = "/edit/save")
 	@ResponseBody
-	public String save(CutUser cutUser) {
-        if(cutUser.getUserId() == null) {
-            cutUser.setUserId(cutUserService.genUserId());
+	public String save(AdminUser adminUser) {
+        if(adminUser.getId() == null) {
+            adminUser.setId(adminUserService.genUserId());
         }
-		cutUser.setUserPassword(cutUserService.DEFAULT_PWD);
-		cutUserService.save(cutUser);
+		adminUser.setPassword(adminUserService.DEFAULT_PWD);
+		adminUserService.save(adminUser);
 		return "0";
 	}
 
 	@RequestMapping(value = "/del/{id}")
 	@ResponseBody
 	public String del(@PathVariable long id) {
-		cutUserService.del(id);
+		adminUserService.del(id);
 		return "0";
 	}
 
@@ -79,12 +79,12 @@ public class CutUserController extends AbstractController {
 	public String saveChangePwd(HttpSession session, String oldUserPwd,
 			String newUserPwd) {
 		int n = 1;
-		CutUser cutUser = (CutUser) session.getAttribute("cutUser");
-		if (cutUser != null) {
-			n = cutUserService.changePwd(cutUser.getUserId(), oldUserPwd,
+		AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");
+		if (adminUser != null) {
+			n = adminUserService.changePwd(adminUser.getUserId(), oldUserPwd,
 					newUserPwd);
 			if (n == 0)
-				cutUser.setUserPassword(newUserPwd);
+				adminUser.setUserPassword(newUserPwd);
 		}
 		return n + "";
 	}
@@ -120,7 +120,7 @@ public class CutUserController extends AbstractController {
 			File file = new File(SystemUtils.getClassPath()+"/../tmp/" + new Date().getTime() + ".xls"); // 新建一个文件
 			try {
 				uFile.getFileItem().write(file);// 将上传的文件写入新建的文件中
-				return cutUserService.handleXlsFile(file);
+				return adminUserService.handleXlsFile(file);
 			} catch (Exception e) {
 				e.printStackTrace();
 				return e.getMessage();

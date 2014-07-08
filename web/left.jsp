@@ -20,43 +20,37 @@
   <tr>
     <td bgcolor="#FFFFFF">
     <table width="100%" border="0" cellpadding="4" cellspacing="1">
-      <tr>
-        <td colspan="2" bgcolor="#dbe3f7">首页(${cutUser.userRealName})</td>
-      </tr>
-    <c:forEach var="m" varStatus="idx" items="${menus}">
-      <c:if test="${m.menuUrl == null}">
-    	</table>
-    	<table width="100%" border="0" cellpadding="4" cellspacing="1">
-      	<tr>
-        	<td colspan="2" bgcolor="#dbe3f7">${m.menuName}</td>
-      	</tr>
-      </c:if>
-      <c:if test="${m.menuUrl != null}">
-      	  <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
-      	  <c:if test="${idx.count == 1}">
-      	  	<td class="menuMouseOver" id="firstRow">4</td>
-      	  </c:if>
-      	  <c:if test="${idx.count != 1}">
-      	  	<td class="menuMouseOver">&nbsp;</td>
-      	  </c:if>
-	        <td><a href="${m.menuUrl}" onclick="domenu(this.parentNode.parentNode)" target="contentInfo">${m.menuName}</a></td>
-	      </tr>
-      </c:if>
-     </c:forEach>
+        <tr>
+            <td colspan="2" bgcolor="#dbe3f7">首页(${adminUser.name})</td>
+        </tr>
+
+        <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+            <td class="menuMouseOver" id="firstRow">4</td>
+            <td>
+                <a href="javascript:alert('营养师管理');" onclick="domenu(this.parentNode.parentNode)"
+                   target="contentInfo">营养师管理</a>
+            </td>
+        </tr>
+        <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+            <td class="menuMouseOver">&nbsp;</td>
+            <td><a href="javascript:alert('会员管理');" onclick="domenu(this.parentNode.parentNode)"
+                   target="contentInfo">会员管理</a></td>
+        </tr>
+    </table>
     </td>
   </tr>
 </table>
 
 <script type="text/javascript">
-	var curRow = document.getElementById("firstRow").parentNode;
-	function domenu(row){
-		var prevRow = curRow;
-		curRow = row;
-		prevRow.cells[0].innerHTML = "&nbsp;";
-	}
-	function doonmouseout(row){
-		row.cells[0].innerHTML= row==curRow?"4":"&nbsp;";
-	}
+    var curRow = document.getElementById("firstRow").parentNode;
+    function domenu(row) {
+        var prevRow = curRow;
+        curRow = row;
+        prevRow.cells[0].innerHTML = "&nbsp;";
+    }
+    function doonmouseout(row) {
+        row.cells[0].innerHTML = row == curRow ? "4" : "&nbsp;";
+    }
 
 </script>
 </body>

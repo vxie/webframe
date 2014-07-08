@@ -19,178 +19,22 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b495909d-c17f-43cd-849e-a0e99246efba" name="Default" comment="move to mysql -- 分页查询待处理">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mysql-jdbc.jar" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\.gpd.step1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\.gpd.step2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\area.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\cutshow_template.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\imgsetup.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\imgsetup_template.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\initdb.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\initdb.sql" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\step1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\main\resources\step2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\test\resources\log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\test\resources\startup-pr.sh" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT\webframe\src\test\resources\startup.sh" afterPath="" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app-servlet.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/app2-servlet.xml" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\baseinfo\set.jsp" afterPath="$PROJECT_DIR$/web/baseinfo/set.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\common\import.jsp" afterPath="$PROJECT_DIR$/web/common/import.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\home.jsp" afterPath="$PROJECT_DIR$/web/home.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\left.jsp" afterPath="$PROJECT_DIR$/web/left.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\login.jsp" afterPath="$PROJECT_DIR$/web/login.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\list.jsp" afterPath="$PROJECT_DIR$/web/progress/list.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\oneinfo.jsp" afterPath="$PROJECT_DIR$/web/progress/oneinfo.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progress.jsp" afterPath="$PROJECT_DIR$/web/progress/progress.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progressimage.jsp" afterPath="$PROJECT_DIR$/web/progress/progressimage.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progressimage1.jsp" afterPath="$PROJECT_DIR$/web/progress/progressimage1.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progressimage1_bak1013.jsp" afterPath="$PROJECT_DIR$/web/progress/progressimage1_bak1013.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progressimage2.jsp" afterPath="$PROJECT_DIR$/web/progress/progressimage2.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progressimage2_bak1014.jsp" afterPath="$PROJECT_DIR$/web/progress/progressimage2_bak1014.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\progressimage_bak0917.jsp" afterPath="$PROJECT_DIR$/web/progress/progressimage_bak0917.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\step-exec.jsp" afterPath="$PROJECT_DIR$/web/progress/step-exec.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\progress\task-exec.jsp" afterPath="$PROJECT_DIR$/web/progress/task-exec.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\css\css.css" afterPath="$PROJECT_DIR$/web/resources/css/css.css" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\folder0.gif" afterPath="$PROJECT_DIR$/web/resources/images/folder0.gif" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\folder1.gif" afterPath="$PROJECT_DIR$/web/resources/images/folder1.gif" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\head.gif" afterPath="$PROJECT_DIR$/web/resources/images/head.gif" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\login_go.gif" afterPath="$PROJECT_DIR$/web/resources/images/login_go.gif" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\nav0.png" afterPath="$PROJECT_DIR$/web/resources/images/nav0.png" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\nav1.png" afterPath="$PROJECT_DIR$/web/resources/images/nav1.png" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\nav2.png" afterPath="$PROJECT_DIR$/web/resources/images/nav2.png" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\nav3.png" afterPath="$PROJECT_DIR$/web/resources/images/nav3.png" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\test.html" afterPath="$PROJECT_DIR$/web/resources/images/test.html" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\images\top_bg.jpg" afterPath="$PROJECT_DIR$/web/resources/images/top_bg.jpg" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\DateUtil.js" afterPath="$PROJECT_DIR$/web/resources/js/DateUtil.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\ajaxpage-2.0.0.js" afterPath="$PROJECT_DIR$/web/resources/js/ajaxpage-2.0.0.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\ajaxpage-foot.js" afterPath="$PROJECT_DIR$/web/resources/js/ajaxpage-foot.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\cal\jquery.cal.css" afterPath="$PROJECT_DIR$/web/resources/js/cal/jquery.cal.css" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\cal\jquery.cal.js" afterPath="$PROJECT_DIR$/web/resources/js/cal/jquery.cal.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\common.js" afterPath="$PROJECT_DIR$/web/resources/js/common.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\dlg\jquery.xdialog.css" afterPath="$PROJECT_DIR$/web/resources/js/dlg/jquery.xdialog.css" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\dlg\jquery.xdialog.js" afterPath="$PROJECT_DIR$/web/resources/js/dlg/jquery.xdialog.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\jquery.form.js" afterPath="$PROJECT_DIR$/web/resources/js/jquery.form.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\jquery.metadata.js" afterPath="$PROJECT_DIR$/web/resources/js/jquery.metadata.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\jquery.min.js" afterPath="$PROJECT_DIR$/web/resources/js/jquery.min.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\progress.js" afterPath="$PROJECT_DIR$/web/resources/js/progress.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\js\validate\jquery.validate.js" afterPath="$PROJECT_DIR$/web/resources/js/validate/jquery.validate.js" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\page\dialog.htm" afterPath="$PROJECT_DIR$/web/resources/page/dialog.htm" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\template-xls\step_import_template.xls" afterPath="$PROJECT_DIR$/web/resources/template-xls/step_import_template.xls" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\template-xls\task_import_template.xls" afterPath="$PROJECT_DIR$/web/resources/template-xls/task_import_template.xls" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\resources\template-xls\user_import_template.xls" afterPath="$PROJECT_DIR$/web/resources/template-xls/user_import_template.xls" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\roles\input.jsp" afterPath="$PROJECT_DIR$/web/roles/input.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\roles\list.jsp" afterPath="$PROJECT_DIR$/web/roles/list.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\step\input.jsp" afterPath="$PROJECT_DIR$/web/step/input.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\step\list.jsp" afterPath="$PROJECT_DIR$/web/step/list.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\task\input.jsp" afterPath="$PROJECT_DIR$/web/task/input.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\task\set.jsp" afterPath="$PROJECT_DIR$/web/task/set.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\users\changepwd.jsp" afterPath="$PROJECT_DIR$/web/users/changepwd.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\users\import.jsp" afterPath="$PROJECT_DIR$/web/users/import.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\users\input.jsp" afterPath="$PROJECT_DIR$/web/users/input.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\app\users\list.jsp" afterPath="$PROJECT_DIR$/web/users/list.jsp" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\ds-default.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\global.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/global.xml" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\jboss-web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/jboss-web.xml" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\antlr-2.7.6.jar" afterPath="$PROJECT_DIR$/lib/antlr-2.7.6.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\aopalliance-1.0.jar" afterPath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\asm.jar" afterPath="$PROJECT_DIR$/lib/asm.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\backport-util-concurrent.jar" afterPath="$PROJECT_DIR$/lib/backport-util-concurrent.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\cglib-2.1.3.jar" afterPath="$PROJECT_DIR$/lib/cglib-2.1.3.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-beanutils-1.8.3.jar" afterPath="$PROJECT_DIR$/lib/commons-beanutils-1.8.3.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-codec-1.5.jar" afterPath="$PROJECT_DIR$/lib/commons-codec-1.5.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-collections-3.2.1.jar" afterPath="$PROJECT_DIR$/lib/commons-collections-3.2.1.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-dbcp-1.2.2.jar" afterPath="$PROJECT_DIR$/lib/commons-dbcp-1.2.2.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-fileupload-1.2.2.jar" afterPath="$PROJECT_DIR$/lib/commons-fileupload-1.2.2.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-io-2.0.1.jar" afterPath="$PROJECT_DIR$/lib/commons-io-2.0.1.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-lang-2.3.jar" afterPath="$PROJECT_DIR$/lib/commons-lang-2.3.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-logging-1.0.4.jar" afterPath="$PROJECT_DIR$/lib/commons-logging-1.0.4.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\commons-pool.jar" afterPath="$PROJECT_DIR$/lib/commons-pool.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\dom4j-1.6.1.jar" afterPath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\ehcache-1.4.1.jar" afterPath="$PROJECT_DIR$/lib/ehcache-1.4.1.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\ejb3-persistence.jar" afterPath="$PROJECT_DIR$/lib/ejb3-persistence.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\ezmorph-1.0.5.jar" afterPath="$PROJECT_DIR$/lib/ezmorph-1.0.5.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\hibernate-annotations.jar" afterPath="$PROJECT_DIR$/lib/hibernate-annotations.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\hibernate-commons-annotations.jar" afterPath="$PROJECT_DIR$/lib/hibernate-commons-annotations.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\hibernate3.jar" afterPath="$PROJECT_DIR$/lib/hibernate3.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\jakarta-oro-2.0.8.jar" afterPath="$PROJECT_DIR$/lib/jakarta-oro-2.0.8.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\jaxen-1.1.1.jar" afterPath="$PROJECT_DIR$/lib/jaxen-1.1.1.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\json-lib-2.3-jdk13.jar" afterPath="$PROJECT_DIR$/lib/json-lib-2.3-jdk13.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\jstl-1.2.jar" afterPath="$PROJECT_DIR$/lib/jstl-1.2.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\jta.jar" afterPath="$PROJECT_DIR$/lib/jta.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\jxl.jar" afterPath="$PROJECT_DIR$/lib/jxl.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\log4j-1.2.15.jar" afterPath="$PROJECT_DIR$/lib/log4j-1.2.15.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\ognl-2.6.11.jar" afterPath="$PROJECT_DIR$/lib/ognl-2.6.11.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\ojdbc14.jar" afterPath="$PROJECT_DIR$/lib/ojdbc14.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.aop-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.aop-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.asm-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.asm-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.aspects-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.aspects-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.beans-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.beans-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.context-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.context-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.context.support-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.context.support-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.core-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.core-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.expression-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.expression-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.instrument-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.instrument-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.instrument.tomcat-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.instrument.tomcat-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.jdbc-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.jdbc-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.orm-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.orm-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.oxm-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.oxm-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.test-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.test-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.transaction-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.transaction-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.web-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.web-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.web.portlet-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.web.portlet-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\org.springframework.web.servlet-3.0.5.RELEASE.jar" afterPath="$PROJECT_DIR$/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\pinyin4j-2.5.0.jar" afterPath="$PROJECT_DIR$/lib/pinyin4j-2.5.0.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\poi-3.9-20121203.jar" afterPath="$PROJECT_DIR$/lib/poi-3.9-20121203.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\poi-ooxml-3.9-20121203.jar" afterPath="$PROJECT_DIR$/lib/poi-ooxml-3.9-20121203.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\poi-ooxml-schemas-3.9-20121203.jar" afterPath="$PROJECT_DIR$/lib/poi-ooxml-schemas-3.9-20121203.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\slf4j-api-1.5.2.jar" afterPath="$PROJECT_DIR$/lib/slf4j-api-1.5.2.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\slf4j-log4j12-1.5.2.jar" afterPath="$PROJECT_DIR$/lib/slf4j-log4j12-1.5.2.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\sqlpage-1.2.4.jar" afterPath="$PROJECT_DIR$/lib/sqlpage-1.2.4.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\standard.jar" afterPath="$PROJECT_DIR$/lib/standard.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\stax-api-1.0.1.jar" afterPath="$PROJECT_DIR$/lib/stax-api-1.0.1.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\sunrise-spring-ext-1.0.0.jar" afterPath="$PROJECT_DIR$/lib/sunrise-spring-ext-1.0.0.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\xml-apis.jar" afterPath="$PROJECT_DIR$/lib/xml-apis.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\lib\xmlbeans-2.3.0.jar" afterPath="$PROJECT_DIR$/lib/xmlbeans-2.3.0.jar" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\oracle-ds.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/oracle-ds.xml" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\WebRoot\WEB-INF\web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\AbstractController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/AbstractController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\AjaxPageController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/AjaxPageController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\BaseInfoController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/BaseInfoController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\CutLoginController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/CutLoginController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\CutProgressController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/CutProgressController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\CutRoleController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/CutRoleController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\CutStepController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/CutStepController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\CutTaskController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/CutTaskController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\CutUserController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/CutUserController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\action\ImportController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/ImportController.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\beans\Check2thAuthFilter.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/beans/Check2thAuthFilter.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\beans\LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\AjaxPageService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\BaseInfoService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/BaseInfoService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\BaseService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/BaseService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\CutLoginService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/CutLoginService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\CutProgressService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/CutProgressService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\CutRoleService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/CutRoleService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\CutStepService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/CutStepService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\CutTaskService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/CutTaskService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\CutUserService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/CutUserService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\DictService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/DictService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\business\ImportService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/ImportService.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutBaseInfo.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutBaseInfo.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutMenu.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutMenu.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutRole.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutRole.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutStep.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutStep.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutStepPosition.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutStepPosition.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutTask.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutTask.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\model\CutUser.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/CutUser.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\utils\Constants.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/utils/Constants.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\utils\DateUtils.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/utils/DateUtils.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\utils\MD5Encoder.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/utils/MD5Encoder.java" />
-      <change type="MOVED" beforePath="C:\GIT\webframe\src\main\java\com\sunrise\cutshow\utils\PicUtil.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/utils/PicUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.iml" afterPath="$PROJECT_DIR$/cutshow4zh.iml" />
+    <list default="true" id="b495909d-c17f-43cd-849e-a0e99246efba" name="Default" comment="设置log4j">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java" />
+      <change type="DELETED" beforePath="C:\GIT\webframe\src\com\vxie\debut\model\CutUser.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\GIT\webframe\src\com\vxie\debut\action\CutLoginController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java" />
+      <change type="MOVED" beforePath="C:\GIT\webframe\src\com\vxie\debut\action\CutUserController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java" />
+      <change type="MOVED" beforePath="C:\GIT\webframe\src\com\vxie\debut\business\CutLoginService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/LoginService.java" />
+      <change type="MOVED" beforePath="C:\GIT\webframe\src\com\vxie\debut\business\CutUserService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.ipr" afterPath="$PROJECT_DIR$/cutshow4zh.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.iws" afterPath="$PROJECT_DIR$/cutshow4zh.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vxie/debut/business/ImportService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/ImportService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/home.jsp" afterPath="$PROJECT_DIR$/web/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/left.jsp" afterPath="$PROJECT_DIR$/web/left.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/users/list.jsp" afterPath="$PROJECT_DIR$/web/users/list.jsp" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -254,100 +98,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ds-default.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/ds-default.xml">
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="AdminUserService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="28" selection-start="3520" selection-end="3520" vertical-scroll-proportion="-4.857143">
+            <state line="76" column="48" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1607#1832#0" expanded="true" />
+                <element signature="e#1825#1826#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminUser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="33" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="global.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/global.xml">
+      <file leaf-file-name="AjaxPageService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="46" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
+            <state line="40" column="60" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1132#1969#0" expanded="true" />
+                <element signature="e#1466#1754#0" expanded="true" />
+                <element signature="e#1958#1959#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="52" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CutMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/CutMenu.java">
+      <file leaf-file-name="left.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/left.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="51" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+            <state line="12" column="44" selection-start="484" selection-end="484" vertical-scroll-proportion="-6.428571">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="AdminUserController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="26" selection-start="902" selection-end="902" vertical-scroll-proportion="-4.0">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app2-servlet.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/app2-servlet.xml">
-          <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="58" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.18772563">
+            <state line="54" column="43" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.3652174">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AbstractController.java">
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="115" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+            <state line="119" column="68" selection-start="3414" selection-end="3414" vertical-scroll-proportion="-4.8867927">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jboss-web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jboss-web.xml">
-          <provider editor-type-id="com.intellij.javaee.oss.jboss.editor.JBossWebRootProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="LoginService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="54" column="37" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginInterceptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java">
+      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="64" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+            <state line="36" column="43" selection-start="1602" selection-end="1602" vertical-scroll-proportion="-6.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oracle-ds.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/oracle-ds.xml">
+      <file leaf-file-name="health_sql.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/health_sql.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="29" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
+            <state line="18" column="20" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -369,22 +211,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/beans/LoginInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutLoginController.java" />
-        <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/docs/initdb_mysql.sql" />
-        <option value="$PROJECT_DIR$/WebRoot/WEB-INF/ds-default.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/CutUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/action/CutUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sunrise/cutshow/business/CutLoginService.java" />
-        <option value="$PROJECT_DIR$/WebRoot/WEB-INF/app/login.jsp" />
-        <option value="$PROJECT_DIR$/WebRoot/WEB-INF/app/resources/css/css.css" />
-        <option value="$PROJECT_DIR$/src/com/vxie/debut/action/AbstractController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/app-servlet.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/app2-servlet.xml" />
+        <option value="$PROJECT_DIR$/docs/health_sql.sql" />
+        <option value="$PROJECT_DIR$/src/log4j.properties" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/web/users/list.jsp" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/model/CutUser.java" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/business/CutUserService.java" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/business/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
+        <option value="$PROJECT_DIR$/web/left.jsp" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java" />
       </list>
     </option>
   </component>
@@ -446,20 +288,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow4zh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cutshow4zh" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -502,6 +330,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -528,7 +406,87 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="beans" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -540,6 +498,20 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -560,10 +532,10 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="134" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="808" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="806" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="877" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="137" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="124" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="877" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="78" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="124" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -600,8 +572,8 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig" persistUploadOnCheckin="false" />
   <component name="RecentsManager">
@@ -674,6 +646,17 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <extension name="snapshooter" />
@@ -701,24 +684,12 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
       <deployment />
       <server-settings />
       <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method>
-        <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
@@ -793,9 +764,10 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="BuildArtifacts" enabled="true">
+        <option name="BuildArtifacts" enabled="false">
           <artifact name="Healthy" />
         </option>
+        <option name="Make" enabled="false" />
       </method>
     </configuration>
     <list size="1">
@@ -968,7 +940,19 @@
       <created>1403944207971</created>
       <updated>1403944207971</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="重构项目目录">
+      <created>1404548428741</created>
+      <updated>1404548428741</updated>
+    </task>
+    <task id="LOCAL-00033" summary="数据库模型1.0">
+      <created>1404734926296</created>
+      <updated>1404734926296</updated>
+    </task>
+    <task id="LOCAL-00034" summary="设置log4j">
+      <created>1404738035913</created>
+      <updated>1404738035913</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1000,11 +984,10 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48553056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64790994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50321543" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6752412" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25324675" sideWeight="0.20900321" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.53536975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6125402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1013,8 +996,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23214285" sideWeight="0.35209003" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25324675" sideWeight="0.7797428" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5385852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1059,7 +1043,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit to debut" />
+    <option name="LAST_COMMIT_MESSAGE" value="设置log4j" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1082,6 +1066,9 @@
     <MESSAGE value="move to mysql -- 分页查询待处理" />
     <MESSAGE value="move to mysql 分页查询等" />
     <MESSAGE value="test commit to debut" />
+    <MESSAGE value="重构项目目录" />
+    <MESSAGE value="数据库模型1.0" />
+    <MESSAGE value="设置log4j" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1125,132 +1112,121 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/baseinfo/set.jsp">
+    <entry file="file://$PROJECT_DIR$/docs/initdb_mysql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="33" selection-start="243" selection-end="243" vertical-scroll-proportion="-0.53571427">
+        <state line="76" column="36" selection-start="1635" selection-end="1635" vertical-scroll-proportion="0.973913">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/beans/Check2thAuthFilter.java">
+    <entry file="jar://$PROJECT_DIR$/lib/org.springframework.jdbc-3.0.5.RELEASE.jar!/org/springframework/jdbc/core/simple/SimpleJdbcTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+        <state line="71" column="59" selection-start="5097" selection-end="5097" vertical-scroll-proportion="0.20856611">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/crebas.sql">
+    <entry file="file://$PROJECT_DIR$/web/users/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="400" selection-end="400" vertical-scroll-proportion="-4.124555">
+        <state line="56" column="60" selection-start="2138" selection-end="2138" vertical-scroll-proportion="-30.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/global.conf">
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/CutBaseInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="46" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+        <state line="17" column="4" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/sunrise-spring-ext-1.0.0.jar!/com/sunrise/springext/dao/IBaseDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="9" selection-start="284" selection-end="284" vertical-scroll-proportion="0.22346368">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/health_sql.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="20" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="60" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1132#1969#0" expanded="true" />
+            <element signature="e#1466#1754#0" expanded="true" />
+            <element signature="e#1958#1959#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/CutStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="35" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="50" selection-start="666" selection-end="666" vertical-scroll-proportion="-0.32142857">
+        <state line="36" column="43" selection-start="1602" selection-end="1602" vertical-scroll-proportion="-6.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="37" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="52" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="665" selection-end="665" vertical-scroll-proportion="-11.25">
+        <state line="119" column="68" selection-start="3414" selection-end="3414" vertical-scroll-proportion="-4.8867927">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java">
+    <entry file="file://$PROJECT_DIR$/web/left.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="64" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+        <state line="12" column="44" selection-start="484" selection-end="484" vertical-scroll-proportion="-6.428571">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/CutMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="51" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="76" column="48" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1607#1832#0" expanded="true" />
+            <element signature="e#1825#1826#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jboss-web.xml">
-      <provider editor-type-id="com.intellij.javaee.oss.jboss.editor.JBossWebRootProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/global.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="46" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="26" selection-start="902" selection-end="902" vertical-scroll-proportion="-4.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/ds-default.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="28" selection-start="3520" selection-end="3520" vertical-scroll-proportion="-4.857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="115" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/oracle-ds.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="29" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/org.springframework.web.servlet-3.0.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="3250" selection-end="3250" vertical-scroll-proportion="0.8134328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/app2-servlet.xml">
-      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="58" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.18772563">
+        <state line="54" column="43" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.3652174">
           <folding />
         </state>
       </provider>

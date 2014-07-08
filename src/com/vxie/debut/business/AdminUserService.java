@@ -9,6 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.vxie.debut.model.AdminUser;
 import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
@@ -19,14 +20,13 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vxie.debut.model.CutUser;
 import com.vxie.debut.utils.Constants;
 import com.vxie.debut.utils.MD5Encoder;
 import com.sunrise.springext.support.json.JSONException;
 import com.sunrise.springext.support.json.JSONUtil;
 
 @Service
-public class CutUserService extends BaseService {
+public class AdminUserService extends BaseService {
 	
 	@Autowired
 	private DictService dictService;
@@ -56,32 +56,21 @@ public class CutUserService extends BaseService {
 	}
 
 	@Transactional
-	public void save(CutUser cutUser) {
-		dao.saveOrUpdate(cutUser);
-		
-		dao.getSimpleJdbcTemplate().update("delete from cut_user_role where user_id=?", cutUser.getUserId());
-		
-		List<Object[]> args = new ArrayList<Object[]>();
-		for(String roleId: cutUser.getUserRoles().split(",")){
-			args.add(new Object[]{cutUser.getUserId(), Long.parseLong(roleId)});
-		}
-		
-		dao.getSimpleJdbcTemplate().batchUpdate("insert into cut_user_role(user_id, role_id) values(?, ?)", args);
+	public void save(AdminUser adminUser) {
+		dao.saveOrUpdate(adminUser);
 	}
 
 	@Transactional
 	public void del(long id) {
-		dao.getSimpleJdbcTemplate().update("delete from cut_step_user where user_id=?", id);
-		dao.getSimpleJdbcTemplate().update("delete from cut_user_role where user_id=?", id);
-		dao.delete(CutUser.class, id);
+		dao.delete(AdminUser.class, id);
 	}
 
 	@Transactional
-	public int changePwd(Long cutUserId, String oldUserPwd, String newUserPwd) {
-		List<CutUser> cutUsers = dao.find(CutUser.class, "from CutUser u where u.userId=? and u.userPassword=?", cutUserId, MD5Encoder.encode(oldUserPwd));
-		if(cutUsers.size() == 1){
-			cutUsers.get(0).setUserPassword(MD5Encoder.encode(newUserPwd));
-			dao.save(cutUsers.get(0));
+	public int changePwd(Long userId, String oldpwd, String newpwd) {
+		List<AdminUser> adminUsers = dao.find(AdminUser.class, "from AdminUser u where u.id=? and u.password=?", userId, MD5Encoder.encode(oldpwd));
+		if(adminUsers.size() == 1){
+			adminUsers.get(0).setPassword(MD5Encoder.encode(newpwd));
+			dao.save(adminUsers.get(0));
 			return 0;
 		}
 		return 1;
@@ -115,13 +104,13 @@ public class CutUserService extends BaseService {
 						
 						if(loginName.equals(XLS_END_FLAG)) break;
 						
-						CutUser cutUser = new CutUser();
-						cutUser.setUserLoginName(loginName);
-						cutUser.setUserRealName(c[1].getContents().trim());
-						cutUser.setUserPassword(DEFAULT_PWD);
-						cutUser.setUserRoles(c[2].getContents().trim());
+						AdminUser adminUser = new AdminUser();
+//						adminUser.setUserLoginName(loginName);
+//						adminUser.setUserRealName(c[1].getContents().trim());
+//						adminUser.setUserPassword(DEFAULT_PWD);
+//						adminUser.setUserRoles(c[2].getContents().trim());
 						try {
-							this.save(cutUser);
+							this.save(adminUser);
 							s++;
 						} catch (Exception e) {
 							e.printStackTrace();

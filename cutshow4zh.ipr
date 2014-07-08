@@ -4,7 +4,7 @@
     <defaultAnt bundledAnt="true" />
   </component>
   <component name="ArtifactManager">
-    <artifact type="exploded-war" build-on-make="true" name="Healthy">
+    <artifact type="exploded-war" name="Healthy">
       <output-path>$PROJECT_DIR$/out/artifacts/Healthy.war</output-path>
       <root id="root">
         <element id="directory" name="WEB-INF">

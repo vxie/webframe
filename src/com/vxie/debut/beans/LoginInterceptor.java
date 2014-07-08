@@ -13,7 +13,7 @@ import com.sunrise.springext.utils.Encode;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 	private final Logger logger = LoggerFactory.getLogger(getClass());
-	private static final String sessionValidMsg = Encode.escape("Session已过期或服务器已重启, 请重新登录!");
+	private static final String sessionValidMsg = Encode.escape("会话已经过期, 请重新登录!");
 	@Override
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {

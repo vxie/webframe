@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 public class ImportService extends BaseService {
 	
 	@Autowired
-	private CutUserService cutUserService;
+	private AdminUserService adminUserService;
 	@Autowired
 	private CutTaskService cutTaskService;
 	@Autowired
@@ -40,7 +40,7 @@ public class ImportService extends BaseService {
 	private String importData(String userId, Workbook book, String subject) throws Exception {
 		String dataCount = "0";
 		if("user".equals(subject)){ //用户
-			dataCount = cutUserService.importCutUser(book);
+			dataCount = adminUserService.importCutUser(book);
 		} else if("task".equals(subject)){//任务
 			dataCount = cutTaskService.importTask(book);
 		} else if("step".equals(subject)){//步骤

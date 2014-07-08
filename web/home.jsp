@@ -128,7 +128,7 @@
 						<iframe name="menuInfo" id="leftInfo" frameborder="0" framespacing="0" marginwidth="0" marginheight="0" src="/left" style="height: 100%; visibility: inherit; width: 140px; z-index: 2"></iframe>
 			  		</td>
 			  		<td bgColor="#dbe3f7" style="width: 10pt">
-              			<img id="switch_left_point" onclick="switchBar('left')" style="cursor: hand;" src="/resources/images/nav2.png"/ border="0">
+              			<img id="switch_left_point" onclick="switchBar('left')" style="cursor: hand;" src="/resources/images/nav2.png" border="0">
 			   		</td>
 					<td style="width: 100%">
                
