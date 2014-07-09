@@ -19,24 +19,39 @@
  <table width="140" border="0" bgcolor="#9aadce">
   <tr>
     <td bgcolor="#FFFFFF">
-    <table width="100%" border="0" cellpadding="4" cellspacing="1">
-        <tr>
-            <td colspan="2" bgcolor="#dbe3f7">首页(${adminUser.name})</td>
-        </tr>
+        <table width="100%" border="0" cellpadding="4" cellspacing="1">
+            <tr>
+                <td colspan="2" bgcolor="#dbe3f7">首页(${adminUser.name})</td>
+            </tr>
 
-        <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
-            <td class="menuMouseOver" id="firstRow">4</td>
-            <td>
-                <a href="javascript:alert('营养师管理');" onclick="domenu(this.parentNode.parentNode)"
-                   target="contentInfo">营养师管理</a>
-            </td>
-        </tr>
-        <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
-            <td class="menuMouseOver">&nbsp;</td>
-            <td><a href="javascript:alert('会员管理');" onclick="domenu(this.parentNode.parentNode)"
-                   target="contentInfo">会员管理</a></td>
-        </tr>
-    </table>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver" id="firstRow">4</td>
+                <td>
+                    <a href="/user/list" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">营养师管理</a>
+                </td>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('会员管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">会员管理</a></td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="4" cellspacing="1">
+            <tr>
+                <td colspan="2" bgcolor="#dbe3f7">参考菜单</td>
+            </tr>
+
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">4</td>
+                <td>
+                    <a href="/role/list" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">角色管理</a>
+                </td>
+            </tr>
+
+        </table>
+
     </td>
   </tr>
 </table>

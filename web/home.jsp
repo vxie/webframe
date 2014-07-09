@@ -96,10 +96,9 @@
 		var barflg = "";
 		var height = 0;
 		$(document).ready(function(){
-			switchBar('left');
-			switchBar('top');
+//			switchBar('left');
+//			switchBar('top');
 			height = document.body.offsetHeight;
-			//alert("home:"+document.body.offsetHeight);
 		});
 		</script>
 	</head>
@@ -118,7 +117,9 @@
   				</table>
  		</tr>
  		<tr>
-  			<td bgColor="#dbe3f7" style="height: 2pt" width="100%" align="middle"><img id="switch_top_point" onclick="switchBar('top')" style="cursor: hand;" src="/resources/images/nav0.png"/ border="0"></td>
+  			<td bgColor="#dbe3f7" style="height: 2pt" width="100%" align="middle">
+                  <%--<img id="switch_top_point" onclick="switchBar('top')" style="cursor: hand;" src="/resources/images/nav0.png" border="0">--%>
+              </td>
  		</tr>
  		<tr>
 	  		<td width="100%" height="100%">
@@ -130,9 +131,9 @@
 			  		<td bgColor="#dbe3f7" style="width: 10pt">
               			<img id="switch_left_point" onclick="switchBar('left')" style="cursor: hand;" src="/resources/images/nav2.png" border="0">
 			   		</td>
-					<td style="width: 100%">
+					<td style="width: 100%; padding: 5px;">
                
-						<iframe name="contentInfo" id="contentInfo" frameBorder="0" scrolling="no" src="/progress/list" style="height: 100%; visibility: inherit; width: 100%; z-index: 1"></iframe>
+						<iframe name="contentInfo" id="contentInfo" frameBorder="0" scrolling="no" src="/user/list" style="height: 100%; visibility: inherit; width: 100%; z-index: 1"></iframe>
 					 
 					</td>
 				</tr>

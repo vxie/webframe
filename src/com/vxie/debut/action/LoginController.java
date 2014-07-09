@@ -44,9 +44,8 @@ public class LoginController extends AbstractController {
 			adminUser = (AdminUser)res;
 			adminUser.setPassword(null);
 			
-			session.removeAttribute("userNotLogin");
 			session.setAttribute("adminUser", adminUser);
-			session.setAttribute("isAdmin", "0".equals(adminUser.getRole()));
+			session.setAttribute("isSA", adminUser.getRole() == 0);
 			
 			String clientIP = request.getRemoteAddr();
 			log.info("user - {} accessed! IP - {}", adminUser.getNumber(), clientIP);
@@ -59,22 +58,20 @@ public class LoginController extends AbstractController {
 		}
 	}
 	
-//	@RequestMapping(value="left")
-//	public String left(HttpSession session, ModelMap map){
+	@RequestMapping(value="left")
+	public String left(HttpSession session, ModelMap map){
 //		Long userId = getSessionLong(session, "cutUserId");
 //		List<CutMenu> list = loginService.getUserMenus(userId);
 //		map.put("menus", list);
-////		session.setAttribute("isAdmin", cutLoginService.isAdmin(userId, list.size()));
-//		return "left";
-//	}
+//		session.setAttribute("isAdmin", cutLoginService.isAdmin(userId, list.size()));
+		return "left";
+	}
 	
 	@RequestMapping(value="logout")
 	@ResponseBody
 	public String logout(HttpSession session){
-		session.removeAttribute("cutUserId");
-		session.removeAttribute("cutUser");
-		session.removeAttribute("isAdmin");
-		session.setAttribute("userNotLogin", 1);
+		session.removeAttribute("adminUser");
+		session.removeAttribute("isSA");
 		return "0";
 	}
 	

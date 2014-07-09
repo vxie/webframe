@@ -69,7 +69,7 @@ function $AjaxPage(tab, url, pageSize){
     this._notFound = function(f){
     	var row = this._colSpan();
 		row.style.color = "green";
-		row.cells[0].innerText = "Not Found!";
+		row.cells[0].innerText = "查询结果为空";
 		if(typeof(f)=="function"){
 			f();
 		}

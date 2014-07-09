@@ -21,7 +21,7 @@ import com.sunrise.sqlpage.intf.EntitiesHandler;
 public class AjaxPageService extends BaseService {
 	
 	public String userPage(HttpServletRequest request) throws Exception {
-		String sql = "select number, name, '' areaName, '' action, id  from t_admin where 1=1 ";
+		String sql = "select number, name, '' areaName, '' action, id  from t_admin where  role <> 0";
 		
 		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
 		

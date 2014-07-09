@@ -27,12 +27,12 @@ td{ font:Arial, Helvetica, sans-serif; font-size:12px}
 		<tr >
 		  <td width="439" align="left"  class="query01_td_text">&nbsp;</td>
 	      <td width="50" align="left"  class="query01_td_text"><div align="right">帐号</div></td>
-	      <td align="left"  class="query01_td_text"><input name="userLoginName" id="userLoginName" type="text" value="" size="20" class="input"/></td>
+	      <td align="left"  class="query01_td_text"><input name="number" type="text" value="" size="20" class="input"/></td>
 		</tr>
 		<tr>
 		  <td align="left"  class="query01_td_text"><label></label></td>
 	      <td align="left"  class="query01_td_text"><div align="right">密码</div></td>
-	      <td align="left"  class="query01_td_text"><input name="userPassword" id="userPassword" type="password" value="" size="20" class="input"/></td>
+	      <td align="left"  class="query01_td_text"><input name="password" type="password" value="" size="20" class="input"/></td>
 	  </tr>
 		<tr >
 		  <td colspan="2" align="left">&nbsp;</td>

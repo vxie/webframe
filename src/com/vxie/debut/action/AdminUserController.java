@@ -76,15 +76,15 @@ public class AdminUserController extends AbstractController {
 
 	@RequestMapping(value = "/changepwd/save")
 	@ResponseBody
-	public String saveChangePwd(HttpSession session, String oldUserPwd,
-			String newUserPwd) {
+	public String saveChangePwd(HttpSession session, String oldpwd,
+			String newpwd) {
 		int n = 1;
 		AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");
 		if (adminUser != null) {
-			n = adminUserService.changePwd(adminUser.getUserId(), oldUserPwd,
-					newUserPwd);
+			n = adminUserService.changePwd(adminUser.getId(), oldpwd,
+					newpwd);
 			if (n == 0)
-				adminUser.setUserPassword(newUserPwd);
+				adminUser.setPassword(newpwd);
 		}
 		return n + "";
 	}

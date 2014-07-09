@@ -29,10 +29,10 @@ public class AdminUser implements RowEntityMapper {
 	private String password;
 	
 	@Column(name="areaId")
-	private String areaId;
+	private Integer areaId;
 
     @Column(name = "role")
-    private String role;
+    private Integer role;
 
 
     public Long getId() {
@@ -67,19 +67,19 @@ public class AdminUser implements RowEntityMapper {
         this.password = password;
     }
 
-    public String getAreaId() {
+    public Integer getAreaId() {
         return areaId;
     }
 
-    public void setAreaId(String areaId) {
+    public void setAreaId(Integer areaId) {
         this.areaId = areaId;
     }
 
-    public String getRole() {
+    public Integer getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Integer role) {
         this.role = role;
     }
 

@@ -4,12 +4,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.vxie.debut.model.AdminUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.vxie.debut.utils.Constants;
 import com.sunrise.springext.utils.Encode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
 	private final Logger logger = LoggerFactory.getLogger(getClass());
@@ -18,31 +22,32 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request,
 			HttpServletResponse response, Object handler) throws Exception {
 		HttpSession session = request.getSession();
-        
-	    if(request.getRequestedSessionId()==null){//first login
-	    	session.setAttribute("userNotLogin", 1);
-	    	return super.preHandle(request, response, handler);
+        String contextPath = request.getContextPath();
+        List<String> loginURI = new ArrayList<String>();
+        loginURI.add(contextPath);
+        loginURI.add(contextPath + "/");
+        loginURI.add(contextPath + "/login");
+        loginURI.add(contextPath + "/login/");
+
+        if (request.getRequestedSessionId() == null || loginURI.contains(request.getRequestURI())) {
+            return super.preHandle(request, response, handler);
         }
-	    
-        if(session.getAttribute("userNotLogin")==null && session.getAttribute("cutUserId")==null){
-			session.setAttribute("userNotLogin", 1);
+
+        if (session.getAttribute("adminUser") == null
+                || !session.getAttribute("adminUser").getClass().equals(AdminUser.class)) {
 			String url = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort() + request.getContextPath() + "/login";
 			//response.setContentType("text/html; charset=UTF-8");
 			response.getOutputStream().print("<script>alert(unescape('"+sessionValidMsg+"'));window.top.location.href='"+url+"'</script>");
 			return false;
         }
-        
-        String url = request.getRequestURI();
-        for(String unfilterableUrl : Constants.unfilterableUrl){
-			if(url.startsWith(unfilterableUrl) || url.equals("/")){
-				return super.preHandle(request, response, handler);
-			}
-		}
-        
-        String queryString = request.getQueryString();
-		queryString = queryString == null ? "" : "?" + queryString;
-		logger.info("userId : " + session.getAttribute("cutUserId") + "[" + request.getRemoteAddr() + "] |URL:" + url + queryString);
-		
+//
+//        String url = request.getRequestURI();
+//        for(String unfilterableUrl : Constants.unfilterableUrl){
+//			if(url.startsWith(unfilterableUrl) || url.equals("/")){
+//				return super.preHandle(request, response, handler);
+//			}
+//		}
+
 		return super.preHandle(request, response, handler);
 	}
 	
