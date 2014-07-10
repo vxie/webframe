@@ -65,16 +65,15 @@ public class AdminUserService extends BaseService {
 		dao.delete(AdminUser.class, id);
 	}
 
-	@Transactional
-	public int changePwd(Long userId, String oldpwd, String newpwd) {
-		List<AdminUser> adminUsers = dao.find(AdminUser.class, "from AdminUser u where u.id=? and u.password=?", userId, MD5Encoder.encode(oldpwd));
-		if(adminUsers.size() == 1){
-			adminUsers.get(0).setPassword(MD5Encoder.encode(newpwd));
-			dao.save(adminUsers.get(0));
-			return 0;
-		}
-		return 1;
-	}
+    @Transactional
+    public void changePwd(Long userId, String oldpwd, String newpwd) {
+        List<AdminUser> adminUsers = dao.find(AdminUser.class, "from AdminUser u where u.id=? and u.password=?", userId, MD5Encoder.encode(oldpwd));
+        if (adminUsers.isEmpty()) {
+            throw new RuntimeException("旧密码错误，请重新输入旧密码");
+        }
+        adminUsers.get(0).setPassword(MD5Encoder.encode(newpwd));
+        dao.save(adminUsers.get(0));
+    }
 	
 	public Boolean hasLoginName(Long userid, String number){
 		if(userid != null){

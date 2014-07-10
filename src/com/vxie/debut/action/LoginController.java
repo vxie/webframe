@@ -43,7 +43,7 @@ public class LoginController extends AbstractController {
 		if(res.getClass().equals(AdminUser.class)) {
 			adminUser = (AdminUser)res;
 			adminUser.setPassword(null);
-			
+
 			session.setAttribute("adminUser", adminUser);
 			session.setAttribute("isSA", adminUser.getRole() == 0);
 			

@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -52,36 +52,7 @@
 		function closeModalDlg(){
 			JQueryXDialog.Close();
 		}
-		<c:if test="${isAdmin==1}">
-		//割接管理系统数据库初始化
-		function init_sys(){
-			if(!window.confirm("你确定要初始化本系统吗(初始化后不可恢复)?")){
-			    return;
-			}
-			$.post('/init', function(s){
-				if(s=="0"){
-					alert("操作成功!");
-					window.top.location.href = "/login";
-				}else{
-					alert("错误：你无权执行该项操作!");
-				}
-			});
-		}
-		
-		function clear_zero(){
-			if(!window.confirm("你确定要对进度数据清零吗(清零后不可恢复)?")){
-			    return;
-			}
-			$.post('/zero', function(s){
-				if(s=="0"){
-					alert("操作成功!");
-					window.top.location.href = "/login";
-				}else{
-					alert("错误：你无权执行该项操作!");
-				}
-			});
-		}
-		</c:if>
+
 		
 		function logout(){
 			$.post('/logout', function(s){
@@ -109,8 +80,7 @@
   				<table style="width:100%; font-family: Arial;font-size: 12px;">
   					<tr valign="bottom">
   						<td><img src="/resources/images/top_bg.jpg" border="0"/></td>
-  					    <c:if test="${isAdmin==1}"><td align="right"><a href="#" style="color:#fff;display:none;" onclick="init_sys()" >系统初始化</a></td></c:if>
-  					    <c:if test="${isAdmin==1}"><td align="right"><a href="#" style="color:#fff;" onclick="clear_zero()">进度清零</a></td></c:if>
+                        <td align="left" style="color:#fff;">${adminUser.number}，您好！</td>
   						<td align="right"><a href="#" style="color:#fff;" onclick="changePwdDlg()">修改密码</a></td>
   						<td align="right"><a href="#" onclick="logout()" style="color:#fff;">退出</a>&nbsp;</td>
   					</tr>

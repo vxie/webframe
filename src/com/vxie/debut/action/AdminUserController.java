@@ -115,16 +115,21 @@ public class AdminUserController extends AbstractController {
 	@ResponseBody
 	public String saveChangePwd(HttpSession session, String oldpwd,
 			String newpwd) {
-		int n = 1;
-		AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");
-		if (adminUser != null) {
-			n = adminUserService.changePwd(adminUser.getId(), oldpwd,
-					newpwd);
-			if (n == 0)
-				adminUser.setPassword(newpwd);
-		}
-		return n + "";
-	}
+        HashMap<String, String> result = new HashMap<String, String>();
+        result.put("SUCCESS", "TRUE");
+        result.put("MSG", "succeed");
+        try {
+            AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");
+            if (adminUser != null) {
+                adminUserService.changePwd(adminUser.getId(), oldpwd, newpwd);
+            }
+        } catch (Exception e) {
+            log.error("AdminUserController.saveChangePwd error", e);
+            result.put("SUCCESS", "FALSE");
+            result.put("MSG", "密码修改失败：" + e.getMessage());
+        }
+        return JSONObject.fromObject(result).toString();
+    }
 
 	@RequestMapping(value = "/import")
 	public String importXls(HttpServletRequest req) {

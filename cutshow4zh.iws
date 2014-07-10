@@ -19,16 +19,16 @@
     <option name="historyRevisionsNumber" value="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b495909d-c17f-43cd-849e-a0e99246efba" name="Default" comment="">
+    <list default="true" id="b495909d-c17f-43cd-849e-a0e99246efba" name="Default" comment="t_plan，t_space 表增加字段">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.ipr" afterPath="$PROJECT_DIR$/cutshow4zh.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cutshow4zh.iws" afterPath="$PROJECT_DIR$/cutshow4zh.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java" afterPath="$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/css/css.css" afterPath="$PROJECT_DIR$/web/resources/css/css.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/home.jsp" afterPath="$PROJECT_DIR$/web/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/users/changepwd.jsp" afterPath="$PROJECT_DIR$/web/users/changepwd.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/users/input.jsp" afterPath="$PROJECT_DIR$/web/users/input.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/users/list.jsp" afterPath="$PROJECT_DIR$/web/users/list.jsp" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
@@ -92,28 +92,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="left.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/left.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="71" selection-start="627" selection-end="627" vertical-scroll-proportion="-4.821429">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="list.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/users/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="39" selection-start="1895" selection-end="1895" vertical-scroll-proportion="-10.714286">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="common.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/resources/js/common.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="43" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="29" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-3.607143">
+            <state line="106" column="43" selection-start="3775" selection-end="3775" vertical-scroll-proportion="-56.785713">
               <folding />
             </state>
           </provider>
@@ -122,20 +113,30 @@
       <file leaf-file-name="AdminUserController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="38" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.0">
+            <state line="112" column="49" selection-start="3926" selection-end="3926" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1718#1734#0" expanded="true" />
                 <element signature="e#2430#2446#0" expanded="true" />
+                <element signature="e#4123#4139#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java">
+      <file leaf-file-name="AdminUserService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="31" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
+            <state line="67" column="24" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changepwd.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/users/changepwd.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="51" selection-start="757" selection-end="757" vertical-scroll-proportion="0.46617916">
               <folding />
             </state>
           </provider>
@@ -144,34 +145,7 @@
       <file leaf-file-name="input.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/users/input.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="47" selection-start="2023" selection-end="2023" vertical-scroll-proportion="-6.964286">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="css.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/resources/css/css.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="38" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.6174377">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="set.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/baseinfo/set.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="71" selection-start="681" selection-end="681" vertical-scroll-proportion="-2.7142856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.validate.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/resources/js/validate/jquery.validate.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="253" column="40" selection-start="7456" selection-end="7456" vertical-scroll-proportion="0.0">
+            <state line="65" column="45" selection-start="2519" selection-end="2519" vertical-scroll-proportion="-6.142857">
               <folding />
             </state>
           </provider>
@@ -180,7 +154,34 @@
       <file leaf-file-name="jquery.xdialog.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/js/dlg/jquery.xdialog.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="41" selection-start="6426" selection-end="6426" vertical-scroll-proportion="0.0">
+            <state line="168" column="36" selection-start="6403" selection-end="6403" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="64" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminUser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="40" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/home.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="30" selection-start="1552" selection-end="1552" vertical-scroll-proportion="-12.857142">
               <folding />
             </state>
           </provider>
@@ -202,22 +203,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/vxie/debut/business/LoginService.java" />
-        <option value="$PROJECT_DIR$/web/left.jsp" />
-        <option value="$PROJECT_DIR$/docs/readme.txt" />
         <option value="$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java" />
         <option value="$PROJECT_DIR$/src/com/vxie/debut/beans/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
-        <option value="$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java" />
         <option value="$PROJECT_DIR$/web/resources/js/ajaxpage-2.0.0.js" />
-        <option value="$PROJECT_DIR$/web/home.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/ds-default.xml" />
         <option value="$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java" />
+        <option value="$PROJECT_DIR$/web/resources/css/css.css" />
+        <option value="$PROJECT_DIR$/web/users/list.jsp" />
+        <option value="$PROJECT_DIR$/docs/health_sql.sql" />
+        <option value="$PROJECT_DIR$/web/left.jsp" />
+        <option value="$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java" />
         <option value="$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java" />
         <option value="$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java" />
         <option value="$PROJECT_DIR$/web/users/input.jsp" />
-        <option value="$PROJECT_DIR$/web/users/list.jsp" />
-        <option value="$PROJECT_DIR$/web/resources/css/css.css" />
+        <option value="$PROJECT_DIR$/web/home.jsp" />
+        <option value="$PROJECT_DIR$/web/users/changepwd.jsp" />
       </list>
     </option>
   </component>
@@ -349,7 +350,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="debut" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cutshow4zh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webframe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -804,7 +851,15 @@
       <created>1404967242292</created>
       <updated>1404967242292</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="t_admin 增删查改">
+      <created>1404985109713</created>
+      <updated>1404985109713</updated>
+    </task>
+    <task id="LOCAL-00039" summary="t_plan，t_space 表增加字段">
+      <created>1404991038198</created>
+      <updated>1404991038198</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -848,7 +903,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18100649" sideWeight="0.51446944" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13474026" sideWeight="0.45980707" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5385852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -895,7 +950,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用 用户管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="t_plan，t_space 表增加字段" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -924,6 +979,8 @@
     <MESSAGE value="admin user" />
     <MESSAGE value="使用t_admin登录成功" />
     <MESSAGE value="使用 用户管理" />
+    <MESSAGE value="t_admin 增删查改" />
+    <MESSAGE value="t_plan，t_space 表增加字段" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -967,118 +1024,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AjaxPageController.java">
+    <entry file="file://$PROJECT_DIR$/web/resources/css/css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="59" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+        <state line="137" column="38" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AjaxPageService.java">
+    <entry file="file://$PROJECT_DIR$/docs/initdb_mysql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="30" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/cglib-2.1.3.jar!/net/sf/cglib/proxy/MethodProxy.class">
+    <entry file="file://$PROJECT_DIR$/docs/health_sql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="28" selection-start="1333" selection-end="1333" vertical-scroll-proportion="0.7821229">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/json-lib-2.3-jdk13.jar!/net/sf/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="155" selection-end="155" vertical-scroll-proportion="0.11173184">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AbstractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="24" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="31" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="38" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1718#1734#0" expanded="true" />
-            <element signature="e#2430#2446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="29" selection-start="1411" selection-end="1411" vertical-scroll-proportion="-3.607143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/dlg/jquery.xdialog.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="41" selection-start="6426" selection-end="6426" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/validate/jquery.validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="40" selection-start="7456" selection-end="7456" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="43" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+        <state line="150" column="35" selection-start="4787" selection-end="4787" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/baseinfo/set.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="71" selection-start="681" selection-end="681" vertical-scroll-proportion="-2.7142856">
+        <state line="16" column="62" selection-start="956" selection-end="956" vertical-scroll-proportion="-5.392857">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/users/input.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AjaxPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="47" selection-start="2023" selection-end="2023" vertical-scroll-proportion="-6.964286">
+        <state line="14" column="13" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/model/AdminUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="40" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/sunrise-spring-ext-1.0.0.jar!/com/sunrise/springext/dao/IBaseDao.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="26" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.3482309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/business/AdminUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="24" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/AdminUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="49" selection-start="3926" selection-end="3926" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1718#1734#0" expanded="true" />
+            <element signature="e#2430#2446#0" expanded="true" />
+            <element signature="e#4123#4139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/left.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="71" selection-start="627" selection-end="627" vertical-scroll-proportion="-4.821429">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/users/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="39" selection-start="1895" selection-end="1895" vertical-scroll-proportion="-10.714286">
+        <state line="106" column="43" selection-start="3775" selection-end="3775" vertical-scroll-proportion="-56.785713">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/css.css">
+    <entry file="file://$PROJECT_DIR$/web/resources/js/dlg/jquery.xdialog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="38" selection-start="2217" selection-end="2217" vertical-scroll-proportion="0.6174377">
+        <state line="168" column="36" selection-start="6403" selection-end="6403" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vxie/debut/action/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="64" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/users/input.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="45" selection-start="2519" selection-end="2519" vertical-scroll-proportion="-6.142857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="30" selection-start="1552" selection-end="1552" vertical-scroll-proportion="-12.857142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/users/changepwd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="51" selection-start="757" selection-end="757" vertical-scroll-proportion="0.46617916">
           <folding />
         </state>
       </provider>
