@@ -6,65 +6,58 @@
 		<link href="/resources/css/css.css" type="text/css" rel="stylesheet" />
   		<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
   		<script src="/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+               $("#p_areaid").val("${currUser.areaId}");
+            });
+
+            function Ok() {
+                if (!$('#form1').validate({
+                    rules:{
+                        userRoles:{
+                            required:true,
+                            minlength:1
+                        }
+                    }
+                }).form()) return;
+                $.post('/user/edit/check', {userid:$("#p_userid").val(), number:$("#p_number").val()}, function (s) {
+                    if (s == "0") {
+                        $.post('/user/edit/save', $("form").serialize(), parent.JQueryXDialog.fnResult);
+                    } else {
+                        alert("错误:该手机号码已经存在!");
+                        $("#p_number").focus();
+                    }
+                });
+            }
+
+        </script>
 	</head>
 	<body>
 	<form id="form1" method="post" action="#">
-		<input type="hidden" id="userId" name="userId" value="${oneCutUser.userId}">
+		<input type="hidden" id="p_userid" name="id" value="${currUser.id}">
 		<table width="100%" border="0" cellpadding="2" cellspacing="1">
+            <tr>
+                <td class="popTitleMust" width="12%">手机号码:</td>
+                <td class="popConent">
+                    <input type="text" id="p_number" name="number" value="${currUser.number}" class="required">
+                </td>
+            </tr>
 		    <tr>
-				<td class="popTitleMust" width="12%">用户名称:</td>
+				<td class="popTitleMust" width="12%">姓名:</td>
 				<td class="popConent">
-					<input type="text" id="userRealName" name="userRealName" value="${oneCutUser.userRealName}" class="required">
+					<input type="text" id="p_name" name="name" value="${currUser.name}" class="required">
 				</td>
 			</tr>
 		    <tr>
-				<td class="popTitleMust" width="12%">登录账号:</td>
+				<td class="popTitleMust" width="12%">地区:</td>
 				<td class="popConent">
-					<input type="text" id="userLoginName" name="userLoginName" value="${oneCutUser.userLoginName}" class="required">
+					<select id="p_areaid" name="areaid">
+                        <option value="1">测试地区</option>
+					</select>
 				</td>
 			</tr>
-		    <tr>
-				<td class="popTitle" width="12%">用户信息:</td>
-				<td class="popConent">
-					<textarea rows="10" cols="60" name="userMemo">${oneCutUser.userMemo}</textarea>
-				</td>
-			</tr>
-		    <tr>
-				<td class="popTitleMust" width="12%">用户角色:</td>
-				<td>
-					<table width="100%" height="50%" border="0" cellpadding="2" cellspacing="1">
-						<c:forEach var="e" items="${roles}">
-						<tr><td>
-							<label for="role_${e.key}"><input type="checkbox" name="userRoles" id="role_${e.key}" class="chkInput" value="${e.key}"  <c:if test="${e.value[1] > '0'}">checked='true'</c:if>/>${e.value[0]}</label>
-						</td></tr>
-						</c:forEach>
-					</table>
-					<label for="userRoles" class="error" style="display:none;">Please select at least one role.</label>
-				</td>
-			</tr>
+
 		</table>
     </form>
 	</body>
-<script type="text/javascript">
-	function Ok(){
-		if(!$('#form1').validate({
-			rules: {
-				userRoles: {
-					required: true,
-					minlength: 1
-				}
-			}
-		}).form()) return;
-		
-		$.post('/user/edit/check', {userId: $("#userId").val(),userLoginName:$("#userLoginName").val()}, function(s){
-			if(s=="0"){
-				$.post('/user/edit/save', $("form").serialize(), parent.JQueryXDialog.fnResult);
-			}else{
-				alert("错误: 该用户登录名称已经存在!");
-				$("#userLoginName").focus();
-			}
-		});
-	}
-
-</script>
 </html>

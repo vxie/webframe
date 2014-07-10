@@ -76,15 +76,17 @@ public class AdminUserService extends BaseService {
 		return 1;
 	}
 	
-	public Boolean hasLoginName(Long userId, String userLoginName){
-		if(userId != null && userId > 0L){
-			return dao.getSimpleJdbcTemplate().queryForInt("select count(user_id) from cut_user where user_id<>? and user_login_name=?", userId, userLoginName) > 0;			
+	public Boolean hasLoginName(String userid, String number){
+		if(userid != null && userid.length() > 0){
+            //编辑用户时
+			return dao.getSimpleJdbcTemplate().queryForInt("select count(id) from t_admin where id <>? and number=?", userid, number) > 0;
 		}
-		return dao.getSimpleJdbcTemplate().queryForInt("select count(user_id) from cut_user where user_login_name=?", userLoginName) > 0;
+        //新建用户时
+		return dao.getSimpleJdbcTemplate().queryForInt("select count(id) from t_admin where number=?", number) > 0;
 	}
 
     public Long genUserId() {
-        return dao.getSimpleJdbcTemplate().queryForInt("select max(user_id) from cut_user") + 1L;
+        return dao.getSimpleJdbcTemplate().queryForInt("select max(id) from t_admin") + 1L;
     }
 
     public String handleXlsFile(File file) throws JSONException {

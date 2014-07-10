@@ -25,9 +25,9 @@ public class AjaxPageService extends BaseService {
 		
 		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
 		
-		page.registerQueryParams("param_number", "number = ?", String.class);
-		page.registerQueryParams("param_name", "name like ?", String.class);
-		page.registerQueryParams("param_areaId", "areaId = ?", String.class);
+		page.registerQueryParams("number", "number = ?", String.class);
+		page.registerQueryParams("name", "name like ?", String.class);
+		page.registerQueryParams("areaid", "areaid = ?", String.class);
 
 		return page.generatePageContent(request, AdminUser.class, new EntitiesHandler<AdminUser>(){
         	public List<AdminUser> handle(List<AdminUser> rows) throws Exception {

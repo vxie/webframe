@@ -38,16 +38,15 @@ public class AdminUserController extends AbstractController {
 
 	@RequestMapping(value = "/edit/{id}")
 	public String edit(ModelMap map, @PathVariable long id) {
-		map.put("oneCutUser", id == 0 ? new AdminUser() : adminUserService.getDao()
+		map.put("currUser", id == 0 ? new AdminUser() : adminUserService.getDao()
 				.get(AdminUser.class, id));
-		map.put("roles", adminUserService.getRoles(id));
 		return "users/input";
 	}
 
 	@RequestMapping(value = "/edit/check")
 	@ResponseBody
-	public String check(Long userId, String userLoginName) {
-		return adminUserService.hasLoginName(userId, userLoginName) ? "1" : "0";
+	public String check(String userid, String number) {
+		return adminUserService.hasLoginName(userid, number) ? "1" : "0";
 	}
 
 	@SuppressWarnings("static-access")
@@ -55,9 +54,21 @@ public class AdminUserController extends AbstractController {
 	@ResponseBody
 	public String save(AdminUser adminUser) {
         if(adminUser.getId() == null) {
+            //新增
             adminUser.setId(adminUserService.genUserId());
+            adminUser.setPassword(adminUserService.DEFAULT_PWD);
+            adminUser.setRole(1);
+        } else {
+            //编辑
+            AdminUser inuser = adminUserService.getDao().get(AdminUser.class, adminUser.getId());
+            if(inuser != null) {
+                inuser.setNumber(adminUser.getNumber());
+                inuser.setName(adminUser.getName());
+                inuser.setAreaId(adminUser.getAreaId());
+                adminUser = inuser;
+            }
         }
-		adminUser.setPassword(adminUserService.DEFAULT_PWD);
+
 		adminUserService.save(adminUser);
 		return "0";
 	}
