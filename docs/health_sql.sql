@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50530
 File Encoding         : 65001
 
-Date: 2014-07-07 15:52:30
+Date: 2014-07-10 19:04:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,11 +41,14 @@ CREATE TABLE `t_area` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL COMMENT '地区的名称',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of t_area
 -- ----------------------------
+INSERT INTO `t_area` VALUES ('1', '广东');
+INSERT INTO `t_area` VALUES ('2', '湖南');
+INSERT INTO `t_area` VALUES ('3', '北京');
 
 -- ----------------------------
 -- Table structure for `t_assessment`
@@ -158,6 +161,7 @@ CREATE TABLE `t_plan` (
   `remarks` varchar(500) DEFAULT NULL COMMENT '备注',
   `sendTime` timestamp NULL DEFAULT '0000-00-00 00:00:00' COMMENT '设置预定的发送给会员的时间',
   `groupId` int(11) DEFAULT NULL COMMENT '会员组Id',
+  `makeTime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '方案制定(修改)的时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=gbk;
 
@@ -223,12 +227,41 @@ CREATE TABLE `t_space` (
   `content` text COMMENT '发表的文字内容.',
   `picName` varchar(100) DEFAULT NULL COMMENT '会员发表文章包含的图片名称',
   `userId` int(11) DEFAULT NULL COMMENT '作者ID',
+  `time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '发布的时间',
+  `state` int(11) DEFAULT '0' COMMENT '审核状态,0=未审核,1=审核通过,2=审核不通过',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of t_space
 -- ----------------------------
+INSERT INTO `t_space` VALUES ('1', '测试测试测试测试', 'xxxx.jpg', '1', '2014-07-08 12:33:26', '0');
+INSERT INTO `t_space` VALUES ('2', '@E5@85@B7@E4@BD@93', '1.jpg', '1', '2014-07-09 11:26:38', '0');
+INSERT INTO `t_space` VALUES ('3', '@E6@99@AE@E9@80@9A', 'Picture 24082048.jpg', '1', '2014-07-09 11:30:15', '0');
+INSERT INTO `t_space` VALUES ('4', '测试题', 'Picture 24082048.jpg', '1', '2014-07-09 11:33:54', '0');
+INSERT INTO `t_space` VALUES ('5', '个哈', 'Picture 24082048.jpg', '1', '2014-07-09 11:46:42', '0');
+INSERT INTO `t_space` VALUES ('6', '近距离', '1404878022271.jpg', '1', '2014-07-09 11:49:58', '0');
+INSERT INTO `t_space` VALUES ('7', '近距离', '1404878479450.jpg', '1', '2014-07-09 11:58:35', '0');
+INSERT INTO `t_space` VALUES ('8', '近距离', '1404878500027.jpg', '1', '2014-07-09 11:58:41', '0');
+INSERT INTO `t_space` VALUES ('9', '近距离', '1404878500027.jpg', '1', '2014-07-09 11:58:59', '0');
+INSERT INTO `t_space` VALUES ('10', 'gbhh', '1404887357129.jpg', '1', '2014-07-09 14:25:17', '0');
+INSERT INTO `t_space` VALUES ('11', 'hhhh', '1404887541975.jpg', '1', '2014-07-09 14:28:25', '0');
+INSERT INTO `t_space` VALUES ('12', 'bbh', '1404887665146.jpg', '1', '2014-07-09 14:30:31', '0');
+INSERT INTO `t_space` VALUES ('13', 'hhnhh', '1404887814466.jpg', '1', '2014-07-09 14:33:54', '0');
+INSERT INTO `t_space` VALUES ('14', 'hhnhh', '1404887814466.jpg', '1', '2014-07-09 14:34:59', '0');
+INSERT INTO `t_space` VALUES ('15', 'hhh', '1404888802331.jpg', '1', '2014-07-09 14:49:29', '0');
+INSERT INTO `t_space` VALUES ('16', 'hhh', '1404889017676.jpg', '1', '2014-07-09 14:54:18', '0');
+INSERT INTO `t_space` VALUES ('17', 'hhh', '1404889120639.jpg', '1', '2014-07-09 14:54:40', '0');
+INSERT INTO `t_space` VALUES ('18', 'vbbb', '1404889789978.jpg', '1', '2014-07-09 15:05:52', '0');
+INSERT INTO `t_space` VALUES ('19', 'vbbb', '1404889789978.jpg', '1', '2014-07-09 15:06:47', '0');
+INSERT INTO `t_space` VALUES ('20', 'vbbb', '1404889789978.jpg', '1', '2014-07-09 15:07:01', '0');
+INSERT INTO `t_space` VALUES ('21', 'nbbh', '1404890236434.jpg', '1', '2014-07-09 15:13:51', '0');
+INSERT INTO `t_space` VALUES ('22', 'nbbh', '1404890236434.jpg', '1', '2014-07-09 15:14:53', '0');
+INSERT INTO `t_space` VALUES ('23', ' bghhh', '1404890504786.jpg', '1', '2014-07-09 15:17:38', '0');
+INSERT INTO `t_space` VALUES ('24', 'ghvghh', '1404890865412.jpg', '1', '2014-07-09 15:23:42', '0');
+INSERT INTO `t_space` VALUES ('25', 'ghvghh', '1404890865412.jpg', '1', '2014-07-09 15:32:39', '0');
+INSERT INTO `t_space` VALUES ('26', 'ghvghh', '1404890865412.jpg', '1', '2014-07-09 15:34:43', '0');
+INSERT INTO `t_space` VALUES ('27', 'ghvghh', '1404890865412.jpg', '1', '2014-07-09 15:35:29', '0');
 
 -- ----------------------------
 -- Table structure for `t_user`
@@ -248,8 +281,9 @@ CREATE TABLE `t_user` (
   `areaId` varchar(50) DEFAULT NULL COMMENT '用户的区域',
   `filename` varchar(50) DEFAULT NULL COMMENT '为病历附件的名称,如果将来客户要求有多张图片,该字段要改用另一张表来关联',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=gbk;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=gbk;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
+INSERT INTO `t_user` VALUES ('1', 'ggg', '5555', null, 'fghhgf', null, '2588', 'qqqqqq', '2014-07-07 00:00:00', '2014-07-07', '1', '');
