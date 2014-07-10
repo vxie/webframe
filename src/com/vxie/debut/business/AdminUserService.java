@@ -76,8 +76,8 @@ public class AdminUserService extends BaseService {
 		return 1;
 	}
 	
-	public Boolean hasLoginName(String userid, String number){
-		if(userid != null && userid.length() > 0){
+	public Boolean hasLoginName(Long userid, String number){
+		if(userid != null){
             //编辑用户时
 			return dao.getSimpleJdbcTemplate().queryForInt("select count(id) from t_admin where id <>? and number=?", userid, number) > 0;
 		}

@@ -8,7 +8,8 @@
 		<script src="/resources/js/common.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			function doEdit(id){
-                showModalDlg((id ? "编辑" : "新建") + "用户", '/user/edit/' + id, 600, 400, function (s) {
+                showModalDlg((id ? "编辑" : "新建") + "用户", '/user/edit/' + id, 600, 250, function (s) {
+                    alert(s);
                     doReset();
                 });
 			}
@@ -32,34 +33,34 @@
 		</script>
 	</head>
 	<body>
-	  <div id="divSearch" class="divSearch">
-		<table width="100%" border="0" cellpadding="2" cellspacing="1">
-			<tr>
-			  <td align="left" valign="middle"> 
-	            手机号码:
-	            <input id="p_number" name="number" type="text"/>
-	            &nbsp;
-                  姓名:
-	            <input id="p_name" name="name" type="text"/>
-                &nbsp;
-                  地区:
-	            <select id="p_areaid" name="p_areaid">
-                    <option value=""></option>
-                    <option value="1">测试地区</option>
-	            </select>
-				&nbsp;<button class="btn_2k3" onclick="doSearch()">查询</button>&nbsp;<button class="btn_2k3" onclick="doReset()">重置</button>
-
-              </td>
-		  </tr>
-		</table>
-	  </div>
+	  <div id="divSearch" class="">
+          <table class="paramTable" width="100%" border="1" cellpadding="0" cellspacing="0">
+              <tr>
+                  <td class="filedName">手机号码:</td>
+                  <td><input id="p_number" name="number" type="text"/></td>
+                  <td class="filedName">姓名:</td>
+                  <td><input id="p_name" name="name" type="text"/></td>
+                  <td class="filedName">地区:</td>
+                  <td>
+                      <select id="p_areaid" name="p_areaid">
+                          <option value=""></option>
+                          <option value="1">测试地区</option>
+                      </select>
+                  </td>
+              </tr>
+          </table>
+          <div class="button_div">
+              <button class="btn_2k3" onclick="doSearch()">查 询</button>
+              &nbsp;
+              <button class="btn_2k3" onclick="doReset()">重 置</button>
+              &nbsp;
+              <button class="btn_2k3" onclick="doEdit(0)">新 建</button>
+              &nbsp;
+              <button class="btn_2k3" onclick="doImport()">导入用户</button>
+              &nbsp;
+          </div>
+      </div>
 		<div style="padding-bottom:5px">
-	  	<table width="100%" border="0" cellpadding="2" cellspacing="1">
-			<tr>
-			  <td align="left">&nbsp;[&nbsp;用户列表&nbsp;]</td>
-			  <td align="right">&nbsp;<button class="btn_2k3" onclick="doEdit(0)">新建</button>&nbsp;<button class="btn_2k3" onclick="doImport()">导入用户</button>&nbsp;</td>
-		  	</tr>
-		</table>
 			<table id="pageList" width="100%" border="1" align="center" cellpadding="0" cellspacing="0" rules="cols" bordercolor="#9aadce" class="table">
 				<thead>
 					<tr class="head">

@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Date;
+import java.util.HashMap;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.vxie.debut.model.AdminUser;
+import net.sf.json.JSONObject;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.FileCopyUtils;
@@ -46,31 +49,54 @@ public class AdminUserController extends AbstractController {
 	@RequestMapping(value = "/edit/check")
 	@ResponseBody
 	public String check(String userid, String number) {
-		return adminUserService.hasLoginName(userid, number) ? "1" : "0";
-	}
+        HashMap<String, String> result = new HashMap<String, String>();
+        result.put("SUCCESS", "TRUE");
+        result.put("MSG", "check succeed");
+        try {
+//            if (adminUserService.hasLoginName(userid, number)) {
+//                throw new RuntimeException("该手机号码已经存在");
+//            }
+        } catch (Exception e) {
+            log.error("AdminUserController.check error", e);
+            result.put("SUCCESS", "FALSE");
+            result.put("MSG", "操作失败：" + e.getMessage());
+        }
+        return JSONObject.fromObject(result).toString();
+    }
 
 	@SuppressWarnings("static-access")
 	@RequestMapping(value = "/edit/save")
 	@ResponseBody
 	public String save(AdminUser adminUser) {
-        if(adminUser.getId() == null) {
-            //新增
-            adminUser.setId(adminUserService.genUserId());
-            adminUser.setPassword(adminUserService.DEFAULT_PWD);
-            adminUser.setRole(1);
-        } else {
-            //编辑
-            AdminUser inuser = adminUserService.getDao().get(AdminUser.class, adminUser.getId());
-            if(inuser != null) {
-                inuser.setNumber(adminUser.getNumber());
-                inuser.setName(adminUser.getName());
-                inuser.setAreaId(adminUser.getAreaId());
-                adminUser = inuser;
+        HashMap<String, String> result = new HashMap<String, String>();
+        result.put("SUCCESS", "TRUE");
+        result.put("MSG", "succeed");
+        try {
+            if (adminUserService.hasLoginName(adminUser.getId(), adminUser.getNumber())) {
+                throw new RuntimeException("该手机号码已经存在");
             }
+            if(adminUser.getId() == null) {
+                //新增
+                adminUser.setId(adminUserService.genUserId());
+                adminUser.setPassword(adminUserService.DEFAULT_PWD);
+                adminUser.setRole(1);
+            } else {
+                //编辑
+                AdminUser inuser = adminUserService.getDao().get(AdminUser.class, adminUser.getId());
+                if(inuser != null) {
+                    inuser.setNumber(adminUser.getNumber());
+                    inuser.setName(adminUser.getName());
+                    inuser.setAreaId(adminUser.getAreaId());
+                    adminUser = inuser;
+                }
+            }
+            adminUserService.save(adminUser);
+        } catch (Exception e) {
+            log.error("AdminUserController.save error", e);
+            result.put("SUCCESS", "FALSE");
+            result.put("MSG", "用户信息保存失败：" + e.getMessage());
         }
-
-		adminUserService.save(adminUser);
-		return "0";
+        return JSONObject.fromObject(result).toString();
 	}
 
 	@RequestMapping(value = "/del/{id}")

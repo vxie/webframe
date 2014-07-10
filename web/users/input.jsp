@@ -14,20 +14,41 @@
             function Ok() {
                 if (!$('#form1').validate({
                     rules:{
-                        userRoles:{
-                            required:true,
-                            minlength:1
+                        number:{
+                            required:true
+                        },
+                        name: {
+                            required:true
                         }
+                    },
+                    messages:{
+                        number: "请输入手机号码",
+                        name: "请输入姓名"
                     }
-                }).form()) return;
-                $.post('/user/edit/check', {userid:$("#p_userid").val(), number:$("#p_number").val()}, function (s) {
-                    if (s == "0") {
-                        $.post('/user/edit/save', $("form").serialize(), parent.JQueryXDialog.fnResult);
+
+                }).form()) {
+                    return;
+                }
+//                $.post('/user/edit/check', {userid:$("#p_userid").val(), number:$("#p_number").val()}, function (data) {
+//                    if (data.SUCCESS == "TRUE") {
+//                        doSave();
+//                    } else {
+//                        alert(data.MSG);
+//                        $("#p_number").focus();
+//                    }
+//                }, "json");
+
+                doSave();
+            }
+
+            function doSave() {
+                $.post('/user/edit/save', $("form").serialize(), function (data) {
+                    if (data.SUCCESS == "TRUE") {
+                        parent.JQueryXDialog.fnResult("用户信息保存成功");
                     } else {
-                        alert("错误:该手机号码已经存在!");
-                        $("#p_number").focus();
+                        alert(data.MSG);
                     }
-                });
+                }, "json");
             }
 
         </script>
@@ -37,19 +58,19 @@
 		<input type="hidden" id="p_userid" name="id" value="${currUser.id}">
 		<table width="100%" border="0" cellpadding="2" cellspacing="1">
             <tr>
-                <td class="popTitleMust" width="12%">手机号码:</td>
+                <td class="popTitleMust filedName" width="12%">手机号码:</td>
                 <td class="popConent">
                     <input type="text" id="p_number" name="number" value="${currUser.number}" class="required">
                 </td>
             </tr>
 		    <tr>
-				<td class="popTitleMust" width="12%">姓名:</td>
+				<td class="popTitleMust filedName" width="12%">姓名:</td>
 				<td class="popConent">
 					<input type="text" id="p_name" name="name" value="${currUser.name}" class="required">
 				</td>
 			</tr>
 		    <tr>
-				<td class="popTitleMust" width="12%">地区:</td>
+				<td class="popTitleMust filedName" width="12%">地区:</td>
 				<td class="popConent">
 					<select id="p_areaid" name="areaid">
                         <option value="1">测试地区</option>
