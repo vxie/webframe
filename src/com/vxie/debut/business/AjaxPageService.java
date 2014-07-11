@@ -51,8 +51,9 @@ public class AjaxPageService extends BaseService {
 	}
 
     public String memberPage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
         String sql = "select name, phoneNumber, medicalRecordId, address, groupId, age, time, brithday, areaId, " +
-                "filename, id, password from t_user where 1=1";
+                "filename, '' action, id, password from t_user where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("name", "name like ?", String.class);

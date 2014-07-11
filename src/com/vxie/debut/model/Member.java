@@ -168,7 +168,7 @@ public class Member implements RowEntityMapper {
         result.put("age", age + "");
         result.put("time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(time));
         result.put("brithday", brithday);
-        result.put("areaName", areaName);
+        result.put("areaId", areaId);
         result.put("filename", filename);
 
         result.put("action", "");  //操作列
