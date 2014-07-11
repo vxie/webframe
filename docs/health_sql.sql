@@ -123,7 +123,7 @@ CREATE TABLE `t_layout` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `textContent` varchar(500) DEFAULT NULL COMMENT '文字内容',
   `picName` varchar(100) DEFAULT NULL COMMENT '图片名称',
-  `order` int(11) DEFAULT NULL COMMENT '显示的序号',
+  `disorder` int(11) DEFAULT NULL COMMENT '显示的序号',
   `useing` int(11) DEFAULT '1' COMMENT '是否显示,0=显示,1=不显示',
   `updatetime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '图片上传时间',
   PRIMARY KEY (`id`)
