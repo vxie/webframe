@@ -101,10 +101,19 @@ public class AdminUserController extends AbstractController {
 
 	@RequestMapping(value = "/del/{id}")
 	@ResponseBody
-	public String del(@PathVariable long id) {
-		adminUserService.del(id);
-		return "0";
-	}
+    public String del(@PathVariable long id) {
+        HashMap<String, String> result = new HashMap<String, String>();
+        result.put("SUCCESS", "TRUE");
+        result.put("MSG", "succeed");
+        try {
+            adminUserService.del(id);
+        } catch (Exception e) {
+            log.error("AdminUserController.del error");
+            result.put("SUCCESS", "FALSE");
+            result.put("MSG", "删除用户失败：" + e.getMessage());
+        }
+        return JSONObject.fromObject(result).toString();
+    }
 
 	@RequestMapping(value = "/changepwd")
 	public String changePwd() {

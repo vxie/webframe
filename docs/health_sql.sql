@@ -273,7 +273,7 @@ CREATE TABLE `t_user` (
   `phoneNumber` varchar(20) DEFAULT NULL COMMENT '联系电话',
   `medicalRecordId` int(20) DEFAULT NULL COMMENT '病历ID',
   `address` varchar(200) DEFAULT NULL COMMENT '地址',
-  ` groupId` int(11) DEFAULT NULL COMMENT '分组id',
+  `groupId` int(11) DEFAULT NULL COMMENT '分组id',
   `age` int(11) DEFAULT NULL COMMENT '会员的年龄',
   `password` varchar(50) DEFAULT '123456' COMMENT '密码',
   `time` timestamp NULL DEFAULT NULL COMMENT '注册时间',

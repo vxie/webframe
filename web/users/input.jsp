@@ -45,7 +45,7 @@
                 $.post('/user/edit/save', $("form").serialize(), function (data) {
                     if (data.SUCCESS == "TRUE") {
                         alert("用户信息保存成功");
-                        parent.JQueryXDialog.fnResult();
+                        parent.JQueryXDialog.fnResult(1);
                     } else {
                         alert(data.MSG);
                     }

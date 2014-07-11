@@ -7,6 +7,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.vxie.debut.model.AdminUser;
+import com.vxie.debut.model.Member;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
@@ -48,6 +49,41 @@ public class AjaxPageService extends BaseService {
         	}
         });
 	}
+
+    public String memberPage(HttpServletRequest request) throws Exception {
+        String sql = "select name, phoneNumber, medicalRecordId, address, groupId, age, time, brithday, areaId, " +
+                "filename, id, password from t_user where 1=1";
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("name", "name like ?", String.class);
+        page.registerQueryParams("phoneNumber", "phoneNumber = ?", String.class);
+        page.registerQueryParams("medicalRecordId", "medicalRecordId = ?", String.class);
+        page.registerQueryParams("groupId", "groupId = ?", String.class);
+        page.registerQueryParams("areaId", "areaId = ?", String.class);
+        page.registerQueryParams("filename", "filename like ?", String.class);
+        page.registerQueryParams("address", "address like ?", String.class);
+
+        return page.generatePageContent(request, Member.class, new EntitiesHandler<Member>() {
+            public List<Member> handle(List<Member> rows) throws Exception {
+                for (Member member : rows) {
+                    //翻译地区名称
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_area a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            member.getAreaId()
+                    );
+                    member.setAreaName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+
+    }
+
 	
 	public String rolePage(HttpServletRequest request) throws Exception {
 		String sql = "select role_id, role_name, role_memo from cut_role where 1=1 ";

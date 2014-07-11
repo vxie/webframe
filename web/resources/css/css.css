@@ -19,6 +19,10 @@ input{ border:#a5a5b2 solid 1px; font-size:12px; font-family:Arial, Helvetica, s
   background-color: #FFFFFF;
 }
 
+.inputTable td {
+    padding: 2px 1px;
+}
+
 .popTitle {
 /* 弹出窗口 标题 样式*/
   width: 30%;
@@ -134,6 +138,7 @@ BORDER-RIGHT: #002D96 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #002D96 1px sol
 .paramTable td {
     vertical-align: middle;
     border: 1px solid #9aadce;
+    padding: 2px 1px;
 }
 
 .button_div {

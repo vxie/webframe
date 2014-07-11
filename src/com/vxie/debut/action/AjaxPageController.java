@@ -21,6 +21,12 @@ public class AjaxPageController extends AbstractController {
 	public String user(HttpServletRequest request) throws Exception{
 		return ajaxPageService.userPage(request);
 	}
+
+    @ResponseBody
+    @RequestMapping(value="/member")
+    public String member(HttpServletRequest request) throws Exception{
+        return ajaxPageService.memberPage(request);
+    }
 	
 	@ResponseBody
 	@RequestMapping(value="/role")

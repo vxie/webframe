@@ -29,6 +29,10 @@
 			   	</bean>
 		  	</list>
 	 	</property>
+        <!-- 日期格式转换 -->
+        <property name="webBindingInitializer">
+            <bean class="com.vxie.debut.beans.DateConverter"/>
+        </property>
 	</bean>
 	
 	<mvc:annotation-driven />

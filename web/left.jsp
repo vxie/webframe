@@ -33,8 +33,13 @@
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
-                <td><a href="javascript:alert('会员管理');" onclick="domenu(this.parentNode.parentNode)"
+                <td><a href="/member/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">会员管理</a></td>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('会员组管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">会员组管理</a></td>
             </tr>
         </table>
         <table width="100%" border="0" cellpadding="4" cellspacing="1">
