@@ -13,6 +13,6 @@ public class DateConverter implements WebBindingInitializer {
 
     public void initBinder(WebDataBinder webDataBinder, WebRequest webRequest) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, false));
+        webDataBinder.registerCustomEditor(Date.class, new CustomDateEditor(sdf, true));
     }
 }

@@ -166,7 +166,7 @@ public class Member implements RowEntityMapper {
         result.put("address", address);
         result.put("groupId", groupId + "");
         result.put("age", age + "");
-        result.put("time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(time));
+        result.put("time", time == null ? "" : new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(time));
         result.put("brithday", brithday);
         result.put("areaId", areaId);
         result.put("filename", filename);

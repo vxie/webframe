@@ -6,6 +6,7 @@
 		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
   		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
   		<script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
+        <script src="<%= contextPath%>/resources/js/DatePicker/WdatePicker.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#p_areaid").val("${currMember.areaId}");
@@ -90,13 +91,15 @@
             <tr>
                 <td class="popTitle filedName" width="12%">注册时间:</td>
                 <td class="popConent">
-                    <input type="text" id="p_time" name="time" value="${currMember.time}">
+                    <input type="text" id="p_time" name="time" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"
+                           value="<fmt:formatDate value="${currMember.time}" pattern="yyyy-MM-dd HH:mm:ss"/>">
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">生日:</td>
                 <td class="popConent">
-                    <input type="text" id="p_brithday" name="brithday" value="${currMember.brithday}">
+                    <input type="text" id="p_brithday" name="brithday" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"
+                           value="${currMember.brithday}">
                 </td>
             </tr>
 		    <tr>
