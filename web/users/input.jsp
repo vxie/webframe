@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ include file="/common/head.inc" %>
 <html>
 	<head>
-		<link href="/resources/css/css.css" type="text/css" rel="stylesheet" />
-  		<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
-  		<script src="/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
+		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
+  		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
+  		<script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                $("#p_areaid").val("${currUser.areaId}");
@@ -42,7 +42,7 @@
             }
 
             function doSave() {
-                $.post('/user/edit/save', $("form").serialize(), function (data) {
+                $.post('<%= contextPath%>/user/edit/save', $("form").serialize(), function (data) {
                     if (data.SUCCESS == "TRUE") {
                         alert("用户信息保存成功");
                         parent.JQueryXDialog.fnResult(1);

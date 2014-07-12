@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file="/common/head.inc" %>
 <html>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta http-equiv="pragma" content="no-cache" />
@@ -27,13 +27,13 @@
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver" id="firstRow">4</td>
                 <td>
-                    <a href="/user/list" onclick="domenu(this.parentNode.parentNode)"
+                    <a href="<%= contextPath%>/user/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">营养师管理</a>
                 </td>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
-                <td><a href="/member/list" onclick="domenu(this.parentNode.parentNode)"
+                <td><a href="<%= contextPath%>/member/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">会员管理</a></td>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
@@ -50,7 +50,7 @@
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">4</td>
                 <td>
-                    <a href="/role/list" onclick="domenu(this.parentNode.parentNode)"
+                    <a href="<%= contextPath%>/role/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">角色管理</a>
                 </td>
             </tr>

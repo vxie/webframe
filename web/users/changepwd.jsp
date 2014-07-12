@@ -1,10 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ include file="/common/head.inc" %>
 <html>
 	<head>
-		<link href="/resources/css/css.css" type="text/css" rel="stylesheet" />
-  		<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
-  		<script src="/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
+		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
+  		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
+  		<script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
 	</head>
 	<body>
 	<form id="form1" method="post" action="#">
@@ -59,7 +60,7 @@
 			alert("错误: 两次输入的新密码必须相同!");
 			return;
 		}
-		$.post('/user/changepwd/save', $("form").serialize(), function(data){
+		$.post('<%= contextPath%>/user/changepwd/save', $("form").serialize(), function(data){
             if (data.SUCCESS == "TRUE") {
                 alert("密码修改成功");
                 parent.JQueryXDialog.fnResult();

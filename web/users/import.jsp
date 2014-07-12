@@ -1,24 +1,24 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ include file="/common/head.inc" %>
 <html>
 	<head>
-		<link href="/resources/css/css.css" type="text/css" rel="stylesheet" />
-  		<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
-  		<script src="/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
-  		<script src="/resources/js/jquery.form.js" type="text/javascript"></script>
+		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
+  		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
+  		<script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
+  		<script src="<%= contextPath%>/resources/js/jquery.form.js" type="text/javascript"></script>
 	</head>
 	<body>
-	<form name="fileUploadForm" id="fileUploadForm" action="/user/import/save" method="post" enctype="multipart/form-data">
+	<form name="fileUploadForm" id="fileUploadForm" action="<%= contextPath%>/user/import/save" method="post" enctype="multipart/form-data">
 		<table width="100%" border="0" cellpadding="2" cellspacing="1">
 			<tr>
-			  <td align="left" style="width:80%;overflow:hidden;white-space：normal;nowrap;">
+			  <td align="left" style="width:80%;overflow:hidden;white-space:normal;nowrap;">
 	            XLS文件:
 	            <input type="file" name="xfile" id="xfile" value="" style="width:60%;"/> 
 			    &nbsp;
 			    <button class="btn_2k3" onclick="doUpLoad()">上传并处理</button>
 			    &nbsp;
-			    <a href="/user/download/xls">下载Excel模板</a>
+			    <a href="<%= contextPath%>/user/download/xls">下载Excel模板</a>
 		      </td>
 		  </tr>
 		</table>

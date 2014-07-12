@@ -1,26 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ include file="/common/head.inc" %>
 <html>
 	<head>
-		<link href="/resources/css/css.css" type="text/css" rel="stylesheet" />
-		<script src="/resources/js/ajaxpage-2.0.0.js" type="text/javascript"></script>
-		<script src="/resources/js/jquery.min.js" type="text/javascript"></script>
-		<script src="/resources/js/common.js" type="text/javascript"></script>
+		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
+		<script src="<%= contextPath%>/resources/js/ajaxpage-2.0.0.js" type="text/javascript"></script>
+		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
+		<script src="<%= contextPath%>/resources/js/common.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			function doEdit(id){
-                showModalDlg((id ? "编辑" : "新建") + "会员", '/member/edit/' + id, 600, 350, function (s) {
+                showModalDlg((id ? "编辑" : "新建") + "会员", '<%= contextPath%>/member/edit/' + id, 600, 350, function (s) {
                     doReset();
                 });
 			}
 			function doImport(){
-				showModalDlg("导入用户", '/common/import/user', 600, 300, function(s){doReset();});
+				showModalDlg("导入用户", '<%= contextPath%>/common/import/user', 600, 300, function(s){doReset();});
 			}
 
             function doDel(id) {
                 if (!window.confirm("你确定要删除该会员吗(删除后不可恢复)?")) {
                     return;
                 }
-                $.post('/member/del/' + id, function (data) {
+                $.post('<%= contextPath%>/member/del/' + id, function (data) {
                             if (data.SUCCESS == "TRUE") {
                                 alert("删除会员成功");
                             } else {
@@ -105,7 +106,7 @@
 		</div>
 		<div id="ajaxpage-foot"></div>
 		<script type="text/javascript">
-			var ajaxPage = new $AjaxPage("pageList", "/ajaxpage/member", 20);
+			var ajaxPage = new $AjaxPage("pageList", "<%= contextPath%>/ajaxpage/member", 20);
             ajaxPage.afterRow(function (rowIndex, row, datas) {
                 var userId = datas.get("id");
                 row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + userId + ")\">编辑</a>&nbsp;<a href='#' onclick=\"doDel(" + userId + ")\">删除</a>";
@@ -135,6 +136,6 @@
 
 			
 		</script>
-		<script src="/resources/js/ajaxpage-foot.js" type="text/javascript"></script>
+		<script src="<%= contextPath%>/resources/js/ajaxpage-foot.js" type="text/javascript"></script>
 	</body>
 </html>

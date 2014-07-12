@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ include file="/common/head.inc" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,7 +10,7 @@
 <!--
 body { margin:0px; padding:0px;}
 td{ font:Arial, Helvetica, sans-serif; font-size:12px}
-.divlogin{ width:1003px; height:768px; background: url(/resources/images/login.jpg) no-repeat top left;}
+.divlogin{ width:1003px; height:768px; background: url(<%= contextPath%>/resources/images/login.jpg) no-repeat top left;}
 .input{ border:#7da5c9 solid 1px;}
 -->
 </style>
@@ -19,7 +18,7 @@ td{ font:Arial, Helvetica, sans-serif; font-size:12px}
 <body>
 <!--内容 -->
 <div class="divlogin">
-<form name="loginForm" id="loginForm" action="/login" method="post">
+<form name="loginForm" id="loginForm" action="<%= contextPath%>/login" method="post">
 	<table width="100%" border="0" cellpadding="2" cellspacing="1" class="query01">
 		<tr>
 		  <td height="170" colspan="3" align="left"  class="query01_td_text">&nbsp;</td>
@@ -36,7 +35,7 @@ td{ font:Arial, Helvetica, sans-serif; font-size:12px}
 	  </tr>
 		<tr >
 		  <td colspan="2" align="left">&nbsp;</td>
-		  <td align="left"><input type="image" id="loginSubmit" name="loginSubmit" value="提交" src="/resources/images/login_go.gif" /></td>
+		  <td align="left"><input type="image" id="loginSubmit" name="loginSubmit" value="提交" src="<%= contextPath%>/resources/images/login_go.gif" /></td>
 	  </tr>
 		<tr >
 		  <td colspan="2" align="left">&nbsp;</td>

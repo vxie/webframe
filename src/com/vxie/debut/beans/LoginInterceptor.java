@@ -28,7 +28,9 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         loginURI.add(contextPath + "/");
         loginURI.add(contextPath + "/login");
         loginURI.add(contextPath + "/login/");
-
+        if(request.getRequestURI().contains("resources/")) {
+            return true;
+        }
         if (request.getRequestedSessionId() == null || loginURI.contains(request.getRequestURI())) {
             return super.preHandle(request, response, handler);
         }
