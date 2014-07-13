@@ -1,7 +1,7 @@
 package com.vxie.debut.action;
 
-import com.vxie.debut.business.GroupService;
-import com.vxie.debut.model.Group;
+import com.vxie.debut.business.BranchService;
+import com.vxie.debut.model.Branch;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -13,45 +13,44 @@ import javax.annotation.Resource;
 import java.util.HashMap;
 
 @Controller
-@RequestMapping(value = "/group")
-public class GroupController extends AbstractController {
-
+@RequestMapping(value = "/branch")
+public class BranchController extends AbstractController {
     @Resource
-    private GroupService groupService;
+    private BranchService branchService;
 
 
     @RequestMapping(value = "/list")
     public String list() {
-        return "group/list";
+        return "branch/list";
     }
 
     @RequestMapping(value = "/edit/{id}")
     public String edit(ModelMap map, @PathVariable long id) {
-        map.put("currGroup", id == 0 ? new Group() : groupService.getDao().get(Group.class, id));
-        return "group/input";
+        map.put("currBranch", id == 0 ? new Branch() : branchService.getDao().get(Branch.class, id));
+        return "branch/input";
     }
 
 
     @SuppressWarnings("static-access")
     @RequestMapping(value = "/edit/save")
     @ResponseBody
-    public String save(Group group) {
+    public String save(Branch branch) {
         HashMap<String, String> result = new HashMap<String, String>();
         result.put("SUCCESS", "TRUE");
         result.put("MSG", "succeed");
         try {
-            if (groupService.isExist(group.getId(), group.getName())) {
-                throw new RuntimeException("该分组已经存在");
+            if (branchService.isExist(branch.getId(), branch.getName())) {
+                throw new RuntimeException("该分店已经存在");
             }
-            if(group.getId() == null) {
+            if (branch.getId() == null) {
                 //新增
-                group.setId(groupService.genId());
+                branch.setId(branchService.genId());
             }
-            groupService.save(group);
+            branchService.save(branch);
         } catch (Exception e) {
-            log.error("GroupController.save error", e);
+            log.error("BranchController.save error", e);
             result.put("SUCCESS", "FALSE");
-            result.put("MSG", "分组信息保存失败：" + e.getMessage());
+            result.put("MSG", "分店信息保存失败：" + e.getMessage());
         }
         return JSONObject.fromObject(result).toString();
     }
@@ -63,13 +62,14 @@ public class GroupController extends AbstractController {
         result.put("SUCCESS", "TRUE");
         result.put("MSG", "succeed");
         try {
-            groupService.del(id);
+            branchService.del(id);
         } catch (Exception e) {
-            log.error("GroupController.del error");
+            log.error("BranchController.del error");
             result.put("SUCCESS", "FALSE");
-            result.put("MSG", "删除分组失败：" + e.getMessage());
+            result.put("MSG", "删除分店失败：" + e.getMessage());
         }
         return JSONObject.fromObject(result).toString();
     }
+
 
 }

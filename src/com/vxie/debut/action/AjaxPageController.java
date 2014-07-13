@@ -41,6 +41,12 @@ public class AjaxPageController extends AbstractController {
     }
 
 
+    @ResponseBody
+    @RequestMapping(value = "/branch")
+    public String branch(HttpServletRequest request) throws Exception {
+        return ajaxPageService.branchPage(request);
+    }
+
 
     @ResponseBody
 	@RequestMapping(value="/role")

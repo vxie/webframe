@@ -9,18 +9,18 @@
 		<script src="<%= contextPath%>/resources/js/common.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			function doEdit(id){
-                showModalDlg((id ? "编辑" : "新建") + "地区", '<%= contextPath%>/area/edit/' + id, 600, 250, function (s) {
+                showModalDlg((id ? "编辑" : "新建") + "分店", '<%= contextPath%>/branch/edit/' + id, 600, 250, function (s) {
                     doReset();
                 });
 			}
 
             function doDel(id) {
-                if (!window.confirm("你确定要删除该地区吗(删除后不可恢复)?")) {
+                if (!window.confirm("你确定要删除该分店吗(删除后不可恢复)?")) {
                     return;
                 }
-                $.post('<%= contextPath%>/area/del/' + id, function (data) {
+                $.post('<%= contextPath%>/branch/del/' + id, function (data) {
                             if (data.SUCCESS == "TRUE") {
-                                alert("删除地区成功");
+                                alert("删除分店成功");
                             } else {
                                 alert(data.MSG);
                             }
@@ -36,10 +36,14 @@
 	  <div id="divSearch" class="">
           <table class="paramTable" width="100%" border="1" cellpadding="0" cellspacing="0">
               <tr>
-                  <td class="filedName">地区ID:</td>
-                  <td><input id="p_id" class="paramIpt" name="id" type="text"/></td>
-                  <td class="filedName">地区名称:</td>
+                  <td class="filedName">分店名称:</td>
                   <td><input id="p_name" class="paramIpt" name="name" type="text"/></td>
+                  <td class="filedName">分店地址:</td>
+                  <td><input id="p_address" class="paramIpt" name="address" type="text"/></td>
+                  <td class="filedName">地理经度:</td>
+                  <td><input id="p_longitude" class="paramIpt" name="longitude" type="text"/></td>
+                  <td class="filedName">地理纬度:</td>
+                  <td><input id="p_latitude" class="paramIpt" name="latitude" type="text"/></td>
               </tr>
           </table>
           <div class="button_div">
@@ -55,11 +59,15 @@
 			<table id="pageList" width="100%" border="1" align="center" cellpadding="0" cellspacing="0" rules="cols" bordercolor="#9aadce" class="table">
 				<thead>
 					<tr class="head">
-                        <td>地区ID</td>
-                        <td>地区名称</td>
+                        <td>分店名称</td>
+                        <td>分店地址</td>
+                        <td>地理经度</td>
+                        <td>地理纬度</td>
 						<td width="8%">操作</td>
 					</tr>
 					<tr style="display: none;cursor='default';" onmouseover="doonmouseover(this)" onmouseout="doonmouseout(this, this.className)">
+						<td></td>
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -72,11 +80,11 @@
 		</div>
 		<div id="ajaxpage-foot"></div>
 		<script type="text/javascript">
-			var ajaxPage = new $AjaxPage("pageList", "<%= contextPath%>/ajaxpage/area", 20);
+			var ajaxPage = new $AjaxPage("pageList", "<%= contextPath%>/ajaxpage/branch", 20);
             ajaxPage.afterRow(function (rowIndex, row, datas) {
-                var areaid = datas.get("id");
-                row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + areaid + ");\">编辑</a>&nbsp;"
-                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + areaid + ");\">删除</a>&nbsp;";
+                var branchid = datas.get("id");
+                row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + branchid + ");\">编辑</a>&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + branchid + ");\">删除</a>&nbsp;";
             });
 			
 			$(document).ready(function() {

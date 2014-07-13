@@ -28,7 +28,7 @@ public class AreaController extends AbstractController {
 
     @RequestMapping(value = "/edit/{id}")
     public String edit(ModelMap map, @PathVariable long id) {
-        map.put("currArea", id == 0 ? new Group() : areaService.getDao().get(Group.class, id));
+        map.put("currArea", id == 0 ? new Area() : areaService.getDao().get(Area.class, id));
         return "area/input";
     }
 
@@ -42,7 +42,7 @@ public class AreaController extends AbstractController {
         result.put("MSG", "succeed");
         try {
             if (areaService.isExist(area.getId(), area.getName())) {
-                throw new RuntimeException("该分组已经存在");
+                throw new RuntimeException("该地区已经存在");
             }
             if (area.getId() == null) {
                 //新增
@@ -50,9 +50,9 @@ public class AreaController extends AbstractController {
             }
             areaService.save(area);
         } catch (Exception e) {
-            log.error("MemberController.save error", e);
+            log.error("AreaController.save error", e);
             result.put("SUCCESS", "FALSE");
-            result.put("MSG", "分组信息保存失败：" + e.getMessage());
+            result.put("MSG", "地区信息保存失败：" + e.getMessage());
         }
         return JSONObject.fromObject(result).toString();
     }
@@ -66,9 +66,9 @@ public class AreaController extends AbstractController {
         try {
             areaService.del(id);
         } catch (Exception e) {
-            log.error("MemberController.del error");
+            log.error("AreaController.del error");
             result.put("SUCCESS", "FALSE");
-            result.put("MSG", "删除分组失败：" + e.getMessage());
+            result.put("MSG", "删除地区失败：" + e.getMessage());
         }
         return JSONObject.fromObject(result).toString();
     }

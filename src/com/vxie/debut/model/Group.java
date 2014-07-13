@@ -59,13 +59,13 @@ public class Group implements RowEntityMapper {
 
     public LinkedHashMap<String, String> entityToRow() {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
-        //字段顺序要严格对应页面列表中的顺序
+        //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
         result.put("name", name);
         result.put("headName", headName);
         result.put("action", "");  //操作列
 
-        result.put("headId", headId + "");
         result.put("id", id + "");
+        result.put("headId", headId + "");
         return result;
     }
 

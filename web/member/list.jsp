@@ -137,7 +137,7 @@
             function doSearch() {
                 ajaxPage.reset();
                 $(".paramIpt").each(function () {
-                    ajaxPage.addQueryParams($(this).attr("name"), $("this").val());
+                    ajaxPage.addQueryParams($(this).attr("name"), $(this).val());
                 });
                 ajaxPage.execute(afterPage);
             }

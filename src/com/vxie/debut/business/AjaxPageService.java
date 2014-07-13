@@ -6,10 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.vxie.debut.model.AdminUser;
-import com.vxie.debut.model.Area;
-import com.vxie.debut.model.Group;
-import com.vxie.debut.model.Member;
+import com.vxie.debut.model.*;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
@@ -94,7 +91,7 @@ public class AjaxPageService extends BaseService {
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("id", "id = ?", String.class);
         page.registerQueryParams("name", "name like ?", String.class);
-        page.registerQueryParams("headId", "headId = ?", Integer.class);
+        page.registerQueryParams("headId", "headId = ?", String.class);
 
         return page.generatePageContent(request, Group.class, new EntitiesHandler<Group>() {
             public List<Group> handle(List<Group> rows) throws Exception {
@@ -119,7 +116,7 @@ public class AjaxPageService extends BaseService {
 
     public String areaPage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select id, name, '' action, from t_area where 1=1";
+        String sql = "select id, name, '' action from t_area where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("id", "id = ?", String.class);
@@ -132,6 +129,26 @@ public class AjaxPageService extends BaseService {
             }
         });
     }
+
+
+    public String branchPage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select name, address, longitude, latitude, '' action, id from t_branch where 1=1";
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("name", "name like ?", String.class);
+        page.registerQueryParams("address", "address like ?", String.class);
+        page.registerQueryParams("longitude", "longitude = ?", String.class);
+        page.registerQueryParams("latitude", "latitude = ?", String.class);
+
+        return page.generatePageContent(request, Branch.class, new EntitiesHandler<Branch>() {
+            public List<Branch> handle(List<Branch> rows) throws Exception {
+                //
+                return rows;
+            }
+        });
+    }
+
 
 
 
