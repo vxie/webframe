@@ -31,6 +31,19 @@
                         }, "json"
                 );
             }
+
+            function viewScore(id) {
+                alert("查看评分");
+            }
+
+            function viewSeedback(id) {
+                alert("查看反馈");
+            }
+
+            function viewAssessment(id) {
+                alert("考核");
+            }
+
 		</script>
 	</head>
 	<body>
@@ -109,7 +122,11 @@
 			var ajaxPage = new $AjaxPage("pageList", "<%= contextPath%>/ajaxpage/member", 20);
             ajaxPage.afterRow(function (rowIndex, row, datas) {
                 var userId = datas.get("id");
-                row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + userId + ")\">编辑</a>&nbsp;<a href='#' onclick=\"doDel(" + userId + ")\">删除</a>";
+                row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + userId + ");\">编辑</a>&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ");\">删除</a>&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ");\">考核</a>&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"viewScore(" + userId + ");\">查看评分</a>&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"viewSeedback(" + userId + ");\">查看反馈</a>&nbsp;";
             });
 			
 			$(document).ready(function() {

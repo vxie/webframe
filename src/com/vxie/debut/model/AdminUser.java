@@ -101,6 +101,7 @@ public class AdminUser implements RowEntityMapper {
         result.put("name", name);
         result.put("areaName", areaName);
         result.put("action", "");
+
         result.put("id", id + "");
 		return result;
 	}

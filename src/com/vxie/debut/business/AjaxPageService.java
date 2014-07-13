@@ -7,6 +7,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import com.vxie.debut.model.AdminUser;
+import com.vxie.debut.model.Area;
+import com.vxie.debut.model.Group;
 import com.vxie.debut.model.Member;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
@@ -85,8 +87,55 @@ public class AjaxPageService extends BaseService {
 
     }
 
-	
-	public String rolePage(HttpServletRequest request) throws Exception {
+    public String groupPage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select name, '' headName, '' action, id, headId from t_group where 1=1";
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("id", "id = ?", String.class);
+        page.registerQueryParams("name", "name like ?", String.class);
+        page.registerQueryParams("headId", "headId = ?", Integer.class);
+
+        return page.generatePageContent(request, Group.class, new EntitiesHandler<Group>() {
+            public List<Group> handle(List<Group> rows) throws Exception {
+                for (Group group : rows) {
+                    //翻译地区名称
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_user a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            group.getHeadId()
+                    );
+                    group.setHeadName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+    }
+
+
+    public String areaPage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select id, name, '' action, from t_area where 1=1";
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("id", "id = ?", String.class);
+        page.registerQueryParams("name", "name like ?", String.class);
+
+        return page.generatePageContent(request, Area.class, new EntitiesHandler<Area>() {
+            public List<Area> handle(List<Area> rows) throws Exception {
+                //
+                return rows;
+            }
+        });
+    }
+
+
+
+    public String rolePage(HttpServletRequest request) throws Exception {
 		String sql = "select role_id, role_name, role_memo from cut_role where 1=1 ";
 		
 		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by role_id");

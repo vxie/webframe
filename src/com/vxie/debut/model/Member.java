@@ -160,6 +160,7 @@ public class Member implements RowEntityMapper {
 
     public LinkedHashMap<String, String> entityToRow() {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
+        //字段顺序要严格对应页面列表中的顺序
         result.put("name", name);
         result.put("phoneNumber", phoneNumber);
         result.put("medicalRecordId", medicalRecordId + "");
@@ -170,8 +171,8 @@ public class Member implements RowEntityMapper {
         result.put("brithday", brithday);
         result.put("areaId", areaId);
         result.put("filename", filename);
-
         result.put("action", "");  //操作列
+
         result.put("id", id + "");
         result.put("password", password);
 

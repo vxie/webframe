@@ -48,12 +48,12 @@ public class MemberController extends AbstractController {
         result.put("SUCCESS", "TRUE");
         result.put("MSG", "succeed");
         try {
-            if (memberService.isMemberExist(member.getId(), member.getPhoneNumber(), member.getName())) {
+            if (memberService.isExist(member.getId(), member.getPhoneNumber(), member.getName())) {
                 throw new RuntimeException("该会员已经存在");
             }
             if(member.getId() == null) {
                 //新增
-                member.setId(memberService.genUserId());
+                member.setId(memberService.genId());
 
             }
             memberService.save(member);

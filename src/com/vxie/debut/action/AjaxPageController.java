@@ -27,8 +27,22 @@ public class AjaxPageController extends AbstractController {
     public String member(HttpServletRequest request) throws Exception{
         return ajaxPageService.memberPage(request);
     }
-	
-	@ResponseBody
+
+    @ResponseBody
+    @RequestMapping(value = "/group")
+    public String group(HttpServletRequest request) throws Exception {
+        return ajaxPageService.groupPage(request);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/area")
+    public String area(HttpServletRequest request) throws Exception {
+        return ajaxPageService.areaPage(request);
+    }
+
+
+
+    @ResponseBody
 	@RequestMapping(value="/role")
 	public String role(HttpServletRequest request) throws Exception{
 		return ajaxPageService.rolePage(request);

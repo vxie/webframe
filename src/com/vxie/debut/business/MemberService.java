@@ -20,12 +20,12 @@ public class MemberService extends BaseService {
         dao.delete(Member.class, id);
     }
 
-    public Long genUserId() {
+    public Long genId() {
         return dao.getSimpleJdbcTemplate().queryForInt("select max(id) from t_user") + 1L;
     }
 
 
-    public Boolean isMemberExist(Long userid, String phoneNumber, String name) {
+    public Boolean isExist(Long userid, String phoneNumber, String name) {
         if (userid != null) {
             //编辑用户时
             return dao.getSimpleJdbcTemplate().queryForInt("select count(id) from t_user where id <> ? and phoneNumber=? and name=?",

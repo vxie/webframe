@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 
 import com.vxie.debut.model.AdminUser;
 import net.sf.json.JSONObject;
-import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.FileCopyUtils;
@@ -53,7 +52,7 @@ public class AdminUserController extends AbstractController {
         result.put("SUCCESS", "TRUE");
         result.put("MSG", "check succeed");
         try {
-//            if (adminUserService.hasLoginName(userid, number)) {
+//            if (adminUserService.isExist(userid, number)) {
 //                throw new RuntimeException("该手机号码已经存在");
 //            }
         } catch (Exception e) {
@@ -72,12 +71,12 @@ public class AdminUserController extends AbstractController {
         result.put("SUCCESS", "TRUE");
         result.put("MSG", "succeed");
         try {
-            if (adminUserService.hasLoginName(adminUser.getId(), adminUser.getNumber())) {
+            if (adminUserService.isExist(adminUser.getId(), adminUser.getNumber())) {
                 throw new RuntimeException("该手机号码已经存在");
             }
             if(adminUser.getId() == null) {
                 //新增
-                adminUser.setId(adminUserService.genUserId());
+                adminUser.setId(adminUserService.genId());
                 adminUser.setPassword(adminUserService.DEFAULT_PWD);
                 adminUser.setRole(1);
             } else {

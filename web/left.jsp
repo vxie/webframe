@@ -20,27 +20,69 @@
   <tr>
     <td bgcolor="#FFFFFF">
         <table width="100%" border="0" cellpadding="4" cellspacing="1">
+           <%--系统管理员菜单--%>
             <tr>
-                <td colspan="2" bgcolor="#dbe3f7">首页(${adminUser.name})</td>
+                <td colspan="2" bgcolor="#dbe3f7">系统管理</td>
             </tr>
-
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver" id="firstRow">4</td>
                 <td>
                     <a href="<%= contextPath%>/user/list" onclick="domenu(this.parentNode.parentNode)"
-                       target="contentInfo">营养师管理</a>
+                       target="contentInfo">营养师管理</a>   <%--t_admin--%>
                 </td>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
                 <td><a href="<%= contextPath%>/member/list" onclick="domenu(this.parentNode.parentNode)"
-                       target="contentInfo">会员管理</a></td>
+                       target="contentInfo">会员管理</a></td>  <%--t_user--%>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
-                <td><a href="javascript:alert('会员组管理');" onclick="domenu(this.parentNode.parentNode)"
-                       target="contentInfo">会员组管理</a></td>
+                <td><a href="<%= contextPath%>/group/list" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">会员组管理</a></td>  <%--t_group--%>
             </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="<%= contextPath%>/area/list" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">地区管理</a></td>   <%--t_area--%>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('分店管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">分店管理</a></td>  <%--t_branch--%>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('发布信息管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">发布信息管理</a></td>  <%--t_space--%>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('推送信息管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">推送信息管理</a></td> <%--t_pushInfo--%>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('主界面管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">主界面管理</a></td>  <%--t_layout--%>
+            </tr>
+
+            <%--营养师菜单--%>
+            <tr>
+                <td colspan="2" bgcolor="#dbe3f7">饮食计划</td>  <%--t_plan--%>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('方案管理');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">方案管理</a></td>
+            </tr>
+            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
+                <td class="menuMouseOver">&nbsp;</td>
+                <td><a href="javascript:alert('制定计划');" onclick="domenu(this.parentNode.parentNode)"
+                       target="contentInfo">制定计划</a></td>
+            </tr>
+
+
         </table>
         <table width="100%" border="0" cellpadding="4" cellspacing="1">
             <tr>
