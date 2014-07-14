@@ -150,6 +150,37 @@ public class AjaxPageService extends BaseService {
     }
 
 
+    public String spacePage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select userId, '' userName, picName, time, content, state, id from t_space where 1=1";
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("id", "id = ?", String.class);
+        page.registerQueryParams("userId", "userId = ?", String.class);
+        page.registerQueryParams("content", "content like ?", String.class);
+
+        return page.generatePageContent(request, Space.class, new EntitiesHandler<Space>() {
+            public List<Space> handle(List<Space> rows) throws Exception {
+                for (Space space : rows) {
+                    //翻译地区名称
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_user a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            space.getUserId()
+                    );
+                    space.setUserName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+    }
+
+
+
 
 
     public String rolePage(HttpServletRequest request) throws Exception {

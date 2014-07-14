@@ -53,7 +53,7 @@
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
-                <td><a href="javascript:alert('发布信息管理');" onclick="domenu(this.parentNode.parentNode)"
+                <td><a href="<%= contextPath%>/space/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">发布信息管理</a></td>  <%--t_space--%>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">

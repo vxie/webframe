@@ -47,6 +47,12 @@ public class AjaxPageController extends AbstractController {
         return ajaxPageService.branchPage(request);
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/space")
+    public String space(HttpServletRequest request) throws Exception {
+        return ajaxPageService.spacePage(request);
+    }
+
 
     @ResponseBody
 	@RequestMapping(value="/role")
