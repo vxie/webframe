@@ -180,6 +180,36 @@ public class AjaxPageService extends BaseService {
     }
 
 
+    public String pushinfoPage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select adminId, '' adminName, time, content, '' action, id from t_pushinfo where 1=1";
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("id", "id = ?", String.class);
+        page.registerQueryParams("adminId", "adminId = ?", String.class);
+        page.registerQueryParams("content", "content like ?", String.class);
+
+        return page.generatePageContent(request, PushInfo.class, new EntitiesHandler<PushInfo>() {
+            public List<PushInfo> handle(List<PushInfo> rows) throws Exception {
+                for (PushInfo pushInfo : rows) {
+                    //翻译地区名称
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_admin a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            pushInfo.getAdminId()
+                    );
+                    pushInfo.setAdminName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+    }
+
+
 
 
 

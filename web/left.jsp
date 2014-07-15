@@ -58,7 +58,7 @@
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
-                <td><a href="javascript:alert('推送信息管理');" onclick="domenu(this.parentNode.parentNode)"
+                <td><a href="<%= contextPath%>/pushinfo/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">推送信息管理</a></td> <%--t_pushInfo--%>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">

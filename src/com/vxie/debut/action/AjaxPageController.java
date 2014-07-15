@@ -53,7 +53,17 @@ public class AjaxPageController extends AbstractController {
         return ajaxPageService.spacePage(request);
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/pushinfo")
+    public String pushinfo(HttpServletRequest request) throws Exception {
+        return ajaxPageService.spacePage(request);
+    }
 
+
+
+
+
+    /////////////////////////////////
     @ResponseBody
 	@RequestMapping(value="/role")
 	public String role(HttpServletRequest request) throws Exception{

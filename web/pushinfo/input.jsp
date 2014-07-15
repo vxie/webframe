@@ -15,12 +15,12 @@
         function Ok() {
             if (!$('#form1').validate({
                 rules:{
-                    name:{
+                    content:{
                         required:true
                     }
                 },
                 messages:{
-                    name:"请输入分店名称"
+                    content:"请输入推送信息内容"
                 }
             }).form()) {
                 return;
@@ -32,7 +32,7 @@
         function doSave() {
             $.post('<%= contextPath%>/branch/edit/save', $("form").serialize(), function (data) {
                 if (data.SUCCESS == "TRUE") {
-                    alert("分店信息保存成功");
+                    alert("推送信息保存成功");
                     parent.JQueryXDialog.fnResult(1);
                 } else {
                     alert(data.MSG);
@@ -44,30 +44,12 @@
 </head>
 <body>
 <form id="form1" method="post" action="#">
-    <input type="hidden" id="p_branchid" name="id" value="${currBranch.id}">
+    <input type="hidden" id="p_infoid" name="id" value="${currPushInfo.id}">
     <table width="100%" border="0" cellpadding="2" cellspacing="1">
         <tr>
-            <td class="popTitleMust filedName" width="12%">分店名称:</td>
+            <td class="popTitleMust filedName" width="12%">信息ID:</td>
             <td class="popConent">
-                <input type="text" id="p_name" name="name" value="${currBranch.name}" class="required">
-            </td>
-        </tr>
-        <tr>
-            <td class="popTitle filedName" width="12%">分店地址:</td>
-            <td class="popConent">
-                <input type="text" id="p_address" name="address" value="${currBranch.address}">
-            </td>
-        </tr>
-        <tr>
-            <td class="popTitle filedName" width="12%">地理经度:</td>
-            <td class="popConent">
-                <input type="text" id="p_longitude" name="longitude" value="${currBranch.longitude}">
-            </td>
-        </tr>
-        <tr>
-            <td class="popTitle filedName" width="12%">地理纬度:</td>
-            <td class="popConent">
-                <input type="text" id="p_latitude" name="latitude" value="${currBranch.latitude}">
+                <input type="text" id="p_content" name="content" value="${currPushInfo.content}" class="required">
             </td>
         </tr>
     </table>
