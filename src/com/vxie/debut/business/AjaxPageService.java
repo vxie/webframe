@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import com.vxie.debut.model.*;
 import org.springframework.jdbc.core.RowMapper;
@@ -96,7 +97,6 @@ public class AjaxPageService extends BaseService {
         return page.generatePageContent(request, Group.class, new EntitiesHandler<Group>() {
             public List<Group> handle(List<Group> rows) throws Exception {
                 for (Group group : rows) {
-                    //翻译地区名称
                     List<String> list = dao.getSimpleJdbcTemplate().query(
                             "select a.name from t_user a where a.id=?",
                             new RowMapper<String>() {
@@ -162,7 +162,6 @@ public class AjaxPageService extends BaseService {
         return page.generatePageContent(request, Space.class, new EntitiesHandler<Space>() {
             public List<Space> handle(List<Space> rows) throws Exception {
                 for (Space space : rows) {
-                    //翻译地区名称
                     List<String> list = dao.getSimpleJdbcTemplate().query(
                             "select a.name from t_user a where a.id=?",
                             new RowMapper<String>() {
@@ -192,7 +191,6 @@ public class AjaxPageService extends BaseService {
         return page.generatePageContent(request, PushInfo.class, new EntitiesHandler<PushInfo>() {
             public List<PushInfo> handle(List<PushInfo> rows) throws Exception {
                 for (PushInfo pushInfo : rows) {
-                    //翻译地区名称
                     List<String> list = dao.getSimpleJdbcTemplate().query(
                             "select a.name from t_admin a where a.id=?",
                             new RowMapper<String>() {
@@ -226,6 +224,39 @@ public class AjaxPageService extends BaseService {
             }
         });
     }
+
+
+    public String planPage(HttpServletRequest request, HttpSession session) throws Exception {
+        AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");  //当显示当前营养师的记录
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select p.groupId, p.userId, '' userName, p.breakfast, p.lunch, p.dinner, p.sendTime, p.makeTime," +
+                " p.remarks, '' action, p.id from t_plan p, t_group g where p.groupId=g.id and g.headId="
+                + adminUser.getId();
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("id", "id =", String.class);
+        page.registerQueryParams("groupId", "groupId =", String.class);
+        page.registerQueryParams("userId", "userId =", String.class);
+
+        return page.generatePageContent(request, Plan.class, new EntitiesHandler<Plan>() {
+            public List<Plan> handle(List<Plan> rows) throws Exception {
+                for (Plan plan : rows) {
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_user a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            plan.getUserId()
+                    );
+                    plan.setUserName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+    }
+
 
 
     public String rolePage(HttpServletRequest request) throws Exception {

@@ -73,28 +73,13 @@
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
-                <td><a href="javascript:alert('方案管理');" onclick="domenu(this.parentNode.parentNode)"
+                <td><a href="<%= contextPath%>/plan/list" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">方案管理</a></td>
             </tr>
             <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
                 <td class="menuMouseOver">&nbsp;</td>
                 <td><a href="javascript:alert('制定计划');" onclick="domenu(this.parentNode.parentNode)"
                        target="contentInfo">制定计划</a></td>
-            </tr>
-
-
-        </table>
-        <table width="100%" border="0" cellpadding="4" cellspacing="1">
-            <tr>
-                <td colspan="2" bgcolor="#dbe3f7">参考菜单</td>
-            </tr>
-
-            <tr onmouseover="this.cells[0].innerText='4'" onmouseout="doonmouseout(this)">
-                <td class="menuMouseOver">4</td>
-                <td>
-                    <a href="<%= contextPath%>/role/list" onclick="domenu(this.parentNode.parentNode)"
-                       target="contentInfo">角色管理</a>
-                </td>
             </tr>
 
         </table>

@@ -66,6 +66,13 @@ public class AjaxPageController extends AbstractController {
     }
 
 
+    @ResponseBody
+    @RequestMapping(value = "/plan")
+    public String plan(HttpServletRequest request, HttpSession session) throws Exception {
+        return ajaxPageService.planPage(request, session);
+    }
+
+
     /////////////////////////////////
     @ResponseBody
 	@RequestMapping(value="/role")
