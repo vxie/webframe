@@ -1,6 +1,7 @@
 package com.vxie.debut.action;
 
 import com.vxie.debut.business.PushInfoService;
+import com.vxie.debut.model.AdminUser;
 import com.vxie.debut.model.PushInfo;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.HashMap;
 
 @Controller
@@ -34,7 +37,7 @@ public class PushInfoController extends AbstractController {
     @SuppressWarnings("static-access")
     @RequestMapping(value = "/edit/save")
     @ResponseBody
-    public String save(PushInfo pushInfo) {
+    public String save(PushInfo pushInfo, HttpSession session) {
         HashMap<String, String> result = new HashMap<String, String>();
         result.put("SUCCESS", "TRUE");
         result.put("MSG", "succeed");
@@ -42,7 +45,10 @@ public class PushInfoController extends AbstractController {
 
             if (pushInfo.getId() == null) {
                 //新增
+                AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");
                 pushInfo.setId(pushInfoService.genId());
+                pushInfo.setAdminId(adminUser.getId());
+                pushInfo.setTime(new Date());
             }
             pushInfoService.save(pushInfo);
         } catch (Exception e) {

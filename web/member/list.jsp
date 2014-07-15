@@ -86,6 +86,7 @@
 			<table id="pageList" width="100%" border="1" align="center" cellpadding="0" cellspacing="0" rules="cols" bordercolor="#9aadce" class="table">
 				<thead>
 					<tr class="head">
+                        <td>会员ID</td>
                         <td>会员名</td>
                         <td>联系电话</td>
 						<td>病历ID</td>
@@ -99,6 +100,7 @@
 						<td width="8%">操作</td>
 					</tr>
 					<tr style="display: none;cursor='default';" onmouseover="doonmouseover(this)" onmouseout="doonmouseout(this, this.className)">
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>

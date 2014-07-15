@@ -56,27 +56,39 @@
             <td class="popConent">
                 <input type="text" id="p_groupId" name="groupId" value="${currPlan.groupId}" class="required"/>
             </td>
+        </tr>
+        <tr>
             <td class="popTitleMust filedName" width="12%">会员ID:</td>
             <td class="popConent">
                 <input type="text" id="p_userId" name="userId" value="${currPlan.userId}" class="required"/>
             </td>
+        </tr>
+        <tr>
             <td class="popTitle filedName" width="12%">早餐搭配方案:</td>
             <td class="popConent">
                 <input type="text" id="p_breakfast" name="breakfast" value="${currPlan.breakfast}"/>
             </td>
+        </tr>
+        <tr>
             <td class="popTitle filedName" width="12%">午餐搭配方案:</td>
             <td class="popConent">
                 <input type="text" id="p_lunch" name="lunch" value="${currPlan.lunch}"/>
             </td>
+        </tr>
+        <tr>
             <td class="popTitle filedName" width="12%">晚餐搭配方案:</td>
             <td class="popConent">
                 <input type="text" id="p_dinner" name="dinner" value="${currPlan.dinner}"/>
             </td>
+        </tr>
+        <tr>
             <td class="popTitle filedName" width="12%">预定发送时间:</td>
             <td class="popConent">
                 <input type="text" id="p_sendTime" name="sendTime" value="${currPlan.sendTime}"/>
             </td>
-             <td class="popTitle filedName" width="12%">备注:</td>
+        </tr>
+        <tr>
+            <td class="popTitle filedName" width="12%">备注:</td>
             <td class="popConent">
                 <input type="text" id="p_remarks" name="remarks" value="${currPlan.remarks}"/>
             </td>

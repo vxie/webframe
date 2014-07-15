@@ -20,7 +20,7 @@
                 }
                 $.post('<%= contextPath%>/pushinfo/del/' + id, function (data) {
                             if (data.SUCCESS == "TRUE") {
-                                alert("删除分店成功");
+                                alert("删除推送信息成功");
                             } else {
                                 alert(data.MSG);
                             }

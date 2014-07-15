@@ -22,7 +22,7 @@ import com.sunrise.sqlpage.intf.EntitiesHandler;
 public class AjaxPageService extends BaseService {
 	
 	public String userPage(HttpServletRequest request) throws Exception {
-		String sql = "select number, name, '' areaName, '' action, id  from t_admin where  role <> 0";
+		String sql = "select id, number, name, '' areaName, '' action from t_admin where  role <> 0";
 		
 		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
 		
@@ -52,8 +52,8 @@ public class AjaxPageService extends BaseService {
 
     public String memberPage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select name, phoneNumber, medicalRecordId, address, groupId, age, time, brithday, areaId, " +
-                "filename, '' action, id, password from t_user where 1=1";
+        String sql = "select  id, name, phoneNumber, medicalRecordId, address, groupId, age, time, brithday, areaId, " +
+                "filename, '' action, password from t_user where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("name", "name like ?", String.class);
@@ -87,7 +87,7 @@ public class AjaxPageService extends BaseService {
 
     public String groupPage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select name, '' headName, '' action, id, headId from t_group where 1=1";
+        String sql = "select id, name, '' headName, '' action, headId from t_group where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("id", "id = ?", String.class);
@@ -98,7 +98,7 @@ public class AjaxPageService extends BaseService {
             public List<Group> handle(List<Group> rows) throws Exception {
                 for (Group group : rows) {
                     List<String> list = dao.getSimpleJdbcTemplate().query(
-                            "select a.name from t_user a where a.id=?",
+                            "select a.name from t_admin a where a.id=?",
                             new RowMapper<String>() {
                                 public String mapRow(ResultSet rs, int arg1) throws SQLException {
                                     return rs.getString(1);

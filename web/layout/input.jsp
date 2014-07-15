@@ -76,7 +76,7 @@
         <tr>
             <td class="popTitle filedName" width="12%">图片上传时间:<br/>(格式如:2014-07-19 17:31:38)</td>
             <td class="popConent">
-                <input type="text" id="p_updatetime" name="updatetime" value="<fmt:formatDate value="${currMember.updatetime}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
+                <input type="text" id="p_updatetime" name="updatetime" value="<fmt:formatDate value="${currLayout.updatetime}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
             </td>
         </tr>
     </table>

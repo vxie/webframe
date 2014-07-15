@@ -30,7 +30,7 @@
         }
 
         function doSave() {
-            $.post('<%= contextPath%>/branch/edit/save', $("form").serialize(), function (data) {
+            $.post('<%= contextPath%>/pushinfo/edit/save', $("form").serialize(), function (data) {
                 if (data.SUCCESS == "TRUE") {
                     alert("推送信息保存成功");
                     parent.JQueryXDialog.fnResult(1);
@@ -45,9 +45,11 @@
 <body>
 <form id="form1" method="post" action="#">
     <input type="hidden" id="p_infoid" name="id" value="${currPushInfo.id}">
+    <input type="hidden" id="p_adminId" name="adminId" value="${currPushInfo.adminId}">
+    <input type="hidden" id="p_time" name="time" value="<fmt:formatDate value="${currPushInfo.time}" pattern="yyyy-MM-dd HH:mm:ss"/>">
     <table width="100%" border="0" cellpadding="2" cellspacing="1">
         <tr>
-            <td class="popTitleMust filedName" width="12%">信息ID:</td>
+            <td class="popTitleMust filedName" width="12%">信息内容:</td>
             <td class="popConent">
                 <input type="text" id="p_content" name="content" value="${currPushInfo.content}" class="required"/>
             </td>
