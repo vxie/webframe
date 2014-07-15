@@ -49,56 +49,56 @@
             <tr>
                 <td class="popTitleMust filedName" width="12%">会员名:</td>
                 <td class="popConent">
-                    <input type="text" id="p_name" name="name" value="${currMember.name}" class="required">
+                    <input type="text" id="p_name" name="name" value="${currMember.name}" class="required"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">联系电话:</td>
                 <td class="popConent">
-                    <input type="text" id="p_phoneNumber" name="phoneNumber" value="${currMember.phoneNumber}">
+                    <input type="text" id="p_phoneNumber" name="phoneNumber" value="${currMember.phoneNumber}"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">病历ID:</td>
                 <td class="popConent">
-                    <input type="text" id="p_medicalRecordId" name="medicalRecordId" value="${currMember.phoneNumber}">
+                    <input type="text" id="p_medicalRecordId" name="medicalRecordId" value="${currMember.phoneNumber}"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">地址:</td>
                 <td class="popConent">
-                    <input type="text" id="p_address" name="address" value="${currMember.address}">
+                    <input type="text" id="p_address" name="address" value="${currMember.address}"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">分组ID:</td>
                 <td class="popConent">
-                    <input type="text" id="p_groupId" name="groupId" value="${currMember.groupId}">
+                    <input type="text" id="p_groupId" name="groupId" value="${currMember.groupId}"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">年龄:</td>
                 <td class="popConent">
-                    <input type="text" id="p_age" name="age" value="${currMember.age}">
+                    <input type="text" id="p_age" name="age" value="${currMember.age}"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">密码:</td>
                 <td class="popConent">
-                    <input type="text" id="p_password" name="password" value="${currMember.password}">
+                    <input type="text" id="p_password" name="password" value="${currMember.password}"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">注册时间:<br/>(格式如:2014-07-19 17:31:38)</td>
                 <td class="popConent">
                     <input type="text" id="p_time" name="time" <%--onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"--%>
-                           value="<fmt:formatDate value="${currMember.time}" pattern="yyyy-MM-dd HH:mm:ss"/>">
+                           value="<fmt:formatDate value="${currMember.time}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitle filedName" width="12%">生日:</td>
                 <td class="popConent">
-                    <input type="text" id="p_brithday" name="brithday" value="${currMember.brithday}">
+                    <input type="text" id="p_brithday" name="brithday" value="${currMember.brithday}"/>
                 </td>
             </tr>
 		    <tr>
@@ -112,7 +112,7 @@
             <tr>
                 <td class="popTitle filedName" width="12%">病历附件:</td>
                 <td class="popConent">
-                    <input type="text" id="p_filename" name="filename" value="${currMember.filename}">
+                    <input type="text" id="p_filename" name="filename" value="${currMember.filename}"/>
                 </td>
             </tr>
 		</table>

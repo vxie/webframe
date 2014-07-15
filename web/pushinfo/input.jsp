@@ -49,7 +49,7 @@
         <tr>
             <td class="popTitleMust filedName" width="12%">信息ID:</td>
             <td class="popConent">
-                <input type="text" id="p_content" name="content" value="${currPushInfo.content}" class="required">
+                <input type="text" id="p_content" name="content" value="${currPushInfo.content}" class="required"/>
             </td>
         </tr>
     </table>

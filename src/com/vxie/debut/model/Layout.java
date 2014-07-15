@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedHashMap;
 
@@ -93,12 +94,30 @@ public class Layout  implements RowEntityMapper {
  ) ENGINE=InnoDB DEFAULT CHARSET=gbk;*/
 
 
-
     public LinkedHashMap<String, String> entityToRow() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
+        //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
+        result.put("textContent", textContent);
+        result.put("picName", picName);
+        result.put("disorder", disorder + "");
+        result.put("useing", useing == 0 ? "显示" : "不显示");
+        result.put("updatetime", updatetime == null ? "" : new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(updatetime));
+        result.put("action", "");  //操作列
+
+        result.put("id", id + ""); //select textContent, picName, disorder, useing, updatetime, '' action, id from t_layout
+        return result;
     }
 
-    public Object mapRow(ResultSet resultSet, int i) throws SQLException {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public Object mapRow(ResultSet rs, int i) throws SQLException {
+        Layout layout = new Layout();
+        layout.setId(rs.getLong("id"));
+        layout.setTextContent(rs.getString("textContent"));
+        layout.setPicName(rs.getString("picName"));
+        layout.setDisorder(rs.getInt("disorder"));
+        layout.setUseing(rs.getInt("useing"));
+        layout.setUpdatetime(rs.getTimestamp("updatetime"));
+
+        return layout;
     }
+
 }

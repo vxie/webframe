@@ -49,7 +49,7 @@
             <tr>
                 <td class="popTitleMust filedName" width="12%">地区名称:</td>
                 <td class="popConent">
-                    <input type="text" id="p_name" name="name" value="${currArea.name}" class="required">
+                    <input type="text" id="p_name" name="name" value="${currArea.name}" class="required"/>
                 </td>
             </tr>
 		</table>

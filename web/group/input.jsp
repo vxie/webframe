@@ -53,13 +53,13 @@
             <tr>
                 <td class="popTitleMust filedName" width="12%">分组名称:</td>
                 <td class="popConent">
-                    <input type="text" id="p_name" name="name" value="${currGroup.name}" class="required">
+                    <input type="text" id="p_name" name="name" value="${currGroup.name}" class="required"/>
                 </td>
             </tr>
             <tr>
                 <td class="popTitleMust filedName" width="12%">饮食搭配负责人:</td>
                 <td class="popConent">
-                    <input type="text" id="p_headId" name="headId" value="${currGroup.headId}" class="required">
+                    <input type="text" id="p_headId" name="headId" value="${currGroup.headId}" class="required"/>
                 </td>
             </tr>
 		</table>

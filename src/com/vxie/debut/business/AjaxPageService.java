@@ -210,7 +210,22 @@ public class AjaxPageService extends BaseService {
     }
 
 
+    public String layoutPage(HttpServletRequest request) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select textContent, picName, disorder, useing, updatetime, '' action, id from t_layout where 1=1";
 
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        page.registerQueryParams("textContent", "textContent = ?", String.class);
+        page.registerQueryParams("picName", "picName = ?", String.class);
+        page.registerQueryParams("useing", "useing = ?", String.class);
+
+        return page.generatePageContent(request, Layout.class, new EntitiesHandler<Layout>() {
+            public List<Layout> handle(List<Layout> rows) throws Exception {
+                //
+                return rows;
+            }
+        });
+    }
 
 
     public String rolePage(HttpServletRequest request) throws Exception {

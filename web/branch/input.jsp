@@ -49,25 +49,25 @@
         <tr>
             <td class="popTitleMust filedName" width="12%">分店名称:</td>
             <td class="popConent">
-                <input type="text" id="p_name" name="name" value="${currBranch.name}" class="required">
+                <input type="text" id="p_name" name="name" value="${currBranch.name}" class="required"/>
             </td>
         </tr>
         <tr>
             <td class="popTitle filedName" width="12%">分店地址:</td>
             <td class="popConent">
-                <input type="text" id="p_address" name="address" value="${currBranch.address}">
+                <input type="text" id="p_address" name="address" value="${currBranch.address}"/>
             </td>
         </tr>
         <tr>
             <td class="popTitle filedName" width="12%">地理经度:</td>
             <td class="popConent">
-                <input type="text" id="p_longitude" name="longitude" value="${currBranch.longitude}">
+                <input type="text" id="p_longitude" name="longitude" value="${currBranch.longitude}"/>
             </td>
         </tr>
         <tr>
             <td class="popTitle filedName" width="12%">地理纬度:</td>
             <td class="popConent">
-                <input type="text" id="p_latitude" name="latitude" value="${currBranch.latitude}">
+                <input type="text" id="p_latitude" name="latitude" value="${currBranch.latitude}"/>
             </td>
         </tr>
     </table>

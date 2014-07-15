@@ -61,13 +61,13 @@
             <tr>
                 <td class="popTitleMust filedName" width="12%">手机号码:</td>
                 <td class="popConent">
-                    <input type="text" id="p_number" name="number" value="${currUser.number}" class="required">
+                    <input type="text" id="p_number" name="number" value="${currUser.number}" class="required"/>
                 </td>
             </tr>
 		    <tr>
 				<td class="popTitleMust filedName" width="12%">姓名:</td>
 				<td class="popConent">
-					<input type="text" id="p_name" name="name" value="${currUser.name}" class="required">
+					<input type="text" id="p_name" name="name" value="${currUser.name}" class="required"/>
 				</td>
 			</tr>
 		    <tr>

@@ -59,8 +59,11 @@ public class AjaxPageController extends AbstractController {
         return ajaxPageService.spacePage(request);
     }
 
-
-
+    @ResponseBody
+    @RequestMapping(value = "/layout")
+    public String layout(HttpServletRequest request) throws Exception {
+        return ajaxPageService.layoutPage(request);
+    }
 
 
     /////////////////////////////////
