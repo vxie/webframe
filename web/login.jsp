@@ -8,14 +8,32 @@
 <title>割接进度管理系统</title>
 <style type="text/css">
 <!--
-body { margin:0px; padding:0px;}
-td{ font:Arial, Helvetica, sans-serif; font-size:12px}
-.divlogin{ width:1003px; height:768px; background: url(<%= contextPath%>/resources/images/login.jpg) no-repeat top left;}
-.input{ border:#7da5c9 solid 1px;}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+td {
+    font: Arial, Helvetica, sans-serif;
+    font-size: 12px
+}
+
+.divlogin {
+    width: 100%;
+    height: 539px;
+    background: url(<%= contextPath%>/resources/images/login.jpg) no-repeat top left;
+}
+
+.input {
+    border: #7da5c9 solid 1px;
+}
 -->
 </style>
 </head>
-<body>
+<body scroll="no">
 <!--内容 -->
 <div class="divlogin">
 <form name="loginForm" id="loginForm" action="<%= contextPath%>/login" method="post">
@@ -26,12 +44,16 @@ td{ font:Arial, Helvetica, sans-serif; font-size:12px}
 		<tr >
 		  <td width="439" align="left"  class="query01_td_text">&nbsp;</td>
 	      <td width="50" align="left"  class="query01_td_text"><div align="right">帐号</div></td>
-	      <td align="left"  class="query01_td_text"><input name="number" type="text" value="" size="20" class="input"/></td>
+	      <td align="left"  class="query01_td_text">
+              <input name="number" type="text" class="input" style="width:150px;"/>
+          </td>
 		</tr>
 		<tr>
 		  <td align="left"  class="query01_td_text"><label></label></td>
 	      <td align="left"  class="query01_td_text"><div align="right">密码</div></td>
-	      <td align="left"  class="query01_td_text"><input name="password" type="password" value="" size="20" class="input"/></td>
+	      <td align="left"  class="query01_td_text">
+              <input name="password" type="password" class="input" style="width:150px;"/>
+          </td>
 	  </tr>
 		<tr >
 		  <td colspan="2" align="left">&nbsp;</td>
