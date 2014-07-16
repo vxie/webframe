@@ -13,6 +13,10 @@
 	.menuMouseOver{
 		color :blue;width:10pt;font-family: webdings;font-size:10pt;
 	}
+    a:link {color:#0000FF;}		/* 未被访问的链接 */
+    a:visited {color:#0000FF;}	/* 已被访问的链接 */
+    a:hover {color:#a52a2a;}	/* 鼠标指针移动到链接上 */
+    a:active {color:#0000FF;}	/* 正在被点击的链接 */
 	</style>
  </head>
  <body>

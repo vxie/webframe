@@ -258,6 +258,34 @@ public class AjaxPageService extends BaseService {
     }
 
 
+    public String scorePage(HttpServletRequest request, HttpSession session) throws Exception {
+        String headId = request.getParameter("headId");
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select s.userId, '' userName, s.planId, s.score, s.time, s.id from t_score s, t_plan p, t_group g" +
+                " where p.groupId=g.id and s.planId=p.id and and g.headId=" + headId;
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+
+        return page.generatePageContent(request, Score.class, new EntitiesHandler<Score>() {
+            public List<Score> handle(List<Score> rows) throws Exception {
+                for (Score score : rows) {
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_user a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            score.getUserId()
+                    );
+                    score.setUserName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+    }
+
+
 
     public String rolePage(HttpServletRequest request) throws Exception {
 		String sql = "select role_id, role_name, role_memo from cut_role where 1=1 ";
