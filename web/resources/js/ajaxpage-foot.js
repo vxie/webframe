@@ -7,7 +7,7 @@ document.getElementById("ajaxpage-foot").innerHTML =
 	"		    <option value='20' selected>20</option> "+
 	"		    <option value='50'>50</option> "+
 	"		    <option value='100'>100</option> "+
-	"		    <option value='0'>all</option> "+
+//	"		    <option value='0'>all</option> "+
 	"		  </select> "+
 	"		</td> "+
 	"		<td width='25%' align='center'> "+

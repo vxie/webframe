@@ -97,7 +97,7 @@
 						<td>生日</td>
 						<td>地区</td>
 						<td>病历附件</td>
-						<td width="8%">操作</td>
+						<td width="10%">操作</td>
 					</tr>
 					<tr style="display: none;cursor='default';" onmouseover="doonmouseover(this)" onmouseout="doonmouseout(this, this.className)">
 						<td></td>
@@ -124,9 +124,9 @@
 			var ajaxPage = new $AjaxPage("pageList", "<%= contextPath%>/ajaxpage/member", 20);
             ajaxPage.afterRow(function (rowIndex, row, datas) {
                 var userId = datas.get("id");
-                row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + userId + ");\">编辑</a>&nbsp;"
-                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ");\">删除</a>&nbsp;"
-                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ");\">考核</a>&nbsp;"
+                row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + userId + ");\">编辑</a>&nbsp;&nbsp;&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ");\">删除</a>&nbsp;&nbsp;&nbsp;"
+                       +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ");\">考核</a></br>"
                        +  "<a href='javascript:void(0);' onclick=\"viewScore(" + userId + ");\">查看评分</a>&nbsp;"
                        +  "<a href='javascript:void(0);' onclick=\"viewSeedback(" + userId + ");\">查看反馈</a>&nbsp;";
             });
