@@ -55,7 +55,7 @@
 	  <div id="divSearch" class="">
           <table class="paramTable" width="100%" border="1" cellpadding="0" cellspacing="0">
               <tr>
-                  <td class="filedName">文章ID:</td>
+                  <td class="filedName">信息ID:</td>
                   <td><input id="p_id" class="paramIpt" name="id" type="text"/></td>
                   <td class="filedName">作者ID:</td>
                   <td><input id="p_userId" class="paramIpt" name="userId" type="text"/></td>
@@ -74,6 +74,7 @@
 			<table id="pageList" width="100%" border="1" align="center" cellpadding="0" cellspacing="0" rules="cols" bordercolor="#9aadce" class="table">
 				<thead>
 					<tr class="head">
+                        <td>信息ID</td>
                         <td>作者ID</td>
                         <td>作者名称</td>
                         <td>图片名称</td>
@@ -83,6 +84,7 @@
 						<td width="8%">操作</td>
 					</tr>
 					<tr style="display: none;cursor='default';" onmouseover="doonmouseover(this)" onmouseout="doonmouseout(this, this.className)">
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>

@@ -57,6 +57,7 @@
 			<table id="pageList" width="100%" border="1" align="center" cellpadding="0" cellspacing="0" rules="cols" bordercolor="#9aadce" class="table">
 				<thead>
 					<tr class="head">
+                        <td>信息ID</td>
                         <td>发布者ID</td>
                         <td>发布者名称</td>
                         <td>发布时间</td>
@@ -64,6 +65,7 @@
 						<td width="8%">操作</td>
 					</tr>
 					<tr style="display: none;cursor='default';" onmouseover="doonmouseover(this)" onmouseout="doonmouseout(this, this.className)">
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>

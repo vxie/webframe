@@ -97,6 +97,7 @@ public class Layout  implements RowEntityMapper {
     public LinkedHashMap<String, String> entityToRow() {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
         //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
+        result.put("id", id + "");
         result.put("textContent", textContent);
         result.put("picName", picName);
         result.put("disorder", disorder + "");
@@ -104,7 +105,7 @@ public class Layout  implements RowEntityMapper {
         result.put("updatetime", updatetime == null ? "" : new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(updatetime));
         result.put("action", "");  //操作列
 
-        result.put("id", id + ""); //select textContent, picName, disorder, useing, updatetime, '' action, id from t_layout
+        //select textContent, picName, disorder, useing, updatetime, '' action, id from t_layout
         return result;
     }
 

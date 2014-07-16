@@ -85,13 +85,13 @@ public class Branch implements RowEntityMapper {
     public LinkedHashMap<String, String> entityToRow() {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
         //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
+        result.put("id", id + "");
         result.put("name", name);
         result.put("address", address);
         result.put("longitude", longitude);
         result.put("latitude", latitude);
         result.put("action", "");  //操作列
 
-        result.put("id", id + "");
         return result;
     }
 

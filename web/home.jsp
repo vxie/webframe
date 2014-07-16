@@ -79,7 +79,7 @@
             }
         </style>
 	</head>
-<body scroll="no" style="margin: 0; overflow-y: hidden;">
+<body scroll="no" style="margin: 0;">
 	<table border="0" cellspacing="0" cellpadding="0" width="100%" height="100%">
  		<tr id="topInfo">
   			<td width="100%" height="28px" bgcolor="#2596ee">
@@ -109,7 +109,7 @@
               			<img id="switch_left_point" onclick="switchBar('left')" style="cursor: hand;" src="<%= contextPath%>/resources/images/nav2.png" border="0">
 			   		</td>
 					<td style="width: 100%; height: 100%; padding: 5px; vertical-align:top;">
-						<iframe name="contentInfo" id="contentInfo" frameBorder="0" scrolling="no" src="<%= contextPath%>/user/list" style="height: 100%; visibility: inherit; width: 100%; z-index: 1"></iframe>
+						<iframe name="contentInfo" id="contentInfo" frameBorder="0" scrolling="" src="<%= contextPath%>/user/list" style="height: 100%; visibility: inherit; width: 100%; z-index: 1"></iframe>
 					</td>
 				</tr>
 			</table>

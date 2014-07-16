@@ -141,6 +141,7 @@ public class Plan implements RowEntityMapper {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
+        result.put("id", id + "");
         result.put("groupId", groupId + "");
         result.put("userId", userId + "");
         result.put("userName", userName);
@@ -152,7 +153,6 @@ public class Plan implements RowEntityMapper {
         result.put("remarks", remarks);
         result.put("action", "");  //操作列
 
-        result.put("id", id + "");
         //select groupId, userId, '' userName, breakfast, lunch, dinner, sendTime, makeTime, remarks, '' action, id from t_plan
         return result;
     }

@@ -133,7 +133,7 @@ public class AjaxPageService extends BaseService {
 
     public String branchPage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select name, address, longitude, latitude, '' action, id from t_branch where 1=1";
+        String sql = "select id, name, address, longitude, latitude, '' action from t_branch where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("name", "name like ?", String.class);
@@ -152,7 +152,7 @@ public class AjaxPageService extends BaseService {
 
     public String spacePage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select userId, '' userName, picName, time, content, state, id from t_space where 1=1";
+        String sql = "select id, userId, '' userName, picName, time, content, state from t_space where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("id", "id = ?", String.class);
@@ -181,7 +181,7 @@ public class AjaxPageService extends BaseService {
 
     public String pushinfoPage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select adminId, '' adminName, time, content, '' action, id from t_pushinfo where 1=1";
+        String sql = "select id, adminId, '' adminName, time, content, '' action from t_pushinfo where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("id", "id = ?", String.class);
@@ -210,7 +210,7 @@ public class AjaxPageService extends BaseService {
 
     public String layoutPage(HttpServletRequest request) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select textContent, picName, disorder, useing, updatetime, '' action, id from t_layout where 1=1";
+        String sql = "select id, textContent, picName, disorder, useing, updatetime, '' action from t_layout where 1=1";
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
         page.registerQueryParams("textContent", "textContent = ?", String.class);
@@ -229,8 +229,8 @@ public class AjaxPageService extends BaseService {
     public String planPage(HttpServletRequest request, HttpSession session) throws Exception {
         AdminUser adminUser = (AdminUser) session.getAttribute("adminUser");  //当显示当前营养师的记录
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select p.groupId, p.userId, '' userName, p.breakfast, p.lunch, p.dinner, p.sendTime, p.makeTime," +
-                " p.remarks, '' action, p.id from t_plan p, t_group g where p.groupId=g.id and g.headId="
+        String sql = "select p.id, p.groupId, p.userId, '' userName, p.breakfast, p.lunch, p.dinner, p.sendTime, p.makeTime," +
+                " p.remarks, '' action from t_plan p, t_group g where p.groupId=g.id and g.headId="
                 + adminUser.getId();
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");

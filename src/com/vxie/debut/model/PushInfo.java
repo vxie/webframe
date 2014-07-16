@@ -82,13 +82,14 @@ public class PushInfo implements RowEntityMapper {
     public LinkedHashMap<String, String> entityToRow() {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
         //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
+        result.put("id", id + "");
         result.put("adminId", adminId + "");
         result.put("adminName", adminName);
         result.put("time", time == null ? "" : new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(time));
         result.put("content", content);
         result.put("action", "");  //操作列
 
-        result.put("id", id + "");   //select adminId, '' adminName, time, content, '' action, id from t_pushinfo
+        //select adminId, '' adminName, time, content, '' action, id from t_pushinfo
         return result;
     }
 

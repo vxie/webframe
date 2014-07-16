@@ -107,6 +107,7 @@ public class Space implements RowEntityMapper {
     public LinkedHashMap<String, String> entityToRow() {
         LinkedHashMap<String, String> result = new LinkedHashMap<String, String>();
         //字段顺序要严格对应页面列表中的顺序及AjaxPageService中的select顺序
+        result.put("id", id + "");
         result.put("userId", userId + "");
         result.put("userName", userName);
         result.put("picName", picName);
@@ -120,7 +121,6 @@ public class Space implements RowEntityMapper {
         }
         result.put("state", stateDisp);
 
-        result.put("id", id + "");
         return result;
     }
 
