@@ -34,11 +34,15 @@
             }
 
             function viewScore(id) {
-                alert("查看评分");
+                showModalDlg("查看评分", '<%= contextPath%>/score/list/' + id, 800, 400, function (s) {
+//                    doReset();
+                });
             }
 
             function viewSeedback(id) {
-                alert("查看反馈");
+                showModalDlg("查看反馈", '<%= contextPath%>/feedback/list/' + id, 800, 400, function (s) {
+//                    doReset();
+                });
             }
 
             function doAssessment(id) {

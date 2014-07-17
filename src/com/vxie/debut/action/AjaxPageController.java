@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -70,6 +71,18 @@ public class AjaxPageController extends AbstractController {
     @RequestMapping(value = "/plan")
     public String plan(HttpServletRequest request, HttpSession session) throws Exception {
         return ajaxPageService.planPage(request, session);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/score/{headId}")
+    public String score(HttpServletRequest request, @PathVariable String headId) throws Exception {
+        return ajaxPageService.scorePage(request, headId);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/feedback/{headId}")
+    public String feedback(HttpServletRequest request, @PathVariable String headId) throws Exception {
+        return ajaxPageService.feedbackPage(request, headId);
     }
 
 

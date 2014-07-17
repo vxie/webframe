@@ -258,11 +258,10 @@ public class AjaxPageService extends BaseService {
     }
 
 
-    public String scorePage(HttpServletRequest request, HttpSession session) throws Exception {
-        String headId = request.getParameter("headId");
+    public String scorePage(HttpServletRequest request, String headId) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
         String sql = "select s.userId, '' userName, s.planId, s.score, s.time, s.id from t_score s, t_plan p, t_group g" +
-                " where p.groupId=g.id and s.planId=p.id and and g.headId=" + headId;
+                " where p.groupId=g.id and s.planId=p.id and g.headId=" + headId;
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
 
@@ -279,6 +278,33 @@ public class AjaxPageService extends BaseService {
                             score.getUserId()
                     );
                     score.setUserName(list.size() > 0 ? list.get(0) : "");
+                }
+                return rows;
+            }
+        });
+    }
+
+
+    public String feedbackPage(HttpServletRequest request, String headId) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select f.userId, '' userName, f.planId, f.content, f.time, f.id from t_feedback f, t_plan p, t_group g" +
+                " where p.groupId=g.id and f.planId=p.id and g.headId=" + headId;
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+
+        return page.generatePageContent(request, Feedback.class, new EntitiesHandler<Feedback>() {
+            public List<Feedback> handle(List<Feedback> rows) throws Exception {
+                for (Feedback feedback : rows) {
+                    List<String> list = dao.getSimpleJdbcTemplate().query(
+                            "select a.name from t_user a where a.id=?",
+                            new RowMapper<String>() {
+                                public String mapRow(ResultSet rs, int arg1) throws SQLException {
+                                    return rs.getString(1);
+                                }
+                            },
+                            feedback.getUserId()
+                    );
+                    feedback.setUserName(list.size() > 0 ? list.get(0) : "");
                 }
                 return rows;
             }

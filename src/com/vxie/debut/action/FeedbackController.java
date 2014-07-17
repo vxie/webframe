@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(value = "/score")
-public class ScoreController extends AbstractController {
+@RequestMapping(value = "/feedback")
+public class FeedbackController extends AbstractController {
 
     @RequestMapping(value = "/list/{headId}")
     public String list(ModelMap map, @PathVariable String headId) {
         map.put("headId", headId);
-        return "score/list";
+        return "feedback/list";
     }
 }
