@@ -84,7 +84,7 @@
         <tr>
             <td class="popTitle filedName" width="12%">预定发送时间:</td>
             <td class="popConent">
-                <input type="text" id="p_sendTime" name="sendTime" value="${currPlan.sendTime}"/>
+                <input type="text" id="p_sendTime" name="sendTime" value="<fmt:formatDate value="${currPlan.sendTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
             </td>
         </tr>
         <tr>
