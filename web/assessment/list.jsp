@@ -35,6 +35,10 @@
                 }, "json");
             }
 
+            function Ok() {
+                parent.JQueryXDialog.fnResult(1);
+            }
+
 
 		</script>
 	</head>
@@ -42,16 +46,14 @@
 	  <div id="divSearch" class="">
           <table class="paramTable" width="100%" border="1" cellpadding="0" cellspacing="0">
               <tr>
-                  <td class="filedName">评分级别</td>
+                  <td class="filedName">评分级别:</td>
                   <td>
                       <select id="p_level" name="level">
-                          <option value="0">优</option>
-                          <option value="1">良</option>
-                          <option value="2">差</option>
-                      </select>
-                  </td>
-                  <td>
-                      <button class="btn_2k3" style="text-align:left;" onclick="doAssessment()">新增考核</button>
+                          <option value="0">&nbsp;优&nbsp;</option>
+                          <option value="1">&nbsp;良&nbsp;</option>
+                          <option value="2">&nbsp;差&nbsp;</option>
+                      </select>&nbsp;
+                      <button class="btn_2k3" onclick="doAssessment()">新增考核</button>
                   </td>
               </tr>
           </table>

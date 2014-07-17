@@ -46,7 +46,9 @@
             }
 
             function doAssessment(id) {
-                alert("考核");
+                showModalDlg("考核", '<%= contextPath%>/assessment/list/' + id, 800, 400, function (s) {
+//                    doReset();
+                });
             }
 
 		</script>
@@ -83,11 +85,11 @@
 			<table id="pageList" width="100%" border="1" align="center" cellpadding="0" cellspacing="0" rules="cols" bordercolor="#9aadce" class="table">
 				<thead>
 					<tr class="head">
-                        <td>营养师ID</td>
+                        <td width="10%">营养师ID</td>
 						<td>手机号码</td>
 						<td>姓名</td>
-						<td>地区</td>
-						<td width="10%">操作</td>
+						<td width="10%">地区</td>
+						<td width="20%">操作</td>
 					</tr>
 					<tr style="display: none;cursor='default';" onmouseover="doonmouseover(this)" onmouseout="doonmouseout(this, this.className)">
 						<td></td>
@@ -108,9 +110,9 @@
             ajaxPage.afterRow(function (rowIndex, row, datas) {
                 var userId = datas.get("id");
                 row.cells[row.cells.length - 1].innerHTML = "<a href='javascript:void(0);' onclick=\"doEdit(" + userId + ")\">编辑</a>&nbsp;&nbsp;&nbsp;"
-                        +  "<a href='#' onclick=\"doDel(" + userId + ")\">删除</a>&nbsp;&nbsp;&nbsp;"
-                        +  "<a href='javascript:void(0);' onclick=\"doAssessment(" + userId + ");\">考核</a></br>"
-                        +  "<a href='javascript:void(0);' onclick=\"viewScore(" + userId + ");\">查看评分</a>&nbsp;"
+                        +  "<a href='javascript:void(0);' onclick=\"doDel(" + userId + ")\">删除</a>&nbsp;&nbsp;&nbsp;"
+                        +  "<a href='javascript:void(0);' onclick=\"doAssessment(" + userId + ");\">考核&nbsp;&nbsp;&nbsp;</a>"
+                        +  "<a href='javascript:void(0);' onclick=\"viewScore(" + userId + ");\">查看评分</a>&nbsp;&nbsp;&nbsp;"
                         +  "<a href='javascript:void(0);' onclick=\"viewSeedback(" + userId + ");\">查看反馈</a>&nbsp;";
             });
 			

@@ -263,7 +263,7 @@ public class AjaxPageService extends BaseService {
         String sql = "select s.userId, '' userName, s.planId, s.score, s.time, s.id from t_score s, t_plan p, t_group g" +
                 " where p.groupId=g.id and s.planId=p.id and g.headId=" + headId;
 
-        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by s.time desc");
 
         return page.generatePageContent(request, Score.class, new EntitiesHandler<Score>() {
             public List<Score> handle(List<Score> rows) throws Exception {
@@ -290,7 +290,7 @@ public class AjaxPageService extends BaseService {
         String sql = "select f.userId, '' userName, f.planId, f.content, f.time, f.id from t_feedback f, t_plan p, t_group g" +
                 " where p.groupId=g.id and f.planId=p.id and g.headId=" + headId;
 
-        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by f.time desc");
 
         return page.generatePageContent(request, Feedback.class, new EntitiesHandler<Feedback>() {
             public List<Feedback> handle(List<Feedback> rows) throws Exception {
@@ -314,7 +314,7 @@ public class AjaxPageService extends BaseService {
 
     public String assessmentPage(HttpServletRequest request, String adminId) throws Exception {
         //select 的字段顺序要严格对应页面列表中的顺序
-        String sql = "select time, level, id from t_assessment where adminId=" + adminId;
+        String sql = "select time, level, '' action, id from t_assessment where adminId=" + adminId;
 
         Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by time desc");
 
