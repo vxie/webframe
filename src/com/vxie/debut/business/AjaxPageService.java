@@ -22,7 +22,7 @@ import com.sunrise.sqlpage.intf.EntitiesHandler;
 public class AjaxPageService extends BaseService {
 	
 	public String userPage(HttpServletRequest request) throws Exception {
-		String sql = "select id, number, name, '' areaName, '' action from t_admin where  role <> 0";
+		String sql = "select id, number, name, '' areaName, '' action, areaId from t_admin where  role <> 0";
 		
 		Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by id");
 		
@@ -311,6 +311,20 @@ public class AjaxPageService extends BaseService {
         });
     }
 
+
+    public String assessmentPage(HttpServletRequest request, String adminId) throws Exception {
+        //select 的字段顺序要严格对应页面列表中的顺序
+        String sql = "select time, level, id from t_assessment where adminId=" + adminId;
+
+        Pageable page = SQLPage.newInstance(Constants.DB_NAME, DataSourceUtils.getDataSource(dao), sql, "order by time desc");
+
+        return page.generatePageContent(request, Assessment.class, new EntitiesHandler<Assessment>() {
+            public List<Assessment> handle(List<Assessment> rows) throws Exception {
+                //
+                return rows;
+            }
+        });
+    }
 
 
     public String rolePage(HttpServletRequest request) throws Exception {

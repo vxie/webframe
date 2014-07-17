@@ -106,14 +106,15 @@ public class AdminUser implements RowEntityMapper {
 
 		return result;
 	}
-	
+
+
 	public Object mapRow(ResultSet rs, int arg1) throws SQLException {
-		AdminUser u = new AdminUser();
-        u.setNumber(rs.getString(1));
-        u.setName(rs.getString(2));
-        u.setAreaName(rs.getString(3));
-        u.setId(rs.getLong(5));
-		return u;
+		AdminUser user = new AdminUser();
+        user.setId(rs.getLong("id"));
+        user.setNumber(rs.getString("number"));
+        user.setName(rs.getString("name"));
+        user.setAreaId(rs.getInt("areaId"));
+		return user;
 	}
 	
 }

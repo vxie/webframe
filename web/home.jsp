@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="pragma" content="no-cache" />
-		<title>割接进度管理系统</title>
+		<title>工作台</title>
 		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
 		<script src="<%= contextPath%>/resources/js/dlg/jquery.xdialog.js" type="text/javascript"></script>
 		<script>

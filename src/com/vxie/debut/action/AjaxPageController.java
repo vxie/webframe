@@ -85,6 +85,13 @@ public class AjaxPageController extends AbstractController {
         return ajaxPageService.feedbackPage(request, headId);
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/assessment/{adminId}")
+    public String assessment(HttpServletRequest request, @PathVariable String adminId) throws Exception {
+        return ajaxPageService.assessmentPage(request, adminId);
+    }
+
+
 
     /////////////////////////////////
     @ResponseBody
