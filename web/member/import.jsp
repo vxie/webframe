@@ -45,12 +45,22 @@
 	</body>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('#fileUploadForm').submit(function () {
+        $('#fileUploadForm').submit(function (e) {
+            e.preventDefault();//阻止默认的提交
             $(this).ajaxSubmit({
                 success:function (s) {
-                    var objs = eval("(" + s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "") + ")");
-                    for (var x in objs) $('#' + x).val(objs[x]);
-                    alert("操作成功!");
+                    var data = eval("(" + s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "") + ")");
+                    if (data.SUCCESS == "TRUE") {
+                        var objs = data.RES;
+                        if (objs) {
+                            for (var x in objs) {
+                                $('#' + x).val(objs[x]);
+                            }
+                        }
+                        alert("操作成功");
+                    } else {
+                        alert(data.MSG);
+                    }
                 },
                 timeout:3000
             });

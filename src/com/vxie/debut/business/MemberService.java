@@ -47,8 +47,8 @@ public class MemberService extends BaseService {
     }
 
 
-    public String handleXlsFile(File file) throws JSONException {
-        Map<String, Integer> result = new HashMap<String, Integer>();
+    public Map<String, String> handleXlsFile(File file) throws JSONException {
+        Map<String, String> result = new HashMap<String, String>();
         int rowCount = 2;
         int succCount = 0;
         int failCount = 0;
@@ -124,11 +124,11 @@ public class MemberService extends BaseService {
                 file.delete();
             }
         }
-        result.put("CountItems", rowCount - 2);
-        result.put("HandledItems", failCount + succCount);
-        result.put("Success", succCount);
-        result.put("Fail", failCount);
-        return JSONUtil.serialize(result);
+        result.put("CountItems", (rowCount - 2) + "");
+        result.put("HandledItems", (failCount + succCount) + "");
+        result.put("Success", succCount + "");
+        result.put("Fail", failCount + "");
+        return result;
     }
 
 

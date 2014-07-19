@@ -89,7 +89,8 @@ public class MemberController extends AbstractController {
 
     @RequestMapping(value = "/download/xls")
     public void downloadXls(HttpServletResponse response) {
-        String path = SystemUtils.getClassPath() + "/../app/resources/template-xls/user_import_template.xls";
+        //C:/GIT/webframe/out/artifacts/Healthy.war/WEB-INF/classes
+        String path = SystemUtils.getClassPath() + "/../../resources/template-xls/user_import_template.xls";
         try {
             response.reset();
             response.setContentType("application/octet-stream");
@@ -109,17 +110,22 @@ public class MemberController extends AbstractController {
     @RequestMapping(value = "/import/save", method = RequestMethod.POST)
     @ResponseBody
     public String uploadFile(@RequestParam("xfile") CommonsMultipartFile uFile) {
-        if (!uFile.isEmpty()) {
-            File file = new File(SystemUtils.getClassPath() + "/../tmp/" + new Date().getTime() + ".xls"); // 新建一个文件
-            try {
-                uFile.getFileItem().write(file);// 将上传的文件写入新建的文件中
-                return memberService.handleXlsFile(file);
-            } catch (Exception e) {
-                log.error("MemberController.uploadFile error", e);
-                return e.getMessage();
+        HashMap<String, Object> result = new HashMap<String, Object>();
+        result.put("SUCCESS", "TRUE");
+        result.put("MSG", "succeed");
+        try {
+            if (uFile.isEmpty()) {
+                throw new RuntimeException("上传文件为空");
             }
+            File file = new File(SystemUtils.getClassPath() + "/../tmp/" + new Date().getTime() + ".xls"); // 新建一个文件
+            uFile.getFileItem().write(file);// 将上传的文件写入新建的文件中
+            result.put("RES", memberService.handleXlsFile(file));
+        } catch (Exception e) {
+            log.error("MemberController.uploadFile error", e);
+            result.put("SUCCESS", "FALSE");
+            result.put("MSG", "导入会员失败：" + e.getMessage());
         }
-        return "";
+        return JSONObject.fromObject(result).toString();
     }
 
 
