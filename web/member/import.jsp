@@ -12,12 +12,14 @@
 	<form name="fileUploadForm" id="fileUploadForm" action="<%= contextPath%>/member/import/save" method="post" enctype="multipart/form-data">
 		<table width="100%" border="0" cellpadding="2" cellspacing="1">
 			<tr>
-			  <td align="left" style="width:80%;overflow:hidden;white-space:normal;nowrap;">
-	            XLS文件:
-	            <input type="file" name="xfile" id="xfile" value="" style="width:60%;"/> 
+              <td class="popTitle filedName">
+                  Excel文件:
+              </td>
+			  <td align="left" style="width:80%;overflow:hidden;white-space:normal;">
+	            <input type="file" name="xfile" id="xfile" value="" style="width:350px;"/>
 			    &nbsp;
-			    <button class="btn_2k3" onclick="doUpLoad()">上传并处理</button>
-			    &nbsp;
+			    <button type="button" id="submitBtn" class="btn_2k3" onclick="doUpLoad()">上传并处理</button>
+			    <br/>
 			    <a href="<%= contextPath%>/member/download/xls">下载Excel模板</a>
 		      </td>
 		  </tr>
@@ -25,19 +27,19 @@
 	</form>
 	<table width="100%" border="0" cellpadding="2" cellspacing="1">
 	    <tr>
-			<td class="popTitle" width="12%">待处理数:</td>
+			<td class="popTitle filedName" width="12%">待处理数:</td>
 			<td class="popConent"><input type="text" id="CountItems" value="0" disabled></td>
 		</tr>
 	    <tr>
-			<td class="popTitle" width="12%">已处理数:</td>
+			<td class="popTitle filedName" width="12%">已处理数:</td>
 			<td class="popConent"><input type="text" id="HandledItems" value="0" disabled></td>
 		</tr>
 	    <tr>
-			<td class="popTitle" width="12%">成功数:</td>
+			<td class="popTitle filedName" width="12%">成功数:</td>
 			<td class="popConent"><input type="text" id="Success" value="0" disabled></td>
 		</tr>
 	    <tr>
-			<td class="popTitleMust" width="12%">失败数:</td>
+			<td class="popTitleMust filedName" width="12%">失败数:</td>
 			<td class="popConent"><input type="text" id="Fail" value="0" disabled></td>
 		</tr>
 	</table>
@@ -51,13 +53,16 @@
                 success:function (s) {
                     var data = eval("(" + s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "") + ")");
                     if (data.SUCCESS == "TRUE") {
+                        alert("操作成功");
+                        $("#xfile").val("");
+                        $("#submitBtn").attr("disabled", true);
                         var objs = data.RES;
                         if (objs) {
                             for (var x in objs) {
                                 $('#' + x).val(objs[x]);
                             }
                         }
-                        alert("操作成功");
+
                     } else {
                         alert(data.MSG);
                     }
@@ -67,6 +72,12 @@
             return false;
         });
     });
+
+
+    function Ok() {
+        parent.JQueryXDialog.fnResult(1);
+    }
+
 
     function doUpLoad() {
         if (!isXlsFile($("#xfile").get(0))) {

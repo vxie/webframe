@@ -117,7 +117,7 @@ public class MemberController extends AbstractController {
             if (uFile.isEmpty()) {
                 throw new RuntimeException("上传文件为空");
             }
-            File file = new File(SystemUtils.getClassPath() + "/../tmp/" + new Date().getTime() + ".xls"); // 新建一个文件
+            File file = new File(SystemUtils.getClassPath() + "/" + new Date().getTime() + ".xls"); // 新建一个文件
             uFile.getFileItem().write(file);// 将上传的文件写入新建的文件中
             result.put("RES", memberService.handleXlsFile(file));
         } catch (Exception e) {

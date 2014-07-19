@@ -120,8 +120,12 @@ public class MemberService extends BaseService {
             log.error("MemberService.handleXlsFile error", e);
         } finally {
             if (book != null) {
-                book.close();
-                file.delete();
+                try {
+                    book.close();
+                    file.delete();
+                } catch (Exception e) {
+                    //ignore
+                }
             }
         }
         result.put("CountItems", (rowCount - 2) + "");

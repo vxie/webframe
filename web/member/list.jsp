@@ -14,9 +14,10 @@
                 });
 			}
 			function doImport(){
-                showModalDlg("导入用户", '<%= contextPath%>/member/import', 600, 400, function(s){doReset();});
-				<%--showModalDlg("导入用户", '<%= contextPath%>/common/import/user', 600, 300, function(s){doReset();});--%>
-			}
+                showModalDlg("导入用户", '<%= contextPath%>/member/import', 650, 250, function (s) {
+                    doReset();
+                });
+            }
 
             function doDel(id) {
                 if (!window.confirm("你确定要删除该会员吗(删除后不可恢复)?")) {
