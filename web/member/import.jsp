@@ -9,7 +9,7 @@
   		<script src="<%= contextPath%>/resources/js/jquery.form.js" type="text/javascript"></script>
 	</head>
 	<body>
-	<form name="fileUploadForm" id="fileUploadForm" action="<%= contextPath%>/user/import/save" method="post" enctype="multipart/form-data">
+	<form name="fileUploadForm" id="fileUploadForm" action="<%= contextPath%>/member/import/save" method="post" enctype="multipart/form-data">
 		<table width="100%" border="0" cellpadding="2" cellspacing="1">
 			<tr>
 			  <td align="left" style="width:80%;overflow:hidden;white-space:normal;nowrap;">
@@ -18,7 +18,7 @@
 			    &nbsp;
 			    <button class="btn_2k3" onclick="doUpLoad()">上传并处理</button>
 			    &nbsp;
-			    <a href="<%= contextPath%>/user/download/xls">下载Excel模板</a>
+			    <a href="<%= contextPath%>/member/download/xls">下载Excel模板</a>
 		      </td>
 		  </tr>
 		</table>
@@ -44,37 +44,37 @@
 	<div id="outMsg" style="display:none;"></div>
 	</body>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('#fileUploadForm').submit(function(){
-	        $(this).ajaxSubmit({
-	        	success: function(s){
-	        		var objs = eval("("+s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "")+")");
-	        		for(var x in objs) $('#'+x).val(objs[x]) ;
-	        		alert("操作成功!");
-	        	},
-	        	timeout:   3000
-	        });
-	        return false;
-	    }); 
-	});
-	
-	function doUpLoad(){
-		if(!isXlsFile($("#xfile").get(0))){
-			alert("请选择一个Excel文件(*.xls)!");
-			return;
-		}
-		$("#fileUploadForm").submit();
-	}
-	
-	function isXlsFile(o){
-	 	if(""!=o.value){
-			var suffx = o.value.replace(/.+\./,'');
-			if("xls"==suffx.toLowerCase()){
-				return true;
-			}
-		}
-		return false;
-	}
+    $(document).ready(function () {
+        $('#fileUploadForm').submit(function () {
+            $(this).ajaxSubmit({
+                success:function (s) {
+                    var objs = eval("(" + s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "") + ")");
+                    for (var x in objs) $('#' + x).val(objs[x]);
+                    alert("操作成功!");
+                },
+                timeout:3000
+            });
+            return false;
+        });
+    });
+
+    function doUpLoad() {
+        if (!isXlsFile($("#xfile").get(0))) {
+            alert("请选择一个Excel文件(*.xls)");
+            return;
+        }
+        $("#fileUploadForm").submit();
+    }
+
+    function isXlsFile(o) {
+        if (o.value) {
+            var suffx = o.value.replace(/.+\./, '');
+            if ("xls" == suffx.toLowerCase()) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 </script>
 </html>

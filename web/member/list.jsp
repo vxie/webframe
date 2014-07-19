@@ -14,7 +14,8 @@
                 });
 			}
 			function doImport(){
-				showModalDlg("导入用户", '<%= contextPath%>/common/import/user', 600, 300, function(s){doReset();});
+                showModalDlg("导入用户", '<%= contextPath%>/member/import', 600, 400, function(s){doReset();});
+				<%--showModalDlg("导入用户", '<%= contextPath%>/common/import/user', 600, 300, function(s){doReset();});--%>
 			}
 
             function doDel(id) {

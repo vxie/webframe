@@ -101,7 +101,7 @@ public class MemberController extends AbstractController {
             response.getOutputStream().flush();
             response.getOutputStream().close();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("MemberController.downloadXls error", e);
         }
     }
 
@@ -115,10 +115,11 @@ public class MemberController extends AbstractController {
                 uFile.getFileItem().write(file);// 将上传的文件写入新建的文件中
                 return memberService.handleXlsFile(file);
             } catch (Exception e) {
-                e.printStackTrace();
+                log.error("MemberController.uploadFile error", e);
                 return e.getMessage();
             }
-        } else return "";
+        }
+        return "";
     }
 
 

@@ -61,7 +61,7 @@
             <tr>
                 <td class="popTitle filedName" width="12%">病历ID:</td>
                 <td class="popConent">
-                    <input type="text" id="p_medicalRecordId" name="medicalRecordId" value="${currMember.phoneNumber}"/>
+                    <input type="text" id="p_medicalRecordId" name="medicalRecordId" value="${currMember.medicalRecordId}"/>
                 </td>
             </tr>
             <tr>
