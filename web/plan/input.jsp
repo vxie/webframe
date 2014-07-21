@@ -6,7 +6,7 @@
     <link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet"/>
     <script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
     <script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
-    <%--<script src="<%= contextPath%>/resources/js/DatePicker/WdatePicker.js" type="text/javascript"></script>--%>
+    <script src="<%= contextPath%>/resources/js/DatePicker/WdatePicker.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -84,7 +84,9 @@
         <tr>
             <td class="popTitle filedName" width="12%">预定发送时间:</td>
             <td class="popConent">
-                <input type="text" id="p_sendTime" name="sendTime" value="<fmt:formatDate value="${currPlan.sendTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
+                <input type="text" id="p_sendTime" name="sendTime"
+                       class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'%y-%M-%d %H:\\#{%m-15}'});"
+                       value="<fmt:formatDate value="${currPlan.sendTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
             </td>
         </tr>
         <tr>

@@ -6,7 +6,7 @@
 		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
   		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
   		<script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
-        <%--<script src="<%= contextPath%>/resources/js/DatePicker/WdatePicker.js" type="text/javascript"></script>--%>
+        <script src="<%= contextPath%>/resources/js/DatePicker/WdatePicker.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#p_areaid").val("${currMember.areaId}");
@@ -59,6 +59,22 @@
                 </td>
             </tr>
             <tr>
+                <td class="popTitle filedName" width="12%">注册时间:<br/></td>
+                <td class="popConent">
+                    <input type="text" id="p_time" name="time"
+                           class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"
+                           value="<fmt:formatDate value="${currMember.time}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="popTitle filedName" width="12%">生日:</td>
+                <td class="popConent">
+                    <input type="text" id="p_brithday" name="brithday"
+                           class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"
+                           value="${currMember.brithday}"/>
+                </td>
+            </tr>
+            <tr>
                 <td class="popTitle filedName" width="12%">病历ID:</td>
                 <td class="popConent">
                     <input type="text" id="p_medicalRecordId" name="medicalRecordId" value="${currMember.medicalRecordId}"/>
@@ -86,19 +102,6 @@
                 <td class="popTitle filedName" width="12%">密码:</td>
                 <td class="popConent">
                     <input type="text" id="p_password" name="password" value="${currMember.password}"/>
-                </td>
-            </tr>
-            <tr>
-                <td class="popTitle filedName" width="12%">注册时间:<br/>(格式如:2014-07-19 17:31:38)</td>
-                <td class="popConent">
-                    <input type="text" id="p_time" name="time" <%--onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});"--%>
-                           value="<fmt:formatDate value="${currMember.time}" pattern="yyyy-MM-dd HH:mm:ss"/>"/>
-                </td>
-            </tr>
-            <tr>
-                <td class="popTitle filedName" width="12%">生日:</td>
-                <td class="popConent">
-                    <input type="text" id="p_brithday" name="brithday" value="${currMember.brithday}"/>
                 </td>
             </tr>
 		    <tr>

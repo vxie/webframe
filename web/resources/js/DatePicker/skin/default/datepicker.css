@@ -1,5 +1,5 @@
 /* 
- * My97 DatePicker 4.7
+ * My97 DatePicker 4.8
  */
 
 .WdateDiv{
@@ -117,7 +117,7 @@
  }
 
 .WdateDiv .MTitle{
-	background-color:#99CCFF;
+	background-color:#BDEBEE;
 }
 .WdateDiv .WdayTable2{
 	border-collapse:collapse;
@@ -159,7 +159,7 @@
 	color:blue;
 }
 .WdateDiv .Wselday{
-	background-color:#99CCFF;
+	background-color:#A9E4E9;
 }
 .WdateDiv .WspecialDay{
 	background-color:#66F4DF;
@@ -240,9 +240,7 @@
 .WdateDiv .dpButton{ 
 	height:20px;
 	width:45px;
-	border:#99CCFF 1px solid;
-	margin-top:3px;
+	border:#ccc 1px solid;
+	margin-top:2px;
 	margin-right:1px;
-	background-color:#99CCFF;
-	color:#092966;
 }
