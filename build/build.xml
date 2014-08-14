@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir=".." default="publish" name="healthy">
+
+    <target name="init" description="设置初始化打war包需要的路径变量">
+        <property name="name" value="healthy"/>
+        <property name="src" value="${basedir}/src"/>
+        <property name="lib" value="${basedir}/lib"/>
+        <property name="webapp" value="${basedir}/web"/>
+        <property name="packages" value="com.*"/>
+
+        <property name="build.src" value="${basedir}/dist/tmp/src"/>
+        <property name="build.class" value="${basedir}/dist/tmp/classes"/>
+        <property name="build.web" value="${basedir}/dist/tmp/web"/>
+
+        <echo message="----------- ${src} ------------"/>
+        <echo message="----------- ${lib} ------------"/>
+        <echo message="----------- ${webapp} ------------"/>
+        <echo message="----------- ${build.src} ------------"/>
+        <echo message="----------- ${build.class} ------------"/>
+        <echo message="----------- ${build.web} ------------"/>
+
+        <path id="classpath" description="设置依赖jar文件">
+            <fileset dir="${lib}">
+                <include name="**/*.jar"/>
+                <exclude name="**/*.bak"/>
+            </fileset>
+            <!--这下面的包不用打到war里-->
+            <fileset dir="${basedir}/../LIB">
+                <include name="**/*.jar"/>
+                <exclude name="**/*.bak"/>
+            </fileset>
+        </path>
+
+    </target>
+
+    <target name="prepare" depends="init" description="创建打包需要的路径，拷贝源文件到打包路径下">
+        <mkdir dir="${build.src}"/>
+        <mkdir dir="${build.class}"/>
+        <mkdir dir="${build.web}"/>
+        <copy todir="${build.src}">
+            <fileset dir="${src}"/>
+        </copy>
+        <copy todir="${build.web}">
+            <fileset dir="${webapp}"/>
+        </copy>
+    </target>
+
+    <target name="build" depends="prepare" description="编译java文件，拷贝properties属性配置文件到编译后的路径下">
+        <javac srcdir="${build.src}" destdir="${build.class}">
+            <classpath refid="classpath" description="依赖上面path标签设置的jar文件"/>
+        </javac>
+        <copy todir="${build.class}">
+            <fileset dir="${build.src}">
+                <include name="**/*.properties"/>
+                <exclude name="**/*.bak"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="antwar" depends="build" description="打war包，不将java文件打入包内">
+        <war warfile="${basedir}/dist/healthy.war" webxml="${build.web}/WEB-INF/web.xml">
+            <lib dir="${lib}"/>
+            <classes dir="${build.class}"/>
+            <fileset dir="${build.web}">
+                <include name="**/*.conf"/>
+                <include name="**/*.html"/>
+                <include name="**/*.htm"/>
+                <include name="**/*.jsp"/>
+                <include name="**/*.inc"/>
+                <include name="**/*.js"/>
+                <include name="**/*.css"/>
+                <include name="**/*.swf"/>
+                <include name="**/*.jpg"/>
+                <include name="**/*.jpeg"/>
+                <include name="**/*.png"/>
+                <include name="**/*.gif"/>
+                <exclude name="**/*.bak"/>
+            </fileset>
+        </war>
+    </target>
+
+    <target name="publish" depends="antwar">
+        <copy todir="${basedir}/out/artifacts">
+            <fileset dir="${basedir}/dist/">
+                <include name="**/*.war"/>
+                <exclude name="**/*.bak"/>
+            </fileset>
+        </copy>
+        <delete dir="${basedir}/dist/tmp" description="删除tmp目录"/>
+    </target>
+
+</project>
