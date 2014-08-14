@@ -74,6 +74,7 @@
                 <include name="**/*.jpeg"/>
                 <include name="**/*.png"/>
                 <include name="**/*.gif"/>
+                <include name="**/*.xml"/>
                 <exclude name="**/*.bak"/>
             </fileset>
         </war>
