@@ -43,13 +43,14 @@
 			<td class="popConent"><input type="text" id="Fail" value="0" disabled></td>
 		</tr>
 	</table>
-	<div id="outMsg" style="display:none;"></div>
+	<div id="messagediv"></div>
 	</body>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#fileUploadForm').submit(function (e) {
             e.preventDefault();//阻止默认的提交
-
+            $("#submitBtn").attr("disabled", true);
+            $("#messagediv").html("正在处理，请等待...");
             try {
                 $(this).ajaxSubmit({
                     success:function (s) {
@@ -67,13 +68,17 @@
                         } else {
                             alert(data.MSG);
                         }
+                        $("#messagediv").html("");
                     },
-                    timeout:3000
+                    error:function (XmlHttpRequest, textStatus, errorThrown) {
+                        alert("导入失败:" + textStatus);
+                        $("#messagediv").html("导入失败：" + textStatus);
+                    },
+                    timeout:300000  // 3秒太短，容易造成超时
                 });
             } catch (e) {
-                alert(e);
+                alert("导入失败:" + e);
             }
-
             return false;
         });
     });
