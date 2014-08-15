@@ -91,18 +91,4 @@ public class AjaxPageController extends AbstractController {
         return ajaxPageService.assessmentPage(request, adminId);
     }
 
-
-
-    /////////////////////////////////
-    @ResponseBody
-	@RequestMapping(value="/role")
-	public String role(HttpServletRequest request) throws Exception{
-		return ajaxPageService.rolePage(request);
-	}
-	
-	@ResponseBody
-	@RequestMapping(value="/step")
-	public String step(HttpServletRequest request, HttpSession session) throws Exception{
-		return ajaxPageService.stepPage(request);
-	}
 }

@@ -13,10 +13,6 @@
                     doReset();
                 });
 			}
-			function doImport(){
-				//showModalDlg("导入用户", '/user/import', 600, 400, function(s){doReset();}, null, '返 回');
-				showModalDlg("导入用户", '<%= contextPath%>/common/import/user', 600, 120, function(s){doReset();});
-			}
 
             function doDel(id) {
                 if (!window.confirm("你确定要删除该用户吗(删除后不可恢复)?")) {
@@ -76,8 +72,6 @@
               <button class="btn_2k3" onclick="doReset()">重 置</button>
               &nbsp;
               <button class="btn_2k3" onclick="doEdit(0)">新 建</button>
-              &nbsp;
-              <button class="btn_2k3" onclick="doImport()">导入用户</button>
               &nbsp;
           </div>
       </div>

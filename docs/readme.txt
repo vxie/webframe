@@ -16,6 +16,7 @@
 
 
 
+// globalConfig.getStringItemByArea("SYSTEM_PARAM", "medical_record_path");
 
 
 

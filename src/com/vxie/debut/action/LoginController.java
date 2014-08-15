@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.vxie.debut.business.LoginService;
-import com.vxie.debut.model.CutMenu;
 import com.vxie.debut.model.AdminUser;
 
 @Controller
@@ -60,10 +59,6 @@ public class LoginController extends AbstractController {
 	
 	@RequestMapping(value="left")
 	public String left(HttpSession session, ModelMap map){
-//		Long userId = getSessionLong(session, "cutUserId");
-//		List<CutMenu> list = loginService.getUserMenus(userId);
-//		map.put("menus", list);
-//		session.setAttribute("isAdmin", cutLoginService.isAdmin(userId, list.size()));
 		return "left";
 	}
 	
@@ -74,20 +69,5 @@ public class LoginController extends AbstractController {
 		session.removeAttribute("isSA");
 		return "0";
 	}
-	
-	@RequestMapping(value="init")
-	@ResponseBody
-	public String initSys(HttpSession session){
-		if(getSessionLong(session, "isAdmin").intValue()==1)
-			return loginService.initSys();
-		return "1";
-	}
-	
-	@RequestMapping(value="zero")
-	@ResponseBody
-	public String zero(HttpSession session){
-		if(getSessionLong(session, "isAdmin").intValue()==1)
-			return loginService.clearZero();
-		return "1";
-	}
+
 }

@@ -49,26 +49,31 @@
     $(document).ready(function () {
         $('#fileUploadForm').submit(function (e) {
             e.preventDefault();//阻止默认的提交
-            $(this).ajaxSubmit({
-                success:function (s) {
-                    var data = eval("(" + s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "") + ")");
-                    if (data.SUCCESS == "TRUE") {
-                        alert("操作成功");
-                        $("#xfile").val("");
-                        $("#submitBtn").attr("disabled", true);
-                        var objs = data.RES;
-                        if (objs) {
-                            for (var x in objs) {
-                                $('#' + x).val(objs[x]);
-                            }
-                        }
 
-                    } else {
-                        alert(data.MSG);
-                    }
-                },
-                timeout:3000
-            });
+            try {
+                $(this).ajaxSubmit({
+                    success:function (s) {
+                        var data = eval("(" + s.replace(/<PRE>/ig, "").replace(/<\/PRE>/ig, "") + ")");
+                        if (data.SUCCESS == "TRUE") {
+                            alert("操作成功");
+                            $("#xfile").val("");
+                            $("#submitBtn").attr("disabled", true);
+                            var objs = data.RES;
+                            if (objs) {
+                                for (var x in objs) {
+                                    $('#' + x).val(objs[x]);
+                                }
+                            }
+                        } else {
+                            alert(data.MSG);
+                        }
+                    },
+                    timeout:3000
+                });
+            } catch (e) {
+                alert(e);
+            }
+
             return false;
         });
     });
