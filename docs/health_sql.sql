@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 194
+Source Server         : 公司农博士
 Source Server Version : 50530
-Source Host           : 192.168.0.194:3306
+Source Host           : 127.0.0.1:168
 Source Database       : HealthyE
 
 Target Server Type    : MYSQL
 Target Server Version : 50530
 File Encoding         : 65001
 
-Date: 2014-07-10 19:04:28
+Date: 2014-08-15 20:47:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -162,6 +162,9 @@ CREATE TABLE `t_plan` (
   `sendTime` timestamp NULL DEFAULT '0000-00-00 00:00:00' COMMENT '设置预定的发送给会员的时间',
   `groupId` int(11) DEFAULT NULL COMMENT '会员组Id',
   `makeTime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '方案制定(修改)的时间',
+  `breakfast_ctrl` int(11) DEFAULT '0' COMMENT '0=不可编辑，1=可编辑',
+  `lunch_ctrl` int(11) DEFAULT '0' COMMENT '0=不可编辑，1=可编辑',
+  `dinner_ctrl` int(11) DEFAULT '0' COMMENT '0=不可编辑，1=可编辑',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=gbk;
 
