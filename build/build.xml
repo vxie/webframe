@@ -46,7 +46,7 @@
     </target>
 
     <target name="build" depends="prepare" description="编译java文件，拷贝properties属性配置文件到编译后的路径下">
-        <javac srcdir="${build.src}" destdir="${build.class}">
+        <javac srcdir="${build.src}" destdir="${build.class}" debug="true">
             <classpath refid="classpath" description="依赖上面path标签设置的jar文件"/>
         </javac>
         <copy todir="${build.class}">
@@ -75,6 +75,7 @@
                 <include name="**/*.png"/>
                 <include name="**/*.gif"/>
                 <include name="**/*.xml"/>
+                <include name="**/*.xls"/>
                 <exclude name="**/*.bak"/>
             </fileset>
         </war>
