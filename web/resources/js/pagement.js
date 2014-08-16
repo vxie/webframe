@@ -7,10 +7,6 @@
  *   - 支持goto指定页
  *   - 同时支持IE6以上和FF2以上
  *
- * @author maxim(liangweiming@revenco.com)
- * @version 2.0.0(服务端需要sqlpage.jar 1.2.2以上版本)
- * since 2008-08-21
- * updated on 2009-08-22
  */
 
 /* 

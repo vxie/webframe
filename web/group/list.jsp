@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<link href="<%= contextPath%>/resources/css/css.css" type="text/css" rel="stylesheet" />
-		<script src="<%= contextPath%>/resources/js/ajaxpage-2.0.0.js" type="text/javascript"></script>
+		<script src="<%= contextPath%>/resources/js/pagement.js" type="text/javascript"></script>
 		<script src="<%= contextPath%>/resources/js/jquery.min.js" type="text/javascript"></script>
 		<script src="<%= contextPath%>/resources/js/common.js" type="text/javascript"></script>
 		<script type="text/javascript">
@@ -108,6 +108,6 @@
 
 			
 		</script>
-		<script src="<%= contextPath%>/resources/js/ajaxpage-foot.js" type="text/javascript"></script>
+		<script src="<%= contextPath%>/resources/js/pagement-foot.js" type="text/javascript"></script>
 	</body>
 </html>
