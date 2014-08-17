@@ -1,6 +1,7 @@
 package com.vxie.debut.action;
 
 import com.vxie.debut.business.AdminUserService;
+import com.vxie.debut.business.AreaService;
 import com.vxie.debut.model.AdminUser;
 import net.sf.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -20,8 +21,12 @@ public class AdminUserController extends AbstractController {
 	@Resource
 	private AdminUserService adminUserService;
 
-	@RequestMapping(value = "/list")
-	public String list() {
+    @Resource
+    private AreaService areaService;
+
+    @RequestMapping(value = "/list")
+	public String list(ModelMap map) {
+        map.put("areaList", areaService.queryAreaList());
 		return "users/list";
 	}
 

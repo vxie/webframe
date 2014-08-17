@@ -5,6 +5,8 @@ import com.vxie.debut.model.Area;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class AreaService extends BaseService {
     @Transactional
@@ -30,6 +32,10 @@ public class AreaService extends BaseService {
         }
         //新建
         return dao.getSimpleJdbcTemplate().queryForInt("select count(id) from t_area where name=?", name) > 0;
+    }
+
+    public List<Area> queryAreaList() {
+       return dao.find(Area.class, "from Area u where 1=1", "");
     }
 
 }
