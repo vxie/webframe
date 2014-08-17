@@ -10,9 +10,6 @@ import com.sunrise.springext.utils.SystemUtils;
 
 /**
  * <p>Description: </p>
- * <p>Company: sunrise Tech Ltd.</p>
- * @author tanggensheng
- * @date 2011-11-30下午06:02:24
  */
 @Service
 public class DictService extends BaseService {

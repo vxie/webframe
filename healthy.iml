@@ -80,15 +80,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset1" name="Xml Application Context" removed="false">
-          <file>file://$MODULE_DIR$/web/WEB-INF/app2-servlet.xml</file>
-          <file>file://$MODULE_DIR$/web/WEB-INF/ds-default.xml</file>
-        </fileset>
-        <fileset id="web: app2 servlet context" name="MVC app2 servlet context" removed="true" />
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
