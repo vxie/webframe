@@ -35,7 +35,7 @@ public class AreaService extends BaseService {
     }
 
     public List<Area> queryAreaList() {
-       return dao.find(Area.class, "from Area u where 1=1", "");
+       return dao.find(Area.class, "from Area u where id <> ?", -1l);
     }
 
 }

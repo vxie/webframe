@@ -20,7 +20,7 @@
     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 
     <!--开发库-->
-    <property name="url" value="jdbc:mysql://192.168.1.102:3306/devdb"/>
+    <property name="url" value="jdbc:mysql://192.168.0.101:3306/devdb"/>
     <!--<property name="url" value="jdbc:mysql://172.20.58.51:3306/devdb"/>-->
     <property name="username" value="root"/>
     <property name="password" value="123456"/>

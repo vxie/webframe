@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="mm" uri="http://tags.vxie.com" %>
 <%@ include file="/common/head.inc" %>
 <html>
 	<head>
@@ -52,10 +53,7 @@
                   <td><input id="p_groupId" class="paramIpt" name="groupId" type="text"/></td>
                   <td class="filedName">地区:</td>
                   <td>
-                      <select id="p_areaId" class="paramIpt" name="areaId">
-                          <option value=""></option>
-                          <option value="1">测试地区</option>
-                      </select>
+                      <mm:select id="p_areaId" name="areaId" cssClass="paramIpt" items="${areaList}" valueProperty="id" displayProperty="name"/>
                   </td>
                   <td class="filedName">地址:</td>
                   <td><input id="p_address" class="paramIpt" name="address" type="text"/></td>

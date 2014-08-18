@@ -34,6 +34,7 @@ public class AdminUserController extends AbstractController {
 	public String edit(ModelMap map, @PathVariable long id) {
 		map.put("currUser", id == 0 ? new AdminUser() : adminUserService.getDao()
 				.get(AdminUser.class, id));
+        map.put("areaList", areaService.queryAreaList());
 		return "users/input";
 	}
 

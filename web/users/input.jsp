@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="mm" uri="http://tags.vxie.com" %>
 <%@ include file="/common/head.inc" %>
 <html>
 	<head>
@@ -8,7 +9,7 @@
   		<script src="<%= contextPath%>/resources/js/validate/jquery.validate.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-               $("#p_areaid").val("${currUser.areaId}");
+               <%--$("#p_areaid").val("${currUser.areaId}");--%>
             });
 
             function Ok() {
@@ -73,9 +74,8 @@
 		    <tr>
 				<td class="popTitleMust filedName" width="12%">地区:</td>
 				<td class="popConent">
-					<select id="p_areaid" name="areaid">
-                        <option value="1">测试地区</option>
-					</select>
+                    <mm:select id="p_areaid" name="areaid" cssClass="paramIpt" items="${areaList}"
+                               valueProperty="id" displayProperty="name" currentValue="${currUser.areaId}"/>
 				</td>
 			</tr>
 

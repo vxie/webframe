@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="mm" uri="http://tags.vxie.com" %>
 <%@ include file="/common/head.inc" %>
 <html>
 	<head>
@@ -9,7 +10,7 @@
         <script src="<%= contextPath%>/resources/js/DatePicker/WdatePicker.js" type="text/javascript"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                $("#p_areaid").val("${currMember.areaId}");
+                <%--$("#p_areaid").val("${currMember.areaId}");--%>
             });
 
             function Ok() {
@@ -107,9 +108,8 @@
 		    <tr>
 				<td class="popTitle filedName" width="12%">地区:</td>
 				<td class="popConent">
-					<select id="p_areaid" name="areaId">
-                        <option value="1">测试地区</option>
-					</select>
+                    <mm:select id="p_areaid" name="areaId" cssClass="paramIpt" items="${areaList}"
+                               valueProperty="id" displayProperty="name" currentValue="${currMember.areaId}"/>
 				</td>
 			</tr>
             <tr>

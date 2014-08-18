@@ -2,6 +2,7 @@ package com.vxie.debut.action;
 
 
 import com.sunrise.springext.utils.SystemUtils;
+import com.vxie.debut.business.AreaService;
 import com.vxie.debut.business.MemberService;
 import com.vxie.debut.model.Member;
 import net.sf.json.JSONObject;
@@ -27,15 +28,20 @@ public class MemberController extends AbstractController {
     @Resource
     private MemberService memberService;
 
+    @Resource
+    private AreaService areaService;
+
 
     @RequestMapping(value = "/list")
-    public String list() {
+    public String list(ModelMap map) {
+        map.put("areaList", areaService.queryAreaList());
         return "member/list";
     }
 
     @RequestMapping(value = "/edit/{id}")
     public String edit(ModelMap map, @PathVariable long id) {
         map.put("currMember", id == 0 ? new Member() : memberService.getDao().get(Member.class, id));
+        map.put("areaList", areaService.queryAreaList());
         return "member/input";
     }
 
