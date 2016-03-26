@@ -10,7 +10,7 @@ import java.util.List;
 public class LoginService extends BaseService {
 	
 	private AdminUser findUser(String loginName){
-		List<AdminUser> res = dao.find(AdminUser.class, "from AdminUser c where c.number=?", loginName);
+		List<AdminUser> res = dao.find(AdminUser.class, "from AdminUser c where c.name=?", loginName);
         return (res.size() == 0 || res.size() > 1) ? null : res.get(0);
     }
 	

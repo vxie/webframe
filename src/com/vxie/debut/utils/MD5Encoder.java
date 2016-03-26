@@ -205,4 +205,8 @@ public class MD5Encoder {
     }
     return rhex(a) + rhex(b) + rhex(c) + rhex(d);
   }
+
+    public static void main(String[] args) {
+        System.out.println(MD5Encoder.encode("123"));//9593a0c8fab5166dc275c9f2f3c2a13d
+    }
 }

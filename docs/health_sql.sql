@@ -29,6 +29,8 @@ CREATE TABLE `t_admin` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=gbk;
 
+insert into t_admin value(000, 'admin', '0', '0', '13800138000', '9593a0c8fab5166dc275c9f2f3c2a13d');
+
 -- ----------------------------
 -- Records of t_admin
 -- ----------------------------

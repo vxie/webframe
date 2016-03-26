@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="pragma" content="no-cache" />
-<title>割接进度管理系统</title>
+<title>WEBFRAME</title>
 <style type="text/css">
 <!--
 body {
